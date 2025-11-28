@@ -1,0 +1,607 @@
+jeff@jeff-System-Product-Name:~/pkg/vcpkg$ ./vcpkg --debug install re2
+[DEBUG] To include the environment variables in debug output, pass --debug-env
+[DEBUG] Trying to load bundleconfig from /home/jeff/pkg/vcpkg/vcpkg-bundle.json
+[DEBUG] Failed to open: /home/jeff/pkg/vcpkg/vcpkg-bundle.json
+[DEBUG] Bundle config: readonly=false, usegitregistry=false, embeddedsha=nullopt, deployment=Git, vsversion=nullopt
+[DEBUG] Metrics enabled.
+[DEBUG] Feature flag 'binarycaching' unset
+[DEBUG] Feature flag 'compilertracking' unset
+[DEBUG] Feature flag 'registries' unset
+[DEBUG] Feature flag 'versions' unset
+[DEBUG] Feature flag 'dependencygraph' unset
+[DEBUG] Using scripts-root: /home/jeff/pkg/vcpkg/scripts
+[DEBUG] Using builtin-ports: /home/jeff/pkg/vcpkg/ports
+[DEBUG] Using installed-root: /home/jeff/pkg/vcpkg/installed
+[DEBUG] Using buildtrees-root: /home/jeff/pkg/vcpkg/buildtrees
+[DEBUG] Using packages-root: /home/jeff/pkg/vcpkg/packages
+[DEBUG] Using vcpkg-root: /home/jeff/pkg/vcpkg
+[DEBUG] Using builtin-registry: /home/jeff/pkg/vcpkg/versions
+[DEBUG] Using downloads-root: /home/jeff/pkg/vcpkg/downloads
+Computing installation plan...
+[DEBUG] Found path: /usr/local/bin/cmake
+[DEBUG] Found path: /usr/bin/cmake
+[DEBUG] Found path: /bin/cmake
+[DEBUG] 1000: execute_process(/usr/local/bin/cmake --version)
+[DEBUG] 1000: cmd_execute_and_stream_data() returned 0 after     5846 us
+[DEBUG] 1001: execute_process(/usr/local/bin/cmake -DVCPKG_ROOT_DIR=/home/jeff/pkg/vcpkg -DPACKAGES_DIR=/home/jeff/pkg/vcpkg/packages -DBUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees -D_VCPKG_INSTALLED_DIR=/home/jeff/pkg/vcpkg/installed -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DVCPKG_MANIFEST_INSTALL=OFF -P /home/jeff/pkg/vcpkg/buildtrees/0.vcpkg_tags.cmake)
+[DEBUG] 1001: cmd_execute_and_stream_data() returned 0 after     2870 us
+The following packages will be built and installed:
+  * abseil:x64-linux@20250814.1
+    re2:x64-linux@2025-11-05
+  * vcpkg-cmake-config:x64-linux@2024-05-23
+Additional packages (*) will be modified to complete this operation.
+Detecting compiler hash for triplet x64-linux...
+[DEBUG] Found path: /usr/bin/git
+[DEBUG] Found path: /bin/git
+[DEBUG] 1002: execute_process(/usr/bin/git --version)
+[DEBUG] 1002: cmd_execute_and_stream_data() returned 0 after     2490 us
+[DEBUG] 1003: execute_process( /usr/local/bin/cmake -DCURRENT_PORT_DIR=/home/jeff/pkg/vcpkg/scripts/detect_compiler -DCURRENT_BUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees/detect_compiler -DCURRENT_PACKAGES_DIR=/home/jeff/pkg/vcpkg/packages/detect_compiler_x64-linux -D_HOST_TRIPLET=x64-linux -DVCPKG_COMPILER_CACHE_FILE=/home/jeff/pkg/vcpkg/installed/vcpkg/compiler-file-hash-cache.json -DZ_VCPKG_CHAINLOAD_TOOLCHAIN_FILE=/home/jeff/pkg/vcpkg/scripts/toolchains/linux.cmake -DCMD=BUILD -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DTARGET_TRIPLET=x64-linux -DTARGET_TRIPLET_FILE=/home/jeff/pkg/vcpkg/triplets/x64-linux.cmake -DVCPKG_BASE_VERSION=2025-11-19 -DVCPKG_CONCURRENCY=13 -DVCPKG_PLATFORM_TOOLSET=external -DGIT=/usr/bin/git -DVCPKG_ROOT_DIR=/home/jeff/pkg/vcpkg -DPACKAGES_DIR=/home/jeff/pkg/vcpkg/packages -DBUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees -D_VCPKG_INSTALLED_DIR=/home/jeff/pkg/vcpkg/installed -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DVCPKG_MANIFEST_INSTALL=OFF -P /home/jeff/pkg/vcpkg/scripts/ports.cmake)
+[DEBUG] -- Configuring x64-linux-rel
+[DEBUG] -- The C compiler identification is GNU 9.4.0
+[DEBUG] -- Detecting C compiler ABI info
+[DEBUG] -- Detecting C compiler ABI info - done
+[DEBUG] -- Check for working C compiler: /usr/bin/cc - skipped
+[DEBUG] -- Detecting C compile features
+[DEBUG] -- Detecting C compile features - done
+[DEBUG] -- The CXX compiler identification is GNU 9.4.0
+[DEBUG] -- Detecting CXX compiler ABI info
+[DEBUG] -- Detecting CXX compiler ABI info - done
+[DEBUG] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[DEBUG] -- Detecting CXX compile features
+[DEBUG] -- Detecting CXX compile features - done
+[DEBUG] -- Configuring done (0.2s)
+[DEBUG] -- Generating done (0.0s)
+[DEBUG] -- Build files have been written to: /home/jeff/pkg/vcpkg/buildtrees/detect_compiler/x64-linux-rel
+[DEBUG] 
+[DEBUG] #COMPILER_HASH#2630aa100c75d085d6803aaad9c0441d621eb488
+[DEBUG] #COMPILER_C_HASH#2980d05d9eccd83eeea48c82387733ac889cb098
+[DEBUG] #COMPILER_C_VERSION#9.4.0
+[DEBUG] #COMPILER_C_ID#GNU
+[DEBUG] #COMPILER_C_PATH#/usr/bin/cc
+[DEBUG] #COMPILER_CXX_HASH#b57d9cc589cafeb8291b4e09c23fa0e6559a488e
+[DEBUG] #COMPILER_CXX_VERSION#9.4.0
+[DEBUG] #COMPILER_CXX_ID#GNU
+[DEBUG] #COMPILER_CXX_PATH#/usr/bin/c++
+[DEBUG] CMake Warning:
+[DEBUG]   Manually-specified variables were not used by the project:
+[DEBUG] 
+[DEBUG]     BUILD_SHARED_LIBS
+[DEBUG]     CMAKE_INSTALL_BINDIR
+[DEBUG]     CMAKE_INSTALL_LIBDIR
+[DEBUG]     VCPKG_PLATFORM_TOOLSET
+[DEBUG]     VCPKG_SET_CHARSET_FLAG
+[DEBUG]     _VCPKG_ROOT_DIR
+[DEBUG] 
+[DEBUG] 
+[DEBUG] 
+[DEBUG] 1003: cmd_execute_and_stream_data() returned 0 after   252890 us
+[DEBUG] Detected compiler hash for triplet x64-linux: 2630aa100c75d085d6803aaad9c0441d621eb488
+Compiler found: /usr/bin/c++
+[DEBUG] <abientries for vcpkg-cmake-config:x64-linux>
+[DEBUG]   cmake|3.31.9
+[DEBUG]   copyright|04b60f99a43bfd7fefdc8364b24aac704a2160cef969b75ba6a38b62dc4c4b70
+[DEBUG]   features|core
+[DEBUG]   portfile.cmake|832b34e63f5af41ad1b2e4aa79c5bfa507a005b120b51548e674accc706837d7
+[DEBUG]   ports.cmake|f4cc0e4d312b743fcb1e9b680c66d17bb556996dc267dc1301eac9037608a378
+[DEBUG]   post_build_checks|2
+[DEBUG]   sbom_info|1
+[DEBUG]   triplet|x64-linux
+[DEBUG]   triplet_abi|3600011444071beb27b81ff82b3c866e3d4054636e3011609deb313d2baf57fd-420bd0c11285370ff634eb31892747754883aedcaf6179cee74a372b1f79eb73-2630aa100c75d085d6803aaad9c0441d621eb488
+[DEBUG]   vcpkg-port-config.cmake|72bc3093337e633bdd19fe5d4dd1f38ca1918def49608d676a9c98c686d38b1e
+[DEBUG]   vcpkg.json|3964c3d0e6b39c7f42cebd5949cccdc7eb6feb83ee434fe73756c954b173c5c2
+[DEBUG]   vcpkg_cmake_config_fixup.cmake|f3880578674f1bdbc54b67c5fc3787aaab8ee8bcf4e3e6e008204bf4ab67aa0b
+[DEBUG]   vcpkg_list|f5de3ebcbc40a4db90622ade9aca918e2cf404dc0d91342fcde457d730e6fa29
+[DEBUG] </abientries>
+[DEBUG] <abientries for abseil:x64-linux>
+[DEBUG]   001-mingw-dll.patch|7756d52ea210a3105520070fdf2c500e97ee1f7c7504c9fdc8bc3ccd0304645f
+[DEBUG]   002-string-view.patch|fbc3096dd9b9ed2b28206401f0f22583eb94cd4e417d79987cd6a7f73045c170
+[DEBUG]   003-force-cxx-17.patch|6481fcaa774212d1453396c26c5240bdbd3cbb25784a94ffa077651b718cf367
+[DEBUG]   cmake|3.31.9
+[DEBUG]   features|core
+[DEBUG]   portfile.cmake|c4d7ab25f08cdc6bf96567939946f0da30ad1b09a7c223a8620cc50b23ccf715
+[DEBUG]   ports.cmake|f4cc0e4d312b743fcb1e9b680c66d17bb556996dc267dc1301eac9037608a378
+[DEBUG]   post_build_checks|2
+[DEBUG]   sbom_info|1
+[DEBUG]   triplet|x64-linux
+[DEBUG]   triplet_abi|3600011444071beb27b81ff82b3c866e3d4054636e3011609deb313d2baf57fd-420bd0c11285370ff634eb31892747754883aedcaf6179cee74a372b1f79eb73-2630aa100c75d085d6803aaad9c0441d621eb488
+[DEBUG]   vcpkg-cmake|7ee5438abe905b0542317e9ba5fab6c444c7264ec9ce084444e65188cc27fb0e
+[DEBUG]   vcpkg-cmake-config|82513df5c74dd134c9b38803b677bc6e31df51d4b6c45cfefe2c69584d8f86e9
+[DEBUG]   vcpkg.json|543b5bae0fcd4ee7181621a347a9e629858655dbaa33fca38aaa6312ffc65977
+[DEBUG]   vcpkg_check_linkage|f8d5dc4ee94493155b76fb825a74e9c4f6037569b990c3f8c02074338223fbbd
+[DEBUG]   vcpkg_copy_pdbs|d15c2f2822d93ecb9023af44803328e491c5374136e0813600289582a72d196d
+[DEBUG]   vcpkg_fixup_pkgconfig|1a15f6c6d8e2b244d83a7514a0412d339127d2217d1df60ad1388b546c85f777
+[DEBUG]   vcpkg_from_git|96ed81968f76354c00096dd8cd4e63c6a235fa969334a11ab18d11c0c512ff58
+[DEBUG]   vcpkg_from_github|1284881728e98a182fc63e841be04e39b8c94753fdc361603c72a63c1adcf846
+[DEBUG]   vcpkg_install_copyright|ba6c169ab4e59fa05682e530cdeb883767de22c8391f023d4e6844a7ec5dd3d2
+[DEBUG]   vcpkg_list|f5de3ebcbc40a4db90622ade9aca918e2cf404dc0d91342fcde457d730e6fa29
+[DEBUG]   vcpkg_replace_string|b450deb79207478b37119743e00808ebc42de0628e7b98c14ab24728bd5c78b8
+[DEBUG] </abientries>
+[DEBUG] <abientries for re2:x64-linux>
+[DEBUG]   abseil|94a70c627fec9f157e55ec269fec82edbd81bffe6172ee53eaac49241cda22c7
+[DEBUG]   cmake|3.31.9
+[DEBUG]   features|core
+[DEBUG]   portfile.cmake|b85f302d11f21ba7cedd228b4a96dff9dfa7317979047b62c9cfb2d329147de4
+[DEBUG]   ports.cmake|f4cc0e4d312b743fcb1e9b680c66d17bb556996dc267dc1301eac9037608a378
+[DEBUG]   post_build_checks|2
+[DEBUG]   sbom_info|1
+[DEBUG]   triplet|x64-linux
+[DEBUG]   triplet_abi|3600011444071beb27b81ff82b3c866e3d4054636e3011609deb313d2baf57fd-420bd0c11285370ff634eb31892747754883aedcaf6179cee74a372b1f79eb73-2630aa100c75d085d6803aaad9c0441d621eb488
+[DEBUG]   vcpkg-cmake|7ee5438abe905b0542317e9ba5fab6c444c7264ec9ce084444e65188cc27fb0e
+[DEBUG]   vcpkg-cmake-config|82513df5c74dd134c9b38803b677bc6e31df51d4b6c45cfefe2c69584d8f86e9
+[DEBUG]   vcpkg.json|050234748a052b8f27341586826521cc34ebe5877985db1bbcd7fa568e577fcd
+[DEBUG]   vcpkg_copy_pdbs|d15c2f2822d93ecb9023af44803328e491c5374136e0813600289582a72d196d
+[DEBUG]   vcpkg_fixup_pkgconfig|1a15f6c6d8e2b244d83a7514a0412d339127d2217d1df60ad1388b546c85f777
+[DEBUG]   vcpkg_from_git|96ed81968f76354c00096dd8cd4e63c6a235fa969334a11ab18d11c0c512ff58
+[DEBUG]   vcpkg_from_github|1284881728e98a182fc63e841be04e39b8c94753fdc361603c72a63c1adcf846
+[DEBUG]   vcpkg_install_copyright|ba6c169ab4e59fa05682e530cdeb883767de22c8391f023d4e6844a7ec5dd3d2
+[DEBUG] </abientries>
+[DEBUG] Default binary cache path is: /home/jeff/.cache/vcpkg/archives
+[DEBUG] 1004: execute_process(unzip -DD -qq /home/jeff/.cache/vcpkg/archives/82/82513df5c74dd134c9b38803b677bc6e31df51d4b6c45cfefe2c69584d8f86e9.zip -d/home/jeff/pkg/vcpkg/packages/vcpkg-cmake-config_x64-linux)
+[DEBUG] 1004: cmd_execute_and_stream_data() returned 0 after     1169 us
+/home/jeff/.cache/vcpkg/archives/82/82513df5c74dd134c9b38803b677bc6e31df51d4b6c45cfefe2c69584d8f86e9.zip: note: extracted into /home/jeff/pkg/vcpkg/packages/vcpkg-cmake-config_x64-linux
+Restored 1 package(s) from /home/jeff/.cache/vcpkg/archives in 1.21 ms. Use --debug to see more details.
+Installing 1/3 vcpkg-cmake-config:x64-linux@2024-05-23...
+Elapsed time to handle vcpkg-cmake-config:x64-linux: 192 us
+vcpkg-cmake-config:x64-linux package ABI: 82513df5c74dd134c9b38803b677bc6e31df51d4b6c45cfefe2c69584d8f86e9
+Installing 2/3 abseil:x64-linux@20250814.1...
+Building abseil:x64-linux@20250814.1...
+[DEBUG] 1005: execute_process(GIT_CEILING_DIRECTORIES=/home/jeff/pkg/vcpkg/buildtrees  /usr/local/bin/cmake "-DALL_FEATURES=test-helpers;" -DCURRENT_BUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees/abseil -DCURRENT_PACKAGES_DIR=/home/jeff/pkg/vcpkg/packages/abseil_x64-linux -DCURRENT_PORT_DIR=/home/jeff/pkg/vcpkg/ports/abseil -D_HOST_TRIPLET=x64-linux -DFEATURES=core -DPORT=abseil -DVERSION=20250814.1 -DVCPKG_USE_HEAD_VERSION=0 -D_VCPKG_EDITABLE=0 -D_VCPKG_NO_DOWNLOADS=0 -DZ_VCPKG_CHAINLOAD_TOOLCHAIN_FILE=/home/jeff/pkg/vcpkg/scripts/toolchains/linux.cmake -DZ_VCPKG_POST_PORTFILE_INCLUDES= -DCMD=BUILD -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DTARGET_TRIPLET=x64-linux -DTARGET_TRIPLET_FILE=/home/jeff/pkg/vcpkg/triplets/x64-linux.cmake -DVCPKG_BASE_VERSION=2025-11-19 -DVCPKG_CONCURRENCY=13 -DVCPKG_PLATFORM_TOOLSET=external -DGIT=/usr/bin/git "-DVCPKG_PORT_CONFIGS=/home/jeff/pkg/vcpkg/installed/x64-linux/share/vcpkg-cmake/vcpkg-port-config.cmake;/home/jeff/pkg/vcpkg/installed/x64-linux/share/vcpkg-cmake-config/vcpkg-port-config.cmake" -DVCPKG_ROOT_DIR=/home/jeff/pkg/vcpkg -DPACKAGES_DIR=/home/jeff/pkg/vcpkg/packages -DBUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees -D_VCPKG_INSTALLED_DIR=/home/jeff/pkg/vcpkg/installed -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DVCPKG_MANIFEST_INSTALL=OFF -P /home/jeff/pkg/vcpkg/scripts/ports.cmake)
+Downloading https://github.com/abseil/abseil-cpp/archive/20250814.1.tar.gz -> abseil-abseil-cpp-20250814.1.tar.gz
+Successfully downloaded abseil-abseil-cpp-20250814.1.tar.gz
+-- Extracting source /home/jeff/pkg/vcpkg/downloads/abseil-abseil-cpp-20250814.1.tar.gz
+-- Applying patch 001-mingw-dll.patch
+-- Applying patch 002-string-view.patch
+-- Applying patch 003-force-cxx-17.patch
+-- Using source at /home/jeff/pkg/vcpkg/buildtrees/abseil/src/20250814.1-a96f5d5fc6.clean
+-- Configuring x64-linux-dbg
+-- Configuring x64-linux-rel
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_absl_check.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_absl_log.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_absl_vlog_is_on.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_algorithm.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_algorithm_container.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_any.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_any_invocable.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_atomic_hook.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_bad_any_cast.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_bad_optional_access.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_bad_variant_access.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_base.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_base_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_bind_front.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_bits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_bounded_utf8_length_sequence.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_btree.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_charset.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_check.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_city.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_civil_time.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cleanup.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cleanup_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_common_policy_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_compare.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_compressed_tuple.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_config.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_container_common.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_container_memory.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cord.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cord_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_functions.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_handle.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_info.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_sample_token.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_statistics.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_update_scope.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_cordz_update_tracker.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_core_headers.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_crc32c.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_crc_cord_state.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_crc_cpu_detect.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_crc_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_debugging.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_debugging_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_decode_rust_punycode.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_demangle_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_demangle_rust.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_die_if_null.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_dynamic_annotations.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_endian.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_errno_saver.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_examine_stack.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_exponential_biased.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_failure_signal_handler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_fast_type_id.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_fixed_array.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_commandlineflag.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_commandlineflag_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_config.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_marshalling.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_parse.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_path_util.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_private_handle_accessor.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_program_name.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_reflection.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_usage.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flags_usage_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flat_hash_map.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_flat_hash_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_function_ref.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_graphcycles_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_has_ostream_operator.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hash.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hash_container_defaults.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hash_function_defaults.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hash_policy_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hashtable_control_bytes.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hashtable_debug.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hashtable_debug_hooks.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hashtable_profiler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_hashtablez_sampler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_inlined_vector.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_inlined_vector_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_int128.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_iterator_traits_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_iterator_traits_test_helper_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_kernel_timeout_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_layout.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_leak_check.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_entry.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_flags.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_globals.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_initialize.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_append_truncated.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_check_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_check_op.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_conditions.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_config.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_flags.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_fnmatch.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_format.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_globals.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_log_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_log_sink_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_message.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_nullguard.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_nullstream.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_proto.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_strip.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_structured.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_structured_proto.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_internal_voidify.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_severity.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_sink.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_sink_registry.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_streamer.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_log_structured.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_malloc_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_memory.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_meta.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_no_destructor.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_node_hash_map.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_node_hash_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_node_slot_policy.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_non_temporal_arm_intrinsics.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_non_temporal_memcpy.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_nullability.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_numeric.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_numeric_representation.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_optional.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_overload.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_periodic_sampler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_poison.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_prefetch.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_pretty_function.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_profile_builder.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_bit_gen_ref.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_distributions.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_distribution_caller.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_distribution_test_util.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_entropy_pool.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_fast_uniform_bits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_fastmath.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_generate_real.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_iostream_state_saver.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_mock_helpers.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_nonsecure_base.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_pcg_engine.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_platform.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_randen.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_randen_engine.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_randen_hwaes.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_randen_hwaes_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_randen_slow.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_salted_seed_seq.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_seed_material.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_uniform_helper.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_internal_wide_multiply.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_random.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_seed_gen_exception.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_random_seed_sequences.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_raw_hash_map.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_raw_hash_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_raw_hash_set_resize_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_raw_logging_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_sample_recorder.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_scoped_set_env.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_span.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_spinlock_wait.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_stacktrace.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_status.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_statusor.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_str_format.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_str_format_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_strerror.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_string_view.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_strings.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_strings_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_symbolize.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_synchronization.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_throw_delegate.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_time.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_time_zone.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_tracing_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_type_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_utf8_for_code_point.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_utility.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_variant.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_vlog_config_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_vlog_is_on.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/lib/pkgconfig/absl_weakly_mixed_integer.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_absl_check.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_absl_log.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_absl_vlog_is_on.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_algorithm.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_algorithm_container.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_any.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_any_invocable.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_atomic_hook.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_bad_any_cast.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_bad_optional_access.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_bad_variant_access.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_base.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_base_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_bind_front.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_bits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_bounded_utf8_length_sequence.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_btree.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_charset.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_check.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_city.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_civil_time.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cleanup.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cleanup_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_common_policy_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_compare.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_compressed_tuple.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_config.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_container_common.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_container_memory.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cord.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cord_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_functions.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_handle.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_info.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_sample_token.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_statistics.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_update_scope.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_cordz_update_tracker.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_core_headers.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_crc32c.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_crc_cord_state.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_crc_cpu_detect.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_crc_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_debugging.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_debugging_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_decode_rust_punycode.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_demangle_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_demangle_rust.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_die_if_null.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_dynamic_annotations.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_endian.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_errno_saver.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_examine_stack.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_exponential_biased.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_failure_signal_handler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_fast_type_id.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_fixed_array.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_commandlineflag.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_commandlineflag_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_config.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_marshalling.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_parse.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_path_util.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_private_handle_accessor.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_program_name.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_reflection.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_usage.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flags_usage_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flat_hash_map.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_flat_hash_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_function_ref.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_graphcycles_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_has_ostream_operator.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hash.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hash_container_defaults.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hash_function_defaults.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hash_policy_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hashtable_control_bytes.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hashtable_debug.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hashtable_debug_hooks.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hashtable_profiler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_hashtablez_sampler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_inlined_vector.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_inlined_vector_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_int128.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_iterator_traits_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_iterator_traits_test_helper_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_kernel_timeout_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_layout.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_leak_check.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_entry.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_flags.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_globals.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_initialize.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_append_truncated.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_check_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_check_op.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_conditions.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_config.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_flags.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_fnmatch.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_format.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_globals.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_log_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_log_sink_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_message.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_nullguard.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_nullstream.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_proto.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_strip.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_structured.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_structured_proto.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_internal_voidify.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_severity.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_sink.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_sink_registry.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_streamer.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_log_structured.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_malloc_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_memory.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_meta.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_no_destructor.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_node_hash_map.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_node_hash_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_node_slot_policy.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_non_temporal_arm_intrinsics.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_non_temporal_memcpy.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_nullability.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_numeric.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_numeric_representation.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_optional.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_overload.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_periodic_sampler.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_poison.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_prefetch.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_pretty_function.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_profile_builder.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_bit_gen_ref.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_distributions.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_distribution_caller.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_distribution_test_util.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_entropy_pool.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_fast_uniform_bits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_fastmath.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_generate_real.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_iostream_state_saver.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_mock_helpers.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_nonsecure_base.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_pcg_engine.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_platform.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_randen.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_randen_engine.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_randen_hwaes.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_randen_hwaes_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_randen_slow.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_salted_seed_seq.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_seed_material.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_uniform_helper.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_internal_wide_multiply.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_random.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_seed_gen_exception.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_random_seed_sequences.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_raw_hash_map.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_raw_hash_set.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_raw_hash_set_resize_impl.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_raw_logging_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_sample_recorder.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_scoped_set_env.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_span.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_spinlock_wait.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_stacktrace.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_status.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_statusor.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_str_format.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_str_format_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_strerror.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_string_view.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_strings.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_strings_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_symbolize.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_synchronization.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_throw_delegate.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_time.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_time_zone.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_tracing_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_type_traits.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_utf8_for_code_point.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_utility.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_variant.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_vlog_config_internal.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_vlog_is_on.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/debug/lib/pkgconfig/absl_weakly_mixed_integer.pc
+-- Installing: /home/jeff/pkg/vcpkg/packages/abseil_x64-linux/share/abseil/copyright
+[DEBUG] 1005: cmd_execute_and_stream_data() returned 0 after 31432353 us
+-- Performing post-build validation
+Starting submission of abseil:x64-linux@20250814.1 to 1 binary cache(s) in the background
+Elapsed time to handle abseil:x64-linux: 32 s
+abseil:x64-linux package ABI: 94a70c627fec9f157e55ec269fec82edbd81bffe6172ee53eaac49241cda22c7
+Installing 3/3 re2:x64-linux@2025-11-05...
+Building re2:x64-linux@2025-11-05...
+[DEBUG] 1006: execute_process(GIT_CEILING_DIRECTORIES=/home/jeff/pkg/vcpkg/buildtrees  /usr/local/bin/cmake -DALL_FEATURES= -DCURRENT_BUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees/re2 -DCURRENT_PACKAGES_DIR=/home/jeff/pkg/vcpkg/packages/re2_x64-linux -DCURRENT_PORT_DIR=/home/jeff/pkg/vcpkg/ports/re2 -D_HOST_TRIPLET=x64-linux -DFEATURES=core -DPORT=re2 -DVERSION=2025-11-05 -DVCPKG_USE_HEAD_VERSION=0 -D_VCPKG_EDITABLE=0 -D_VCPKG_NO_DOWNLOADS=0 -DZ_VCPKG_CHAINLOAD_TOOLCHAIN_FILE=/home/jeff/pkg/vcpkg/scripts/toolchains/linux.cmake -DZ_VCPKG_POST_PORTFILE_INCLUDES= -DCMD=BUILD -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DTARGET_TRIPLET=x64-linux -DTARGET_TRIPLET_FILE=/home/jeff/pkg/vcpkg/triplets/x64-linux.cmake -DVCPKG_BASE_VERSION=2025-11-19 -DVCPKG_CONCURRENCY=13 -DVCPKG_PLATFORM_TOOLSET=external -DGIT=/usr/bin/git "-DVCPKG_PORT_CONFIGS=/home/jeff/pkg/vcpkg/installed/x64-linux/share/vcpkg-cmake/vcpkg-port-config.cmake;/home/jeff/pkg/vcpkg/installed/x64-linux/share/vcpkg-cmake-config/vcpkg-port-config.cmake" -DVCPKG_ROOT_DIR=/home/jeff/pkg/vcpkg -DPACKAGES_DIR=/home/jeff/pkg/vcpkg/packages -DBUILDTREES_DIR=/home/jeff/pkg/vcpkg/buildtrees -D_VCPKG_INSTALLED_DIR=/home/jeff/pkg/vcpkg/installed -DDOWNLOADS=/home/jeff/pkg/vcpkg/downloads -DVCPKG_MANIFEST_INSTALL=OFF -P /home/jeff/pkg/vcpkg/scripts/ports.cmake)
+[DEBUG] 1007: execute_process(cd /home/jeff/pkg/vcpkg/packages/abseil_x64-linux && zip --quiet -y -r /home/jeff/pkg/vcpkg/packages/abseil_x64-linux.zip * --exclude .DS_Store)
+Downloading https://github.com/google/re2/archive/927f5d53caf8111721e734cf24724686bb745f55.tar.gz -> google-re2-927f5d53caf8111721e734cf24724686bb745f55.tar.gz
+Successfully downloaded google-re2-927f5d53caf8111721e734cf24724686bb745f55.tar.gz
+[DEBUG] 1007: cmd_execute_and_stream_data() returned 0 after  2050795 us
+-- Extracting source /home/jeff/pkg/vcpkg/downloads/google-re2-927f5d53caf8111721e734cf24724686bb745f55.tar.gz
+-- Using source at /home/jeff/pkg/vcpkg/buildtrees/re2/src/86bb745f55-648e6b982e.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/re2_x64-linux/lib/pkgconfig/re2.pc
+-- Fixing pkgconfig file: /home/jeff/pkg/vcpkg/packages/re2_x64-linux/debug/lib/pkgconfig/re2.pc
+-- Installing: /home/jeff/pkg/vcpkg/packages/re2_x64-linux/share/re2/copyright
+[DEBUG] 1006: cmd_execute_and_stream_data() returned 0 after 13755161 us
+-- Performing post-build validation
+Starting submission of re2:x64-linux@2025-11-05 to 1 binary cache(s) in the background
+Elapsed time to handle re2:x64-linux: 14 s
+re2:x64-linux package ABI: d192da88343b93694c60a45132a08ee67755b50164b383f1ad1f9d4ac3d451b1
+[DEBUG] 1008: execute_process(cd /home/jeff/pkg/vcpkg/packages/re2_x64-linux && zip --quiet -y -r /home/jeff/pkg/vcpkg/packages/re2_x64-linux.zip * --exclude .DS_Store)
+Total install time: 46 s
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Packages installed in this vcpkg installation declare the following licenses:
+Apache-2.0
+BSD-3-Clause
+MIT
+re2 provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(re2 CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE re2::re2)
+
+re2 provides pkg-config modules:
+
+  # RE2 is a fast, safe, thread-friendly regular expression engine.
+  re2
+
+Completed submission of abseil:x64-linux@20250814.1 to 1 binary cache(s) in 2.1 s
+Waiting for 1 remaining binary cache submissions...
+[DEBUG] 1008: cmd_execute_and_stream_data() returned 0 after   666961 us
+Completed submission of re2:x64-linux@2025-11-05 to 1 binary cache(s) in 667 ms (1/1)
+All requested installations completed successfully in: 46 s
+[DEBUG] /source/src/vcpkg/commands.install.cpp(1510): 
+[DEBUG] Time in subprocesses: 48170535us
+[DEBUG] Time in parsing JSON: 132us
+[DEBUG] Time in JSON reader: 85us
+[DEBUG] Time in filesystem: 15711us
+[DEBUG] Time in loading ports: 154us
+[DEBUG] Exiting after 47 s (46563921us)

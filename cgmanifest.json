@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/component-detection-manifest.json",
+  "Registrations": [
+    {
+      "Component": {
+        "Type": "git",
+        "git": {
+          "RepositoryUrl": "https://github.com/catchorg/Catch2",
+          "CommitHash": "62fd660583d3ae7a7886930b413c3c570e89786c"
+        }
+      },
+      "DevelopmentDependency": true,
+      "DependencyRoots": []
+    },
+    {
+      "Component": {
+        "Type": "other",
+        "other": {
+          "name": "fmt",
+          "version": "11.2.0",
+          "downloadUrl": "https://github.com/fmtlib/fmt/archive/refs/tags/11.2.0.tar.gz",
+          "hash": "46974efd36e613477351aa357c451cee434da797c2a505f9f86d73e394dcb35dc2dc0cda66abb98c023e8f24deac9d8e3ee6f9f6c0971cc4c00e37c34aa7f15f"
+        }
+      },
+      "DevelopmentDependency": false,
+      "DependencyRoots": []
+    },
+    {
+      "Component": {
+        "Type": "other",
+        "other": {
+          "name": "CMakeRC",
+          "version": "2.0.1",
+          "downloadUrl": "https://github.com/vector-of-bool/cmrc/archive/refs/tags/2.0.1.tar.gz",
+          "hash": "cb69ff4545065a1a89e3a966e931a58c3f07d468d88ecec8f00da9e6ce3768a41735a46fc71af56e0753926371d3ca5e7a3f2221211b4b1cf634df860c2c997f"
+        }
+      },
+      "DevelopmentDependency": false,
+      "DependencyRoots": []
+    }
+  ]
+}

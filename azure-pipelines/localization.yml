@@ -1,0 +1,50 @@
+trigger:
+- main
+pr: none
+
+variables:
+- name: TeamName
+  value: 'Visual-Cpp-vcpkg'
+
+resources:
+  repositories:
+  - repository: CustomPipelineTemplates
+    type: git
+    name: 1ESPipelineTemplates/MicroBuildTemplate
+
+extends:
+    template: azure-pipelines/MicroBuild.1ES.Official.yml@CustomPipelineTemplates
+    parameters:
+      pool:
+        name: 'VSEngSS-MicroBuild2022-1ES'
+      sdl:
+        sourceAnalysisPool:
+          name: VSEngSS-MicroBuild2022-1ES
+          image: server2022-microbuildVS2022-1es
+          os: windows
+      stages:
+        - stage: stage
+          displayName: Build Localization Files Stage
+          jobs:
+            - job: job
+              displayName: Build Localization Files Job
+              templateContext:
+                outputs:
+                - output: pipelineArtifact
+                  targetPath: $(Build.ArtifactStagingDirectory)
+                  artifactName: drop
+              steps:
+              - task: OneLocBuild@3
+                displayName: 'Build localization files'
+                env:
+                  SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+                inputs:
+                  locProj: 'LocProject.json'
+                  outDir: '$(Build.ArtifactStagingDirectory)'
+                  isCreatePrSelected: true
+                  repoType: 'gitHub'
+                  prSourceBranchPrefix: 'locfiles'
+                  isAutoCompletePrSelected: false
+                  isUseLfLineEndingsSelected: true
+                  dependencyPackageSource: 'https://pkgs.dev.azure.com/devdiv/DevDiv/_packaging/vcpkg.localization/nuget/v3/index.json'
+                  packageSourceAuth: 'patAuth'

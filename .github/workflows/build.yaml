@@ -1,0 +1,84 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      codeql:
+        type: boolean
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2022
+            preset: windows-ci
+          - os: ubuntu-22.04
+            preset: linux-ci
+          - os: ubuntu-24.04-arm
+            preset: linux-arm64-ci
+          - os: macos-14
+            preset: macos-ci
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+          cache: 'npm'
+          cache-dependency-path: vcpkg-artifacts/package-lock.json
+      - name: Enable Problem Matchers
+        run: echo "::add-matcher::.github/workflows/matchers.json"
+      - name: '[CI Only] Initialize CodeQL'
+        if: inputs.codeql && matrix.preset != 'linux-arm64-ci'
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript, c-cpp
+      - name: Configure and Build
+        if: matrix.preset != 'windows-ci'
+        run: |
+          cmake --preset ${{ matrix.preset }}
+          cmake --build --preset ${{ matrix.preset }} -- -k0
+      - name: Configure and Build (Windows)
+        if: matrix.preset == 'windows-ci'
+        shell: cmd
+        run: |
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=amd64 -host_arch=amd64
+          IF %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
+          cl /Bv
+          set CXX=cl
+          set CC=cl
+          cmake --preset ${{ matrix.preset }}
+          IF %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
+          cmake --build --preset ${{ matrix.preset }} -- -k0
+      - name: '[CI Only] Perform CodeQL Analysis'
+        if: inputs.codeql && matrix.preset != 'linux-arm64-ci'
+        uses: github/codeql-action/analyze@v3
+      - name: Run vcpkg and vcpkg-artifacts unit tests
+        run: ctest --preset ${{ matrix.preset }} --output-on-failure 2>&1
+      - name: Get microsoft/vcpkg pinned sha into VCPKG_SHA
+        id: vcpkg_sha
+        shell: pwsh
+        run: |
+          "VCPKG_SHA="+(Get-Content vcpkg-init/vcpkg-scripts-sha.txt -Raw).Trim() >> $env:GITHUB_OUTPUT
+      - name: Checkout microsoft/vcpkg for end-to-end tests
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: ${{ github.workspace }}/vcpkg-root
+          repository: microsoft/vcpkg
+          ref: ${{ steps.vcpkg_sha.outputs.VCPKG_SHA }}
+      - name: Install Mono (for NuGet export)
+        if: matrix.preset == 'linux-arm64-ci'
+        run: |
+          sudo apt update
+          sudo apt install -y mono-complete
+      - name: Run vcpkg end-to-end tests
+        shell: pwsh
+        run: |
+          cd out/build/${{ matrix.preset }}
+          ${{ github.workspace }}/azure-pipelines/end-to-end-tests.ps1 -RunArtifactsTests
+        env:
+          VCPKG_ROOT: ${{ github.workspace }}/vcpkg-root
