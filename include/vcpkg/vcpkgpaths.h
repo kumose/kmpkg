@@ -80,6 +80,7 @@ namespace vcpkg
 
         const Path original_cwd;
         const Path root;
+        const Path repo;
 
     private:
         const std::unique_ptr<VcpkgPathsImpl> m_pimpl;

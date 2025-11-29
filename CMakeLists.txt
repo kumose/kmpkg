@@ -88,7 +88,7 @@ if(NOT DEFINED VCPKG_BASE_VERSION OR VCPKG_BASE_VERSION STREQUAL "")
     endif()
 
     # The first digit is 2 to work with vcpkg_minimum_required in scripts.
-    set(VCPKG_BASE_VERSION "3999-12-31")
+    set(VCPKG_BASE_VERSION "2991-12-31")
 endif()
 
 set(CMAKE_CXX_EXTENSIONS OFF)

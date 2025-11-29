@@ -10,6 +10,7 @@
 #include <vcpkg/vcpkgcmdarguments.h>
 #include <vcpkg/vcpkgpaths.h>
 #include <vcpkg/versions.h>
+#include <vcpkg/config.h>
 
 using namespace vcpkg;
 
@@ -187,7 +188,9 @@ namespace vcpkg
             {
                 RegistryConfig default_registry;
                 default_registry.kind.emplace(JsonIdGit);
-                default_registry.repo.emplace(builtin_registry_git_url.data(), builtin_registry_git_url.size());
+                auto r = KmpkgConfig::get_current_remote_from_config();
+                auto url = r ? *r :"";
+                default_registry.repo.emplace(url.data(), url.size());
                 default_registry.baseline.emplace(*current_builtin_sha);
                 configuration.default_reg.emplace(std::move(default_registry));
             }
