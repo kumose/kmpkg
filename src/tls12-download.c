@@ -12,7 +12,7 @@
 
 /*
  * This program must be as small as possible, because it is committed in binary form to the
- * vcpkg github repo to enable downloading the main vcpkg program on Windows 7, where TLS 1.2 is
+ * kmpkg github repo to enable downloading the main kmpkg program on Windows 7, where TLS 1.2 is
  * unavailable to PowerShell.
  * To that end it avoids using C runtime functions (beyond the vcruntime ones the compiler
  * injects itself).

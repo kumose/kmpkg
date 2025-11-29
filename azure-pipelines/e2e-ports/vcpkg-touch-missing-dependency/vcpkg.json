@@ -1,7 +1,0 @@
-{
-  "name": "vcpkg-touch-missing-dependency",
-  "version": "1.0.0",
-  "dependencies": [
-    "vcpkg-never-builds"
-  ]
-}

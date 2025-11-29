@@ -23,7 +23,7 @@ USA
 Notwithstanding any other terms, you may reverse engineer this software to the extent
 required to debug changes to any libraries licensed under the GNU Lesser General Public License.
 
-The following third party software is incorporated into vcpkg's main program binary:
+The following third party software is incorporated into kmpkg's main program binary:
 
 fmt
 
@@ -71,7 +71,7 @@ SOFTWARE.
 =========================================
 END OF CMakeRC NOTICES, INFORMATION, AND LICENSE
 
-The following third party software is incorporated into vcpkg-artifacts:
+The following third party software is incorporated into kmpkg-artifacts:
 
 ---------------------------------------------------------
 
@@ -936,7 +936,7 @@ THE SOFTWARE.
 
 ---------------------------------------------------------
 
-The following third party software is used in vcpkg's tests:
+The following third party software is used in kmpkg's tests:
 
 Catch2
 

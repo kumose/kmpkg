@@ -9,10 +9,10 @@ Param(
     [string]$GithubRepository = "spdx/license-list-data",
 
     [Parameter()]
-    [string]$LicensesOutFile = "$PSScriptRoot/src/vcpkg/spdx-licenses.inc",
+    [string]$LicensesOutFile = "$PSScriptRoot/src/kmpkg/spdx-licenses.inc",
 
     [Parameter()]
-    [string]$ExceptionsOutFile = "$PSScriptRoot/src/vcpkg/spdx-exceptions.inc"
+    [string]$ExceptionsOutFile = "$PSScriptRoot/src/kmpkg/spdx-exceptions.inc"
 )
 
 function Transform-JsonFile {

@@ -53,19 +53,19 @@ BraceWrapping:
 
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex: '^(<vcpkg/base/system-headers\.h>|"pch\.h")$'
+  - Regex: '^(<kmpkg/base/system-headers\.h>|"pch\.h")$'
     Priority: -1
   - Regex: '^<catch2/catch\.hpp>$'
     Priority: 1
-  - Regex: '^<vcpkg-test/util\.h>$'
+  - Regex: '^<kmpkg-test/util\.h>$'
     Priority: 1
-  - Regex: '^<vcpkg/base/fwd/.*\.h>$'
+  - Regex: '^<kmpkg/base/fwd/.*\.h>$'
     Priority: 2
-  - Regex: '^<vcpkg/fwd/.*\.h>$'
+  - Regex: '^<kmpkg/fwd/.*\.h>$'
     Priority: 3
-  - Regex: '^<vcpkg/base/.*\.h>$'
+  - Regex: '^<kmpkg/base/.*\.h>$'
     Priority: 4
-  - Regex: '^<vcpkg/.*\.h>$'
+  - Regex: '^<kmpkg/.*\.h>$'
     Priority: 5
   - Regex: '^(<Softpub\.h>)$'
     Priority: 8

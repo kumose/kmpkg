@@ -1,0 +1,69 @@
+#pragma once
+
+#include <kmpkg/base/lineinfo.h>
+#include <kmpkg/base/messages.h>
+#include <kmpkg/base/stringview.h>
+
+namespace kmpkg::Checks
+{
+    // Additional convenience overloads on top of basic_checks.h that do formatting.
+
+    // This function is a link seam called by final_cleanup_and_exit.
+    void on_final_cleanup_and_exit();
+
+    [[noreturn]] void log_final_cleanup_and_exit(const LineInfo& line_info, const int exit_code);
+    [[noreturn]] void final_cleanup_and_exit(const int exit_code);
+
+    // Indicate that an internal error has occurred and exit the tool. This should be used when invariants have been
+    // broken.
+    [[noreturn]] void unreachable(const LineInfo& line_info);
+    [[noreturn]] void unreachable(const LineInfo& line_info, StringView message);
+
+    [[noreturn]] void exit_with_code(const LineInfo& line_info, const int exit_code);
+
+    // Exit the tool without an error message.
+    [[noreturn]] void exit_fail(const LineInfo& line_info);
+
+    // Exit the tool successfully.
+    [[noreturn]] void exit_success(const LineInfo& line_info);
+
+    // Display an error message to the user and exit the tool.
+    [[noreturn]] void msg_exit_with_message(const LineInfo& line_info, const LocalizedString& error_message);
+    template<KMPKG_DECL_MSG_TEMPLATE>
+    [[noreturn]] void msg_exit_with_message(const LineInfo& line_info, KMPKG_DECL_MSG_ARGS)
+    {
+        msg_exit_with_message(line_info, msg::format(KMPKG_EXPAND_MSG_ARGS));
+    }
+
+    // If expression is false, call exit_fail.
+    KMPKG_SAL_ANNOTATION(_Post_satisfies_(_Old_(expression)))
+    void check_exit(const LineInfo& line_info, bool expression);
+
+    // if expression is false, call exit_with_message.
+    void check_exit(const LineInfo& line_info, bool expression, StringView error_message);
+    void check_exit(const LineInfo& line_info, bool expression, const LocalizedString&) = delete;
+    void msg_check_exit(const LineInfo& line_info, bool expression, const LocalizedString& error_message);
+    template<KMPKG_DECL_MSG_TEMPLATE>
+    KMPKG_SAL_ANNOTATION(_Post_satisfies_(_Old_(expression)))
+    void msg_check_exit(const LineInfo& line_info, bool expression, KMPKG_DECL_MSG_ARGS)
+    {
+        if (!expression)
+        {
+            // Only create the string if the expression is false
+            msg_exit_with_message(line_info, msg::format(KMPKG_EXPAND_MSG_ARGS));
+        }
+    }
+
+    [[noreturn]] inline void msg_exit_with_error(const LineInfo& line_info, const LocalizedString& message)
+    {
+        msg::write_unlocalized_text_to_stderr(Color::error, error_prefix().append_raw(message).append_raw('\n'));
+        Checks::exit_fail(line_info);
+    }
+    template<KMPKG_DECL_MSG_TEMPLATE>
+    [[noreturn]] void msg_exit_with_error(const LineInfo& line_info, KMPKG_DECL_MSG_ARGS)
+    {
+        msg::write_unlocalized_text_to_stderr(Color::error,
+                                              error_prefix().append(KMPKG_EXPAND_MSG_ARGS).append_raw('\n'));
+        Checks::exit_fail(line_info);
+    }
+}

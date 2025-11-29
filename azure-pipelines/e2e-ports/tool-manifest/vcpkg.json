@@ -1,7 +1,0 @@
-{
-	"name": "tool-manifest",
-	"version-string": "1.0.0",
-	"dependencies": [
-		"tool-liba"
-	]
-}

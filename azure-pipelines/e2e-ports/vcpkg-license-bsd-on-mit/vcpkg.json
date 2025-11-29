@@ -1,8 +1,0 @@
-{
-  "name": "vcpkg-license-bsd-on-mit",
-  "version": "0",
-  "license": "BSD-3-Clause",
-  "dependencies": [
-    "vcpkg-license-mit"
-  ]
-}

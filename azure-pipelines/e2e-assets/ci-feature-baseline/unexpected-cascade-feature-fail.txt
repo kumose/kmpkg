@@ -1,1 +1,0 @@
-vcpkg-depends-on-fail-feature[x]=feature-fails

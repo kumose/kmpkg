@@ -1,5 +1,0 @@
-LIBRARY broken-symlink
-
-EXPORTS
-
-hello_symlink_earth

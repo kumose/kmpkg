@@ -11,8 +11,7 @@
 .DS_Store
 CMakeLists.txt.user
 .cache
-/vcpkg-artifacts/node_modules/
 **/dist/
-/vcpkg-root
+/kmpkg-root
 /CMakeUserPresets.json
 /work

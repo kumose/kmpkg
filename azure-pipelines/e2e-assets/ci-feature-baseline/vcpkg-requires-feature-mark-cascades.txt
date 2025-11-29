@@ -1,1 +1,0 @@
-vcpkg-requires-feature[cascades] = cascade

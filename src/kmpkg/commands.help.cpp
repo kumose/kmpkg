@@ -1,0 +1,200 @@
+#include <kmpkg/base/cmd-parser.h>
+#include <kmpkg/base/message_sinks.h>
+#include <kmpkg/base/strings.h>
+#include <kmpkg/base/util.h>
+
+#include <kmpkg/binarycaching.h>
+#include <kmpkg/commands.h>
+#include <kmpkg/commands.help.h>
+#include <kmpkg/documentation.h>
+#include <kmpkg/metrics.h>
+#include <kmpkg/kmpkgcmdarguments.h>
+#include <kmpkg/kmpkgpaths.h>
+
+using namespace kmpkg;
+
+namespace
+{
+    struct Topic
+    {
+        StringLiteral name;
+        void (*print)(const KmpkgPaths&);
+    };
+
+    LocalizedString help_topics();
+
+    void help_topic_valid_triplet(const TripletDatabase& database)
+    {
+        LocalizedString result;
+        append_help_topic_valid_triplet(result, database);
+        msg::print(result);
+    }
+
+    void help_topic_versioning(const KmpkgPaths&)
+    {
+        HelpTableFormatter tbl;
+        tbl.text(msg::format(msgHelpVersioning));
+        tbl.blank();
+        tbl.blank();
+        tbl.header(msg::format(msgHelpVersionSchemes));
+        tbl.format("version", msg::format(msgHelpVersionScheme));
+        tbl.format("version-date", msg::format(msgHelpVersionDateScheme));
+        tbl.format("version-semver", msg::format(msgHelpVersionSemverScheme));
+        tbl.format("version-string", msg::format(msgHelpVersionStringScheme));
+        tbl.blank();
+        tbl.text(msg::format(msgHelpPortVersionScheme));
+        tbl.blank();
+        tbl.blank();
+        tbl.header(msg::format(msgHelpManifestConstraints));
+        tbl.format("builtin-baseline", msg::format(msgHelpBuiltinBase));
+        tbl.blank();
+        tbl.format("version>=", msg::format(msgHelpVersionGreater));
+        tbl.blank();
+        tbl.format("overrides", msg::format(msgHelpOverrides));
+        tbl.blank();
+        tbl.text(msg::format(msgHelpMinVersion));
+        tbl.blank();
+        tbl.text(msg::format(msgHelpUpdateBaseline));
+        tbl.blank();
+        tbl.text(msg::format(msgHelpPackagePublisher));
+        tbl.blank();
+        tbl.text(msg::format(msgHelpExampleManifest));
+        tbl.blank();
+        tbl.text(R"({
+    "builtin-baseline": "a14a6bcb27287e3ec138dba1b948a0cdbc337a3a",
+    "dependencies": [
+        { "name": "zlib", "version>=": "1.2.11#8" },
+        "rapidjson"
+    ],
+    "overrides": [
+        { "name": "rapidjson", "version": "2020-09-14" }
+    ]
+})");
+        msg::println(LocalizedString::from_raw(std::move(tbl).m_str));
+        msg::println(msgExtendedDocumentationAtUrl, msg::url = docs::versioning_url);
+    }
+
+    constexpr Topic topics[] = {
+        {"assetcaching", [](const KmpkgPaths&) { msg::println(format_help_topic_asset_caching()); }},
+        {"binarycaching", [](const KmpkgPaths&) { msg::println(format_help_topic_binary_caching()); }},
+        {"commands", [](const KmpkgPaths&) { print_full_command_list(); }},
+        {"topics", [](const KmpkgPaths&) { msg::println(help_topics()); }},
+        {"triplet", [](const KmpkgPaths& paths) { help_topic_valid_triplet(paths.get_triplet_db()); }},
+        {"versioning", help_topic_versioning},
+    };
+
+    LocalizedString help_topics()
+    {
+        std::vector<LocalizedString> all_topic_names;
+        for (auto&& topic : topics)
+        {
+            all_topic_names.push_back(LocalizedString::from_raw(topic.name));
+        }
+
+        for (auto&& command_metadata : get_all_commands_metadata())
+        {
+            all_topic_names.push_back(LocalizedString::from_raw(command_metadata->name));
+        }
+
+        Util::sort(all_topic_names);
+
+        LocalizedString result;
+        result.append(msgAvailableHelpTopics);
+        result.append_floating_list(1, all_topic_names);
+        return result;
+    }
+
+} // unnamed namespace
+
+namespace kmpkg
+{
+    constexpr CommandMetadata CommandHelpMetadata{
+        "help",
+        msgHelpTopicCommand,
+        {"kmpkg help topics", "kmpkg help commands", "kmpkg help install"},
+        Undocumented,
+        AutocompletePriority::Public,
+        0,
+        1,
+        {},
+        nullptr,
+    };
+
+    void append_help_topic_valid_triplet(LocalizedString& result, const TripletDatabase& database)
+    {
+        std::map<StringView, std::vector<const TripletFile*>> triplets_per_location;
+        Util::group_by(database.available_triplets,
+                       &triplets_per_location,
+                       [](const TripletFile& triplet_file) -> StringView { return triplet_file.location; });
+
+        result.append(msgBuiltInTriplets).append_raw('\n');
+        for (auto* triplet : triplets_per_location[database.default_triplet_directory])
+        {
+            result.append_indent().append_raw(triplet->name).append_raw('\n');
+        }
+
+        triplets_per_location.erase(database.default_triplet_directory);
+        result.append(msgCommunityTriplets).append_raw('\n');
+        for (auto* triplet : triplets_per_location[database.community_triplet_directory])
+        {
+            result.append_indent().append_raw(triplet->name).append_raw('\n');
+        }
+
+        triplets_per_location.erase(database.community_triplet_directory);
+        for (auto&& kv_pair : triplets_per_location)
+        {
+            result.append(msgOverlayTriplets, msg::path = kv_pair.first).append_raw('\n');
+            for (auto* triplet : kv_pair.second)
+            {
+                result.append_indent().append_raw(triplet->name).append_raw('\n');
+            }
+        }
+
+        result.append(msgSeeURL, msg::url = docs::triplets_url);
+        result.append_raw('\n');
+    }
+
+    void command_help_and_exit(const KmpkgCmdArguments& args, const KmpkgPaths& paths)
+    {
+        const auto parsed = args.parse_arguments(CommandHelpMetadata);
+
+        if (parsed.command_arguments.empty())
+        {
+            msg::write_unlocalized_text_to_stdout(Color::none, get_zero_args_usage());
+            Checks::exit_success(KMPKG_LINE_INFO);
+        }
+        const auto& topic = parsed.command_arguments[0];
+        if (Strings::case_insensitive_ascii_equals(topic, "triplets") ||
+            Strings::case_insensitive_ascii_equals(topic, "triple"))
+        {
+            help_topic_valid_triplet(paths.get_triplet_db());
+            get_global_metrics_collector().track_string(StringMetric::CommandContext, "triplet");
+            Checks::exit_success(KMPKG_LINE_INFO);
+        }
+
+        for (auto&& candidate : topics)
+        {
+            if (Strings::case_insensitive_ascii_equals(candidate.name, topic))
+            {
+                candidate.print(paths);
+                get_global_metrics_collector().track_string(StringMetric::CommandContext, candidate.name);
+                Checks::exit_success(KMPKG_LINE_INFO);
+            }
+        }
+
+        for (auto&& command_metadata : get_all_commands_metadata())
+        {
+            if (Strings::case_insensitive_ascii_equals(command_metadata->name, topic))
+            {
+                msg::print(usage_for_command(*command_metadata));
+                get_global_metrics_collector().track_string(StringMetric::CommandContext, command_metadata->name);
+                Checks::exit_success(KMPKG_LINE_INFO);
+            }
+        }
+
+        stderr_sink.println(msg::format_error(msgUnknownTopic, msg::value = topic));
+        stderr_sink.println(help_topics());
+        get_global_metrics_collector().track_string(StringMetric::CommandContext, "unknown");
+        Checks::exit_fail(KMPKG_LINE_INFO);
+    }
+} // namespace kmpkg

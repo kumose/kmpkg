@@ -511,11 +511,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";AVcpkgRepositoryCommit" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";AKmpkgRepositoryCommit" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[a vcpkg repository commit]]></Val>
+          <Val><![CDATA[a kmpkg repository commit]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[potvrzení úložiště vcpkg]]></Val>
+            <Val><![CDATA[potvrzení úložiště kmpkg]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -597,9 +597,9 @@
       </Item>
       <Item ItemId=";AddPortSucceeded" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Succeeded in adding ports to vcpkg.json file.]]></Val>
+          <Val><![CDATA[Succeeded in adding ports to kmpkg.json file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Porty se úspěšně přidaly do souboru vcpkg.json.]]></Val>
+            <Val><![CDATA[Porty se úspěšně přidaly do souboru kmpkg.json.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -636,9 +636,9 @@
       </Item>
       <Item ItemId=";AddVersionArtifactsOnly" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[--version is artifacts only and can't be used with vcpkg add port]]></Val>
+          <Val><![CDATA[--version is artifacts only and can't be used with kmpkg add port]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[--version je jenom artefakty a nedá se použít s portem vcpkg add.]]></Val>
+            <Val><![CDATA[--version je jenom artefakty a nedá se použít s portem kmpkg add.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -858,9 +858,9 @@
       </Item>
       <Item ItemId=";AddingCompletionEntry" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Adding vcpkg completion entry to {path}.]]></Val>
+          <Val><![CDATA[Adding kmpkg completion entry to {path}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Položka dokončení vcpkg se přidává do {path}.]]></Val>
+            <Val><![CDATA[Položka dokončení kmpkg se přidává do {path}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -960,9 +960,9 @@
       </Item>
       <Item ItemId=";AmbiguousConfig" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Ambiguous vcpkg configuration provided by both manifest and configuration file. Choose one by deleting this file or deleting "{json_field}" from the manifest file.]]></Val>
+          <Val><![CDATA[Ambiguous kmpkg configuration provided by both manifest and configuration file. Choose one by deleting this file or deleting "{json_field}" from the manifest file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nejednoznačná konfigurace vcpkg poskytovaná manifestem i konfiguračním souborem. Zvolte jednu možnost odstraněním tohoto souboru nebo odstraněním {json_field} ze souboru manifestu.]]></Val>
+            <Val><![CDATA[Nejednoznačná konfigurace kmpkg poskytovaná manifestem i konfiguračním souborem. Zvolte jednu možnost odstraněním tohoto souboru nebo odstraněním {json_field} ze souboru manifestu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1084,11 +1084,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";AnObjectContainingVcpkgArtifactsMetadata" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";AnObjectContainingKmpkgArtifactsMetadata" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[an object containing vcpkg-artifacts metadata]]></Val>
+          <Val><![CDATA[an object containing kmpkg-artifacts metadata]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[objekt obsahující metadata vcpkg-artifacts]]></Val>
+            <Val><![CDATA[objekt obsahující metadata kmpkg-artifacts]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1140,9 +1140,9 @@
       </Item>
       <Item ItemId=";AppliedUserIntegration" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Applied user-wide integration for this vcpkg root.]]></Val>
+          <Val><![CDATA[Applied user-wide integration for this kmpkg root.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pro tento kořen vcpkg byla použita integrace na úrovni uživatele.]]></Val>
+            <Val><![CDATA[Pro tento kořen kmpkg byla použita integrace na úrovni uživatele.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1154,7 +1154,7 @@
             <Val><![CDATA[nasazování závislostí]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg applocal processing: {path}]]></Val>
+            <Val><![CDATA[kmpkg applocal processing: {path}]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1170,9 +1170,9 @@
       </Item>
       <Item ItemId=";ArtifactsBootstrapFailed" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg-artifacts is not installed and could not be bootstrapped.]]></Val>
+          <Val><![CDATA[kmpkg-artifacts is not installed and could not be bootstrapped.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg-artifacts není nainstalovaný a nelze jej spustit.]]></Val>
+            <Val><![CDATA[kmpkg-artifacts není nainstalovaný a nelze jej spustit.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1575,12 +1575,12 @@
       </Item>
       <Item ItemId=";AssetSourcesArg" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Asset caching sources. See 'vcpkg help assetcaching']]></Val>
+          <Val><![CDATA[Asset caching sources. See 'kmpkg help assetcaching']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zdroje ukládání prostředků do mezipaměti. Viz nvcpkg help assetcaching]]></Val>
+            <Val><![CDATA[Zdroje ukládání prostředků do mezipaměti. Viz nkmpkg help assetcaching]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Add sources for asset caching. See 'vcpkg help assetcaching'.]]></Val>
+            <Val><![CDATA[Add sources for asset caching. See 'kmpkg help assetcaching'.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1596,9 +1596,9 @@
       </Item>
       <Item ItemId=";AttemptingToSetBuiltInBaseline" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[attempting to set builtin-baseline in vcpkg.json while overriding the default-registry in vcpkg-configuration.json.]A;the default-registry from vcpkg-configuration.json will be used.]]></Val>
+          <Val><![CDATA[attempting to set builtin-baseline in kmpkg.json while overriding the default-registry in kmpkg-configuration.json.]A;the default-registry from kmpkg-configuration.json will be used.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[při pokusu o nastavení předdefinovaného směrného plánu v souboru vcpkg.json při přepsání výchozího registru v souboru vcpkg-configuration.json.]A;se použije výchozí registr z vcpkg-configuration.json.]]></Val>
+            <Val><![CDATA[při pokusu o nastavení předdefinovaného směrného plánu v souboru kmpkg.json při přepsání výchozího registru v souboru kmpkg-configuration.json.]A;se použije výchozí registr z kmpkg-configuration.json.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1668,9 +1668,9 @@
       </Item>
       <Item ItemId=";BaselineConflict" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Specifying vcpkg-configuration.default-registry in a manifest file conflicts with built-in baseline.]A;Please remove one of these conflicting settings.]]></Val>
+          <Val><![CDATA[Specifying kmpkg-configuration.default-registry in a manifest file conflicts with built-in baseline.]A;Please remove one of these conflicting settings.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zadání vcpkg-configuration.default-registry v souboru manifestu je v konfliktu s předdefinovanými standardními hodnotami.]A;Odeberte jedno z těchto konfliktních nastavení.]]></Val>
+            <Val><![CDATA[Zadání kmpkg-configuration.default-registry v souboru manifestu je v konfliktu s předdefinovanými standardními hodnotami.]A;Odeberte jedno z těchto konfliktních nastavení.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1691,7 +1691,7 @@
             <Val><![CDATA[{package_name} nemá přiřazenou verzi]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Baseline version not found. Run:]A;vcpkg x-add-version {package_name}]A;git add versions]A;git commit -m "Update version database"]A;to set {version} as the baseline version.]]></Val>
+            <Val><![CDATA[Baseline version not found. Run:]A;kmpkg x-add-version {package_name}]A;git add versions]A;git commit -m "Update version database"]A;to set {version} as the baseline version.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1716,12 +1716,12 @@
       </Item>
       <Item ItemId=";BinarySourcesArg" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Binary caching sources. See 'vcpkg help binarycaching']]></Val>
+          <Val><![CDATA[Binary caching sources. See 'kmpkg help binarycaching']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Binární zdroje ukládání do mezipaměti. Viz vcpkg help binarycaching]]></Val>
+            <Val><![CDATA[Binární zdroje ukládání do mezipaměti. Viz kmpkg help binarycaching]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Add sources for binary caching. See 'vcpkg help binarycaching'.]]></Val>
+            <Val><![CDATA[Add sources for binary caching. See 'kmpkg help binarycaching'.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -1911,9 +1911,9 @@
       </Item>
       <Item ItemId=";BuildTroubleshootingMessage1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Please ensure you're using the latest port files with `git pull` and `vcpkg update`.]A;Then check for known issues at:]]></Val>
+          <Val><![CDATA[Please ensure you're using the latest port files with `git pull` and `kmpkg update`.]A;Then check for known issues at:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Ujistěte se prosím, že používáte nejnovější soubory portů s git pull a vcpkg update.]A;Pak zkontrolujte známé problémy na:]]></Val>
+            <Val><![CDATA[Ujistěte se prosím, že používáte nejnovější soubory portů s git pull a kmpkg update.]A;Pak zkontrolujte známé problémy na:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -1991,16 +1991,16 @@
             <Val><![CDATA[Předdefinovaná trojčata:]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg built-in triplets:]]></Val>
+            <Val><![CDATA[kmpkg built-in triplets:]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";BuiltWithIncorrectArchitecture" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The triplet requests that binaries are built for {arch}, but the following binaries were built for a different architecture. This usually means toolchain information is incorrectly conveyed to the binaries' build system. To suppress this message, add set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)]]></Val>
+          <Val><![CDATA[The triplet requests that binaries are built for {arch}, but the following binaries were built for a different architecture. This usually means toolchain information is incorrectly conveyed to the binaries' build system. To suppress this message, add set(KMPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Triplet požaduje, aby byly binární soubory sestaveny pro {arch}, ale následující binární soubory byly sestaveny pro jinou architekturu. To obvykle znamená, že informace o sadě nástrojů se nesprávně předávají do sestavovacího systému binárních souborů. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)]]></Val>
+            <Val><![CDATA[Triplet požaduje, aby byly binární soubory sestaveny pro {arch}, ale následující binární soubory byly sestaveny pro jinou architekturu. To obvykle znamená, že informace o sadě nástrojů se nesprávně předávají do sestavovacího systému binárních souborů. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_ARCHITECTURE_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The following files were built for an incorrect architecture:]]></Val>
@@ -2253,9 +2253,9 @@
       </Item>
       <Item ItemId=";ChecksFailedCheck" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg has crashed; no additional details are available.]]></Val>
+          <Val><![CDATA[kmpkg has crashed; no additional details are available.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg se zhroutilo. blížší podrobnosti nejsou k dispozici.]]></Val>
+            <Val><![CDATA[kmpkg se zhroutilo. blížší podrobnosti nejsou k dispozici.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2382,9 +2382,9 @@
       </Item>
       <Item ItemId=";CmdAcquireExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg acquire <artifact>]]></Val>
+          <Val><![CDATA[kmpkg acquire <artifact>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg acquire <artifact>]]></Val>
+            <Val><![CDATA[kmpkg acquire <artifact>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2418,18 +2418,18 @@
       </Item>
       <Item ItemId=";CmdAddExample1" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg add port <port name>]]></Val>
+          <Val><![CDATA[kmpkg add port <port name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg add port <port name>]]></Val>
+            <Val><![CDATA[kmpkg add port <port name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdAddExample2" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg add artifact <artifact name>]]></Val>
+          <Val><![CDATA[kmpkg add artifact <artifact name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[přidat artefakt vcpkg <artifact name>]]></Val>
+            <Val><![CDATA[přidat artefakt kmpkg <artifact name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2445,9 +2445,9 @@
       </Item>
       <Item ItemId=";CmdAddVersionExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-add-version <port name>]]></Val>
+          <Val><![CDATA[kmpkg x-add-version <port name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-add-version <název portu>]]></Val>
+            <Val><![CDATA[kmpkg x-add-version <název portu>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2478,12 +2478,12 @@
       </Item>
       <Item ItemId=";CmdAddVersionOptSkipFormatChk" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Skips the formatting check of vcpkg.json files]]></Val>
+          <Val><![CDATA[Skips the formatting check of kmpkg.json files]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Přeskočí kontrolu formátování souborů vcpkg.json]]></Val>
+            <Val><![CDATA[Přeskočí kontrolu formátování souborů kmpkg.json]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Skips the formatting check of vcpkg.json files.]]></Val>
+            <Val><![CDATA[Skips the formatting check of kmpkg.json files.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -2523,36 +2523,36 @@
       </Item>
       <Item ItemId=";CmdBootstrapStandaloneSynopsis" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Bootstraps a vcpkg root from only a vcpkg binary]]></Val>
+          <Val><![CDATA[Bootstraps a kmpkg root from only a kmpkg binary]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Spustí kořen vcpkg jenom z binárního souboru vcpkg.]]></Val>
+            <Val><![CDATA[Spustí kořen kmpkg jenom z binárního souboru kmpkg.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdBuildExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg build <port spec>]]></Val>
+          <Val><![CDATA[kmpkg build <port spec>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[sestavení vcpkg <port spec>]]></Val>
+            <Val><![CDATA[sestavení kmpkg <port spec>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdBuildExternalExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg build-external <port name> <source path>]]></Val>
+          <Val><![CDATA[kmpkg build-external <port name> <source path>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg build-external <port name> <source path>]]></Val>
+            <Val><![CDATA[kmpkg build-external <port name> <source path>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdBuildExternalExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg build-external zlib2 C:\path\to\dir\with\vcpkg.json]]></Val>
+          <Val><![CDATA[kmpkg build-external zlib2 C:\path\to\dir\with\kmpkg.json]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg build-external zlib2 C:\path\to\dir\with\vcpkg.json]]></Val>
+            <Val><![CDATA[kmpkg build-external zlib2 C:\path\to\dir\with\kmpkg.json]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2577,9 +2577,9 @@
       </Item>
       <Item ItemId=";CmdCheckSupportExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-check-support <port name>]]></Val>
+          <Val><![CDATA[kmpkg x-check-support <port name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-check-support <port name>]]></Val>
+            <Val><![CDATA[kmpkg x-check-support <port name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2649,27 +2649,27 @@
       </Item>
       <Item ItemId=";CmdCreateExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg create <port name> <uri>]]></Val>
+          <Val><![CDATA[kmpkg create <port name> <uri>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg create <port name> <uri>]]></Val>
+            <Val><![CDATA[kmpkg create <port name> <uri>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdCreateExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg create my-fancy-port https://example.com/sources.zip]]></Val>
+          <Val><![CDATA[kmpkg create my-fancy-port https://example.com/sources.zip]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg create my-fancy-port https://example.com/sources.zip]]></Val>
+            <Val><![CDATA[kmpkg create my-fancy-port https://example.com/sources.zip]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdCreateExample3" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg create <port name> <uri> <downloaded filename>]]></Val>
+          <Val><![CDATA[kmpkg create <port name> <uri> <downloaded filename>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg create <port name> <uri> <downloaded filename>]]></Val>
+            <Val><![CDATA[kmpkg create <port name> <uri> <downloaded filename>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2685,9 +2685,9 @@
       </Item>
       <Item ItemId=";CmdDependInfoExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg depend-info <port name>]]></Val>
+          <Val><![CDATA[kmpkg depend-info <port name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg depend-info <port name>]]></Val>
+            <Val><![CDATA[kmpkg depend-info <port name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2781,27 +2781,27 @@
       </Item>
       <Item ItemId=";CmdDownloadExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-download <filepath> <sha512> --url=https://...]]></Val>
+          <Val><![CDATA[kmpkg x-download <filepath> <sha512> --url=https://...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-download <filepath> <sha512> --url=https://...]]></Val>
+            <Val><![CDATA[kmpkg x-download <filepath> <sha512> --url=https://...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdDownloadExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-download <filepath> --sha512=<sha512> --url=https://...]]></Val>
+          <Val><![CDATA[kmpkg x-download <filepath> --sha512=<sha512> --url=https://...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-download <filepath> --sha512=<sha512> --url=https://...]]></Val>
+            <Val><![CDATA[kmpkg x-download <filepath> --sha512=<sha512> --url=https://...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdDownloadExample3" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-download <filepath> --skip-sha512 --url=https://...]]></Val>
+          <Val><![CDATA[kmpkg x-download <filepath> --skip-sha512 --url=https://...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-download <filepath> --skip-sha512 --url=https://...]]></Val>
+            <Val><![CDATA[kmpkg x-download <filepath> --skip-sha512 --url=https://...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2817,9 +2817,9 @@
       </Item>
       <Item ItemId=";CmdEditExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg edit <port name>]]></Val>
+          <Val><![CDATA[kmpkg edit <port name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg edit <port name>]]></Val>
+            <Val><![CDATA[kmpkg edit <port name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -2871,12 +2871,12 @@
       </Item>
       <Item ItemId=";CmdExportExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg export <port names> [--nuget]5D; [--output-dir=out_dir]5D;]]></Val>
+          <Val><![CDATA[kmpkg export <port names> [--nuget]5D; [--output-dir=out_dir]5D;]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg export <port names> [--nuget]5D; [--directory=out_dir]5D;]]></Val>
+            <Val><![CDATA[kmpkg export <port names> [--nuget]5D; [--directory=out_dir]5D;]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg export <port names> [--nuget]5D; [--directory=out_dir]5D;]]></Val>
+            <Val><![CDATA[kmpkg export <port names> [--nuget]5D; [--directory=out_dir]5D;]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -3042,18 +3042,18 @@
       </Item>
       <Item ItemId=";CmdFindExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg find port <port name>]]></Val>
+          <Val><![CDATA[kmpkg find port <port name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg find port <port name>]]></Val>
+            <Val><![CDATA[kmpkg find port <port name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdFindExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg find artifact <artifact name>]]></Val>
+          <Val><![CDATA[kmpkg find artifact <artifact name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg find artifact <artifact name>]]></Val>
+            <Val><![CDATA[kmpkg find artifact <artifact name>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3069,9 +3069,9 @@
       </Item>
       <Item ItemId=";CmdFormatFeatureBaselineExample" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg format-feature-baseline <ci.feature.baseline.txt path>]]></Val>
+          <Val><![CDATA[kmpkg format-feature-baseline <ci.feature.baseline.txt path>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg format-feature-baseline <ci.feature.baseline.txt path>]]></Val>
+            <Val><![CDATA[kmpkg format-feature-baseline <ci.feature.baseline.txt path>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3087,9 +3087,9 @@
       </Item>
       <Item ItemId=";CmdFormatManifestExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg format-manifest <vcpkg.json path>]]></Val>
+          <Val><![CDATA[kmpkg format-manifest <kmpkg.json path>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg format-manifest <vcpkg.json path>]]></Val>
+            <Val><![CDATA[kmpkg format-manifest <kmpkg.json path>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3120,27 +3120,27 @@
       </Item>
       <Item ItemId=";CmdFormatManifestSynopsis" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Prettyfies vcpkg.json]]></Val>
+          <Val><![CDATA[Prettyfies kmpkg.json]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Prettyfies vcpkg.json]]></Val>
+            <Val><![CDATA[Prettyfies kmpkg.json]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdGenerateMSBuildPropsExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg generate-msbuild-props --msbuild-props <path>]]></Val>
+          <Val><![CDATA[kmpkg generate-msbuild-props --msbuild-props <path>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg generate-msbuild-props --msbuild-props <cesta>]]></Val>
+            <Val><![CDATA[kmpkg generate-msbuild-props --msbuild-props <cesta>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdGenerateMSBuildPropsExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg generate-msbuild-props --msbuild-props out.props]]></Val>
+          <Val><![CDATA[kmpkg generate-msbuild-props --msbuild-props out.props]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg generate-msbuild-props --msbuild-props out.props]]></Val>
+            <Val><![CDATA[kmpkg generate-msbuild-props --msbuild-props out.props]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3168,18 +3168,18 @@
       </Item>
       <Item ItemId=";CmdHashExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg hash <path>]]></Val>
+          <Val><![CDATA[kmpkg hash <path>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg hash <path>]]></Val>
+            <Val><![CDATA[kmpkg hash <path>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdHashExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg hash <path> SHA256]]></Val>
+          <Val><![CDATA[kmpkg hash <path> SHA256]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg hash <path> SHA256]]></Val>
+            <Val><![CDATA[kmpkg hash <path> SHA256]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3255,9 +3255,9 @@
       </Item>
       <Item ItemId=";CmdInitRegistryExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-init-registry <path>]]></Val>
+          <Val><![CDATA[kmpkg x-init-registry <path>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-init-registry <path>]]></Val>
+            <Val><![CDATA[kmpkg x-init-registry <path>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3273,18 +3273,18 @@
       </Item>
       <Item ItemId=";CmdInstallExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg install <port name> <port name>...]]></Val>
+          <Val><![CDATA[kmpkg install <port name> <port name>...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg install <port name> <port name>...]]></Val>
+            <Val><![CDATA[kmpkg install <port name> <port name>...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdIntegrateSynopsis" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Integrates vcpkg with machines, projects, or shells]]></Val>
+          <Val><![CDATA[Integrates kmpkg with machines, projects, or shells]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Integruje vcpkg s počítači, projekty nebo prostředími]]></Val>
+            <Val><![CDATA[Integruje kmpkg s počítači, projekty nebo prostředími]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3300,18 +3300,18 @@
       </Item>
       <Item ItemId=";CmdListExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg list <filter>]]></Val>
+          <Val><![CDATA[kmpkg list <filter>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg list <filter>]]></Val>
+            <Val><![CDATA[kmpkg list <filter>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdNewExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg new --name=example --version=1.0]]></Val>
+          <Val><![CDATA[kmpkg new --name=example --version=1.0]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg new --name=example --version=1.0]]></Val>
+            <Val><![CDATA[kmpkg new --name=example --version=1.0]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3330,12 +3330,12 @@
       </Item>
       <Item ItemId=";CmdNewOptSingleFile" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Embeds vcpkg-configuration.json into vcpkg.json]]></Val>
+          <Val><![CDATA[Embeds kmpkg-configuration.json into kmpkg.json]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vloží soubor vcpkg-configuration.json do souboru vcpkg.json]]></Val>
+            <Val><![CDATA[Vloží soubor kmpkg-configuration.json do souboru kmpkg.json]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Embed vcpkg-configuration.json into vcpkg.json.]]></Val>
+            <Val><![CDATA[Embed kmpkg-configuration.json into kmpkg.json.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -3420,36 +3420,36 @@
       </Item>
       <Item ItemId=";CmdOwnsExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg owns <pattern>]]></Val>
+          <Val><![CDATA[kmpkg owns <pattern>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg owns <vzor>]]></Val>
+            <Val><![CDATA[kmpkg owns <vzor>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdPackageInfoExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-package-info <package name>...]]></Val>
+          <Val><![CDATA[kmpkg x-package-info <package name>...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-package-info <název balíčku>...]]></Val>
+            <Val><![CDATA[kmpkg x-package-info <název balíčku>...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdPortsdiffExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg portsdiff <branch name>]]></Val>
+          <Val><![CDATA[kmpkg portsdiff <branch name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg portsdiff <název větve>]]></Val>
+            <Val><![CDATA[kmpkg portsdiff <název větve>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdPortsdiffExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg portsdiff <from> <to>]]></Val>
+          <Val><![CDATA[kmpkg portsdiff <from> <to>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg portsdiff <od> <do>]]></Val>
+            <Val><![CDATA[kmpkg portsdiff <od> <do>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3501,9 +3501,9 @@
       </Item>
       <Item ItemId=";CmdRemoveExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg remove <package name>...]]></Val>
+          <Val><![CDATA[kmpkg remove <package name>...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg remove <název balíčku>...]]></Val>
+            <Val><![CDATA[kmpkg remove <název balíčku>...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3546,18 +3546,18 @@
       </Item>
       <Item ItemId=";CmdSearchExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg search <pattern>]]></Val>
+          <Val><![CDATA[kmpkg search <pattern>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg search <vzor>]]></Val>
+            <Val><![CDATA[kmpkg search <vzor>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdSetInstalledExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-set-installed <package name> <package name>...]]></Val>
+          <Val><![CDATA[kmpkg x-set-installed <package name> <package name>...]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-set-installed <název balíčku> <název balíčku>...]]></Val>
+            <Val><![CDATA[kmpkg x-set-installed <název balíčku> <název balíčku>...]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3588,12 +3588,12 @@
       </Item>
       <Item ItemId=";CmdSetInstalledOptWritePkgConfig" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Writes a NuGet packages.config-formatted file for use with external binary caching. See `vcpkg help binarycaching` for more information]]></Val>
+          <Val><![CDATA[Writes a NuGet packages.config-formatted file for use with external binary caching. See `kmpkg help binarycaching` for more information]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zapíše soubor ve formátu NuGet packages.config pro použití s externí binární mezipamětí. Další informace najdete v vcpkg help binarycaching]]></Val>
+            <Val><![CDATA[Zapíše soubor ve formátu NuGet packages.config pro použití s externí binární mezipamětí. Další informace najdete v kmpkg help binarycaching]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Writes out a NuGet packages.config-formatted file for use with external binary caching.]A;See `vcpkg help binarycaching` for more information.]]></Val>
+            <Val><![CDATA[Writes out a NuGet packages.config-formatted file for use with external binary caching.]A;See `kmpkg help binarycaching` for more information.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -3720,12 +3720,12 @@
       </Item>
       <Item ItemId=";CmdUpdateBaselineOptInitial" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Adds a `builtin-baseline` to a vcpkg.json that doesn't already have it]]></Val>
+          <Val><![CDATA[Adds a `builtin-baseline` to a kmpkg.json that doesn't already have it]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Přidá builtin-baseline do souboru vcpkg.json, který ho ještě nemá]]></Val>
+            <Val><![CDATA[Přidá builtin-baseline do souboru kmpkg.json, který ho ještě nemá]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[add a `builtin-baseline` to a vcpkg.json that doesn't already have it]]></Val>
+            <Val><![CDATA[add a `builtin-baseline` to a kmpkg.json that doesn't already have it]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -3771,9 +3771,9 @@
       </Item>
       <Item ItemId=";CmdUpdateRegistryExample3" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg x-update-registry <artifact registry name>]]></Val>
+          <Val><![CDATA[kmpkg x-update-registry <artifact registry name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg x-update-registry <název registru artefaktů>]]></Val>
+            <Val><![CDATA[kmpkg x-update-registry <název registru artefaktů>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3807,9 +3807,9 @@
       </Item>
       <Item ItemId=";CmdUseExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg use <artifact name>]]></Val>
+          <Val><![CDATA[kmpkg use <artifact name>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg use <název artefaktu>]]></Val>
+            <Val><![CDATA[kmpkg use <název artefaktu>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3894,18 +3894,18 @@
       </Item>
       <Item ItemId=";CmdZExtractExample1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg z-extract <archive path> <output directory>]]></Val>
+          <Val><![CDATA[kmpkg z-extract <archive path> <output directory>]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg z-extract <cesta k archivu> <výstupní adresář>]]></Val>
+            <Val><![CDATA[kmpkg z-extract <cesta k archivu> <výstupní adresář>]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";CmdZExtractExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg z-extract source.zip source_dir --strip 2]]></Val>
+          <Val><![CDATA[kmpkg z-extract source.zip source_dir --strip 2]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg z-extract source.zip source_dir --strip 2]]></Val>
+            <Val><![CDATA[kmpkg z-extract source.zip source_dir --strip 2]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3921,9 +3921,9 @@
       </Item>
       <Item ItemId=";CommandEnvExample2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg env "ninja -C <path>" --triplet x64-windows]]></Val>
+          <Val><![CDATA[kmpkg env "ninja -C <path>" --triplet x64-windows]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg env "ninja -C <cesta>" --triplet x64-windows]]></Val>
+            <Val><![CDATA[kmpkg env "ninja -C <cesta>" --triplet x64-windows]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -3947,7 +3947,7 @@
             <Val><![CDATA[Trojčata komunity:]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[VCPKG community triplets:]]></Val>
+            <Val><![CDATA[KMPKG community triplets:]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -4008,9 +4008,9 @@
       </Item>
       <Item ItemId=";ConflictingEmbeddedConfiguration" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[only one of {{"configuration", "vcpkg-configuration"}} may be used]]></Val>
+          <Val><![CDATA[only one of {{"configuration", "kmpkg-configuration"}} may be used]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[lze použít pouze jednu z {{"configuration", "vcpkg-configuration"}}]]></Val>
+            <Val><![CDATA[lze použít pouze jednu z {{"configuration", "kmpkg-configuration"}}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4080,9 +4080,9 @@
       </Item>
       <Item ItemId=";CopyrightIsDir" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[this port sets ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright to a directory, but it should be a file. Consider combining separate copyright files into one using vcpkg_install_copyright. To suppress this message, add set(VCPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
+          <Val><![CDATA[this port sets ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright to a directory, but it should be a file. Consider combining separate copyright files into one using kmpkg_install_copyright. To suppress this message, add set(KMPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[tento port nastaví ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright na adresář, ale měl by to být soubor. Zvažte možnost sloučit jednotlivé soubory copyright do jednoho pomocí vcpkg_install_copyright. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
+            <Val><![CDATA[tento port nastaví ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright na adresář, ale měl by to být soubor. Zvažte možnost sloučit jednotlivé soubory copyright do jednoho pomocí kmpkg_install_copyright. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[`{path}` being a directory is deprecated.]]></Val>
@@ -4092,9 +4092,9 @@
       </Item>
       <Item ItemId=";CorruptedDatabase" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg's installation database corrupted. This is either a bug in vcpkg or something else has modified the contents of the 'installed' directory in an unexpected way. You may be able to fix this by deleting the 'installed' directory and reinstalling what you want to use. If this problem happens consistently, please file a bug at https://github.com/microsoft/vcpkg .]]></Val>
+          <Val><![CDATA[kmpkg's installation database corrupted. This is either a bug in kmpkg or something else has modified the contents of the 'installed' directory in an unexpected way. You may be able to fix this by deleting the 'installed' directory and reinstalling what you want to use. If this problem happens consistently, please file a bug at https://github.com/kumose/kmpkg .]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Instalační databáze vcpkg je poškozená. Buď je chyba v souboru vcpkg, nebo něco jiného neočekávaným způsobem změnilo obsah adresáře installed. Můžete to vyřešit odstraněním adresáře installed a přeinstalací toho, co chcete použít. Pokud k tomuto problému dochází konzistentně, nahlaste prosím chybu na https://github.com/microsoft/vcpkg.]]></Val>
+            <Val><![CDATA[Instalační databáze kmpkg je poškozená. Buď je chyba v souboru kmpkg, nebo něco jiného neočekávaným způsobem změnilo obsah adresáře installed. Můžete to vyřešit odstraněním adresáře installed a přeinstalací toho, co chcete použít. Pokud k tomuto problému dochází konzistentně, nahlaste prosím chybu na https://github.com/kumose/kmpkg.]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Database corrupted.]]></Val>
@@ -4293,27 +4293,27 @@
       </Item>
       <Item ItemId=";DefaultBinaryCachePlatformCacheRequiresAbsolutePath" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Environment variable VCPKG_DEFAULT_BINARY_CACHE must be a directory (was: {path})]]></Val>
+          <Val><![CDATA[Environment variable KMPKG_DEFAULT_BINARY_CACHE must be a directory (was: {path})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná prostředí VCPKG_DEFAULT_BINARY_CACHE musí být adresář (byla: {path}).]]></Val>
+            <Val><![CDATA[Proměnná prostředí KMPKG_DEFAULT_BINARY_CACHE musí být adresář (byla: {path}).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DefaultBinaryCacheRequiresAbsolutePath" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Environment variable VCPKG_DEFAULT_BINARY_CACHE must be absolute (was: {path})]]></Val>
+          <Val><![CDATA[Environment variable KMPKG_DEFAULT_BINARY_CACHE must be absolute (was: {path})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná prostředí VCPKG_DEFAULT_BINARY_CACHE musí být absolutní (byla: {path}).]]></Val>
+            <Val><![CDATA[Proměnná prostředí KMPKG_DEFAULT_BINARY_CACHE musí být absolutní (byla: {path}).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";DefaultBinaryCacheRequiresDirectory" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Environment variable VCPKG_DEFAULT_BINARY_CACHE must be a directory (was: {path})]]></Val>
+          <Val><![CDATA[Environment variable KMPKG_DEFAULT_BINARY_CACHE must be a directory (was: {path})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná prostředí VCPKG_DEFAULT_BINARY_CACHE musí být adresář (byla: {path}).]]></Val>
+            <Val><![CDATA[Proměnná prostředí KMPKG_DEFAULT_BINARY_CACHE musí být adresář (byla: {path}).]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4485,9 +4485,9 @@
       </Item>
       <Item ItemId=";DocumentedFieldsSuggestUpdate" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[If these are documented fields that should be recognized try updating the vcpkg tool.]]></Val>
+          <Val><![CDATA[If these are documented fields that should be recognized try updating the kmpkg tool.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pokud se jedná o zdokumentovaná pole, která by se měla rozpoznat, zkuste aktualizovat nástroj vcpkg.]]></Val>
+            <Val><![CDATA[Pokud se jedná o zdokumentovaná pole, která by se měla rozpoznat, zkuste aktualizovat nástroj kmpkg.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -4545,12 +4545,12 @@
       </Item>
       <Item ItemId=";DownloadFailedProxySettings" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[If you are using a proxy, please ensure your proxy settings are correct.]A;Possible causes are:]A;1. You are actually using an HTTP proxy, but setting HTTPS_PROXY variable to `https://address:port`.]A;This is not correct, because `https://` prefix claims the proxy is an HTTPS proxy, while your proxy (v2ray, shadowsocksr, etc...) is an HTTP proxy.]A;Try setting `http://address:port` to both HTTP_PROXY and HTTPS_PROXY instead.]A;2. If you are using Windows, vcpkg will automatically use your Windows IE Proxy Settings set by your proxy software. See: https://github.com/microsoft/vcpkg-tool/pull/77]A;The value set by your proxy might be wrong, or have same `https://` prefix issue.]A;3. Your proxy's remote server is out of service.]A;If you believe this is not a temporary download server failure and vcpkg needs to be changed to download this file from a different location, please submit an issue to https://github.com/Microsoft/vcpkg/issues]]></Val>
+          <Val><![CDATA[If you are using a proxy, please ensure your proxy settings are correct.]A;Possible causes are:]A;1. You are actually using an HTTP proxy, but setting HTTPS_PROXY variable to `https://address:port`.]A;This is not correct, because `https://` prefix claims the proxy is an HTTPS proxy, while your proxy (v2ray, shadowsocksr, etc...) is an HTTP proxy.]A;Try setting `http://address:port` to both HTTP_PROXY and HTTPS_PROXY instead.]A;2. If you are using Windows, kmpkg will automatically use your Windows IE Proxy Settings set by your proxy software. See: https://github.com/kumose/kmpkg-tool/pull/77]A;The value set by your proxy might be wrong, or have same `https://` prefix issue.]A;3. Your proxy's remote server is out of service.]A;If you believe this is not a temporary download server failure and kmpkg needs to be changed to download this file from a different location, please submit an issue to https://github.com/kumose/kmpkg/issues]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pokud používáte proxy server, ujistěte se, že je nastavení proxy serveru správné.]A;Možné příčiny:]A;1. Ve skutečnosti používáte proxy server HTTP, ale nastavujete proměnnou HTTPS_PROXY na https://address:port.]A;To není správné, protože předpona „https://“ označuje, že proxy server je typu HTTPS, zatímco váš proxy server (v2ray, shadowsocksr atd...) je proxy server HTTP.]A;Zkuste místo toho nastavit „http://address:port“ u HTTP_PROXY i HTTPS_PROXY.]A;2. Pokud používáte Windows, bude vcpkg automaticky používat nastavení proxy serveru Windows IE nastavená vaším proxy softwarem. Viz: https://github.com/microsoft/vcpkg-tool/pull/77]A;Hodnota nastavená proxy serverem může být chybná nebo může mít stejný problém s předponou „https://“.]A;3. Vzdálený server vašeho proxy serveru je mimo provoz.]A;Pokud se domníváte, že se nejedná o dočasné selhání stahovacího serveru a že je třeba změnit vcpkg tak, aby stahoval tento soubor z jiného umístění, nahlaste prosím problém na adrese https://github.com/Microsoft/vcpkg/issues]]></Val>
+            <Val><![CDATA[Pokud používáte proxy server, ujistěte se, že je nastavení proxy serveru správné.]A;Možné příčiny:]A;1. Ve skutečnosti používáte proxy server HTTP, ale nastavujete proměnnou HTTPS_PROXY na https://address:port.]A;To není správné, protože předpona „https://“ označuje, že proxy server je typu HTTPS, zatímco váš proxy server (v2ray, shadowsocksr atd...) je proxy server HTTP.]A;Zkuste místo toho nastavit „http://address:port“ u HTTP_PROXY i HTTPS_PROXY.]A;2. Pokud používáte Windows, bude kmpkg automaticky používat nastavení proxy serveru Windows IE nastavená vaším proxy softwarem. Viz: https://github.com/kumose/kmpkg-tool/pull/77]A;Hodnota nastavená proxy serverem může být chybná nebo může mít stejný problém s předponou „https://“.]A;3. Vzdálený server vašeho proxy serveru je mimo provoz.]A;Pokud se domníváte, že se nejedná o dočasné selhání stahovacího serveru a že je třeba změnit kmpkg tak, aby stahoval tento soubor z jiného umístění, nahlaste prosím problém na adrese https://github.com/kumose/kmpkg/issues]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[If you are using a proxy, please ensure your proxy settings are correct.]A;Possible causes are:]A;1. You are actually using an HTTP proxy, but setting HTTPS_PROXY variable to `https//address:port`.]A;This is not correct, because `https://` prefix claims the proxy is an HTTPS proxy, while your proxy (v2ray, shadowsocksr, etc...) is an HTTP proxy.]A;Try setting `http://address:port` to both HTTP_PROXY and HTTPS_PROXY instead.]A;2. If you are using Windows, vcpkg will automatically use your Windows IE Proxy Settings set by your proxy software. See: https://github.com/microsoft/vcpkg-tool/pull/77]A;The value set by your proxy might be wrong, or have same `https://` prefix issue.]A;3. Your proxy's remote server is out of service.]A;If you believe this is not a temporary download server failure and vcpkg needs to be changed to download this file from a different location, please submit an issue to https://github.com/Microsoft/vcpkg/issues]]></Val>
+            <Val><![CDATA[If you are using a proxy, please ensure your proxy settings are correct.]A;Possible causes are:]A;1. You are actually using an HTTP proxy, but setting HTTPS_PROXY variable to `https//address:port`.]A;This is not correct, because `https://` prefix claims the proxy is an HTTPS proxy, while your proxy (v2ray, shadowsocksr, etc...) is an HTTP proxy.]A;Try setting `http://address:port` to both HTTP_PROXY and HTTPS_PROXY instead.]A;2. If you are using Windows, kmpkg will automatically use your Windows IE Proxy Settings set by your proxy software. See: https://github.com/kumose/kmpkg-tool/pull/77]A;The value set by your proxy might be wrong, or have same `https://` prefix issue.]A;3. Your proxy's remote server is out of service.]A;If you believe this is not a temporary download server failure and kmpkg needs to be changed to download this file from a different location, please submit an issue to https://github.com/kumose/kmpkg/issues]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -4726,7 +4726,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";DownloadingVcpkgStandaloneBundle" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";DownloadingKmpkgStandaloneBundle" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Downloading standalone bundle {version}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -4735,7 +4735,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";DownloadingVcpkgStandaloneBundleLatest" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";DownloadingKmpkgStandaloneBundleLatest" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Downloading latest standalone bundle.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -4879,7 +4879,7 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";EmailVcpkgTeam" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";EmailKmpkgTeam" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Send an email to {url} with any feedback.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -4953,12 +4953,12 @@
       </Item>
       <Item ItemId=";ErrorIndividualPackagesUnsupported" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[In manifest mode, `vcpkg install` does not support individual package arguments.]A;To install additional packages, edit vcpkg.json and then run `vcpkg install` without any package arguments.]]></Val>
+          <Val><![CDATA[In manifest mode, `kmpkg install` does not support individual package arguments.]A;To install additional packages, edit kmpkg.json and then run `kmpkg install` without any package arguments.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[V režimu manifestu nástroj vcpkg install nepodporuje jednotlivé argumenty balíčku.]A;Pokud chcete nainstalovat další balíčky, upravte soubor vcpkg.json a pak spusťte příkaz vcpkg install bez argumentů balíčku.]]></Val>
+            <Val><![CDATA[V režimu manifestu nástroj kmpkg install nepodporuje jednotlivé argumenty balíčku.]A;Pokud chcete nainstalovat další balíčky, upravte soubor kmpkg.json a pak spusťte příkaz kmpkg install bez argumentů balíčku.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: In manifest mode, `vcpkg install` does not support individual package arguments.]A;To install additional packages, edit vcpkg.json and then run `vcpkg install` without any package arguments.]]></Val>
+            <Val><![CDATA[Error: In manifest mode, `kmpkg install` does not support individual package arguments.]A;To install additional packages, edit kmpkg.json and then run `kmpkg install` without any package arguments.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -5023,14 +5023,14 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";ErrorMissingVcpkgRoot" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";ErrorMissingKmpkgRoot" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Could not detect vcpkg-root. If you are trying to use a copy of vcpkg that you've built, you must define the VCPKG_ROOT environment variable to point to a cloned copy of https://github.com/Microsoft/vcpkg.]]></Val>
+          <Val><![CDATA[Could not detect kmpkg-root. If you are trying to use a copy of kmpkg that you've built, you must define the KMPKG_ROOT environment variable to point to a cloned copy of https://github.com/kumose/kmpkg.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nepovedlo se zjistit vcpkg-root. Pokud se pokoušíte použít kopii vcpkg, kterou jste vytvořili, musíte definovat proměnnou prostředí VCPKG_ROOT tak, aby odkazovala na klonovanou kopii https://github.com/Microsoft/vcpkg.]]></Val>
+            <Val><![CDATA[Nepovedlo se zjistit kmpkg-root. Pokud se pokoušíte použít kopii kmpkg, kterou jste vytvořili, musíte definovat proměnnou prostředí KMPKG_ROOT tak, aby odkazovala na klonovanou kopii https://github.com/kumose/kmpkg.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: Could not detect vcpkg-root. If you are trying to use a copy of vcpkg that you've built, you must define the VCPKG_ROOT environment variable to point to a cloned copy of {url}.]]></Val>
+            <Val><![CDATA[Error: Could not detect kmpkg-root. If you are trying to use a copy of kmpkg that you've built, you must define the KMPKG_ROOT environment variable to point to a cloned copy of {url}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -5103,45 +5103,45 @@
       </Item>
       <Item ItemId=";ErrorRequireBaseline" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[this vcpkg instance requires a manifest with a specified baseline in order to interact with ports. Please add 'builtin-baseline' to the manifest or add a 'vcpkg-configuration.json' that redefines the default registry.]]></Val>
+          <Val><![CDATA[this kmpkg instance requires a manifest with a specified baseline in order to interact with ports. Please add 'builtin-baseline' to the manifest or add a 'kmpkg-configuration.json' that redefines the default registry.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Tato instance vcpkg vyžaduje k interakci s porty manifest se zadaným směrným plánem. Přidejte prosím do manifestu builtin-baseline nebo přidejte soubor vcpkg-configuration.json, který předefinuje výchozí registr.]]></Val>
+            <Val><![CDATA[Tato instance kmpkg vyžaduje k interakci s porty manifest se zadaným směrným plánem. Přidejte prosím do manifestu builtin-baseline nebo přidejte soubor kmpkg-configuration.json, který předefinuje výchozí registr.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: this vcpkg instance requires a manifest with a specified baseline in order to interact with ports. Please add 'builtin-baseline' to the manifest or add a 'vcpkg-configuration.json' that redefines the default registry.]A;]]></Val>
+            <Val><![CDATA[Error: this kmpkg instance requires a manifest with a specified baseline in order to interact with ports. Please add 'builtin-baseline' to the manifest or add a 'kmpkg-configuration.json' that redefines the default registry.]A;]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ErrorRequirePackagesList" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[`vcpkg install` requires a list of packages to install in classic mode.]]></Val>
+          <Val><![CDATA[`kmpkg install` requires a list of packages to install in classic mode.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg install v klasickém režimu vyžaduje instalaci seznamu balíčků.]]></Val>
+            <Val><![CDATA[kmpkg install v klasickém režimu vyžaduje instalaci seznamu balíčků.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: `vcpkg install` requires a list of packages to install in classic mode.]]></Val>
+            <Val><![CDATA[Error: `kmpkg install` requires a list of packages to install in classic mode.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ErrorUnableToDetectCompilerInfo" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg was unable to detect the active compiler's information. See above for the CMake failure output.]]></Val>
+          <Val><![CDATA[kmpkg was unable to detect the active compiler's information. See above for the CMake failure output.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nástroj vcpkg nezjistil informace o aktivním kompilátoru. Výstup selhání CMake najdete výše.]]></Val>
+            <Val><![CDATA[Nástroj kmpkg nezjistil informace o aktivním kompilátoru. Výstup selhání CMake najdete výše.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";ErrorVcvarsUnsupported" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[in triplet {triplet}: Use of Visual Studio's Developer Prompt is unsupported on non-Windows hosts.]A;Define 'VCPKG_CMAKE_SYSTEM_NAME' or 'VCPKG_CHAINLOAD_TOOLCHAIN_FILE' in the triplet file.]]></Val>
+          <Val><![CDATA[in triplet {triplet}: Use of Visual Studio's Developer Prompt is unsupported on non-Windows hosts.]A;Define 'KMPKG_CMAKE_SYSTEM_NAME' or 'KMPKG_CHAINLOAD_TOOLCHAIN_FILE' in the triplet file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[v trojitém {triplet}: Použití nástroje Visual Studio Developer Prompt není podporováno na hostitelích s jiným operačním systémem než Windows.]A;v trojitém souboru definujte VCPKG_CMAKE_SYSTEM_NAME nebo VCPKG_CHAINLOAD_TOOLCHAIN_FILE.]]></Val>
+            <Val><![CDATA[v trojitém {triplet}: Použití nástroje Visual Studio Developer Prompt není podporováno na hostitelích s jiným operačním systémem než Windows.]A;v trojitém souboru definujte KMPKG_CMAKE_SYSTEM_NAME nebo KMPKG_CHAINLOAD_TOOLCHAIN_FILE.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: in triplet {triplet}: Use of Visual Studio's Developer Prompt is unsupported on non-Windows hosts.]A;Define 'VCPKG_CMAKE_SYSTEM_NAME' or 'VCPKG_CHAINLOAD_TOOLCHAIN_FILE' in the triplet file.]]></Val>
+            <Val><![CDATA[Error: in triplet {triplet}: Use of Visual Studio's Developer Prompt is unsupported on non-Windows hosts.]A;Define 'KMPKG_CMAKE_SYSTEM_NAME' or 'KMPKG_CHAINLOAD_TOOLCHAIN_FILE' in the triplet file.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -5784,9 +5784,9 @@
       </Item>
       <Item ItemId=";FailedToParseSerializedBinParagraph" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[[sanity check]5D; Failed to parse a serialized binary paragraph.]A;Please open an issue at https://github.com/microsoft/vcpkg, with the following output:]A;{error_msg}]A;Serialized Binary Paragraph:]]></Val>
+          <Val><![CDATA[[sanity check]5D; Failed to parse a serialized binary paragraph.]A;Please open an issue at https://github.com/kumose/kmpkg, with the following output:]A;{error_msg}]A;Serialized Binary Paragraph:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[[kontrola správnosti]5D; Nepovedlo se parsovat serializovaný binární odstavec.]A;Otevřete prosím problém na https://github.com/microsoft/vcpkg s následujícím výstupem:]A;{error_msg}]A;Serializovaný binární odstavec:]]></Val>
+            <Val><![CDATA[[kontrola správnosti]5D; Nepovedlo se parsovat serializovaný binární odstavec.]A;Otevřete prosím problém na https://github.com/kumose/kmpkg s následujícím výstupem:]A;{error_msg}]A;Serializovaný binární odstavec:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6009,9 +6009,9 @@
       </Item>
       <Item ItemId=";FilesContainAbsolutePath1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[There should be no absolute paths, such as the following, in an installed package. To suppress this message, add set(VCPKG_POLICY_SKIP_ABSOLUTE_PATHS_CHECK enabled)]]></Val>
+          <Val><![CDATA[There should be no absolute paths, such as the following, in an installed package. To suppress this message, add set(KMPKG_POLICY_SKIP_ABSOLUTE_PATHS_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[V nainstalovaném balíčku by neměly být žádné absolutní cesty, jako jsou následující. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_ABSOLUTE_PATHS_CHECK enabled)]]></Val>
+            <Val><![CDATA[V nainstalovaném balíčku by neměly být žádné absolutní cesty, jako jsou následující. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_ABSOLUTE_PATHS_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[There should be no absolute paths, such as the following, in an installed package:]]></Val>
@@ -6033,9 +6033,9 @@
       </Item>
       <Item ItemId=";FilesContainAbsolutePathPkgconfigNote" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Adding a call to `vcpkg_fixup_pkgconfig()` may fix absolute paths in .pc files]]></Val>
+          <Val><![CDATA[Adding a call to `kmpkg_fixup_pkgconfig()` may fix absolute paths in .pc files]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Přidáním volání do funkce vcpkg_fixup_pkgconfig() lze opravit absolutní cesty v souborech .pc]]></Val>
+            <Val><![CDATA[Přidáním volání do funkce kmpkg_fixup_pkgconfig() lze opravit absolutní cesty v souborech .pc]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6078,18 +6078,18 @@
       </Item>
       <Item ItemId=";FindVersionArtifactsOnly" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[--version can't be used with vcpkg search or vcpkg find port]]></Val>
+          <Val><![CDATA[--version can't be used with kmpkg search or kmpkg find port]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[--version se nedá použít s hledáním vcpkg nebo vcpkg vyhledávacím portem.]]></Val>
+            <Val><![CDATA[--version se nedá použít s hledáním kmpkg nebo kmpkg vyhledávacím portem.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";FishCompletion" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg fish completion is already added at "{path}".]]></Val>
+          <Val><![CDATA[kmpkg fish completion is already added at "{path}".]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dokončení vcpkg fish je už přidáno do {path}.]]></Val>
+            <Val><![CDATA[Dokončení kmpkg fish je už přidáno do {path}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6114,9 +6114,9 @@
       </Item>
       <Item ItemId=";FollowingPackagesMissingControl" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The following packages do not have a valid CONTROL or vcpkg.json:]]></Val>
+          <Val><![CDATA[The following packages do not have a valid CONTROL or kmpkg.json:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Následující balíčky nemají platnou hodnotu CONTROL nebo vcpkg.json:]]></Val>
+            <Val><![CDATA[Následující balíčky nemají platnou hodnotu CONTROL nebo kmpkg.json:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6168,12 +6168,12 @@
       </Item>
       <Item ItemId=";ForceSystemBinariesOnWeirdPlatforms" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Environment variable VCPKG_FORCE_SYSTEM_BINARIES must be set on arm, s390x, ppc64le and riscv platforms.]]></Val>
+          <Val><![CDATA[Environment variable KMPKG_FORCE_SYSTEM_BINARIES must be set on arm, s390x, ppc64le and riscv platforms.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná prostředí VCPKG_FORCE_SYSTEM_BINARIES musí být nastavená na platformách arm, s390x, ppc64le a riscv.]]></Val>
+            <Val><![CDATA[Proměnná prostředí KMPKG_FORCE_SYSTEM_BINARIES musí být nastavená na platformách arm, s390x, ppc64le a riscv.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Environment variable VCPKG_FORCE_SYSTEM_BINARIES must be set on arm, s390x, and ppc64le platforms.]]></Val>
+            <Val><![CDATA[Environment variable KMPKG_FORCE_SYSTEM_BINARIES must be set on arm, s390x, and ppc64le platforms.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -6312,9 +6312,9 @@
       </Item>
       <Item ItemId=";HelpAssetCaching" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[**Experimental feature: this may change or be removed at any time**]A;]A;vcpkg can use mirrors to cache downloaded assets, ensuring continued operation even if the original source changes or disappears.]A;]A;Asset caching can be configured either by setting the environment variable X_VCPKG_ASSET_SOURCES to a semicolon-delimited list of sources or by passing a sequence of --x-asset-sources=<source> command line options. Command line sources are interpreted after environment sources. Commas, semicolons, and backticks can be escaped using backtick (`).]A;]A;The <rw> optional parameter for certain strings controls how they will be accessed. It can be specified as "read", "write", or "readwrite" and defaults to "read".]A;]A;Valid sources:]]></Val>
+          <Val><![CDATA[**Experimental feature: this may change or be removed at any time**]A;]A;kmpkg can use mirrors to cache downloaded assets, ensuring continued operation even if the original source changes or disappears.]A;]A;Asset caching can be configured either by setting the environment variable X_KMPKG_ASSET_SOURCES to a semicolon-delimited list of sources or by passing a sequence of --x-asset-sources=<source> command line options. Command line sources are interpreted after environment sources. Commas, semicolons, and backticks can be escaped using backtick (`).]A;]A;The <rw> optional parameter for certain strings controls how they will be accessed. It can be specified as "read", "write", or "readwrite" and defaults to "read".]A;]A;Valid sources:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[**Experimentální funkce: může se změnit nebo odebrat bez upozornění.**]A;]A;Vcpkg může ukládat stažené prostředky do mezipaměti pomocí zrcadlení a zajistit tak plynulý provoz i v případě, že se původní zdroj změní nebo zmizí.]A;]A;Ukládání prostředků do mezipaměti je možné nakonfigurovat buď nastavením proměnné prostředí X_VCPKG_ASSET_SOURCES na seznam zdrojů oddělený středníky, nebo předáním posloupnosti možností příkazového řádku --x-asset-sources=<source>. Zdroje příkazového řádku se interpretují po zdrojích prostředí. Čárky, středníky a obrácené čárky je možné uvozovat pomocí obrácené čárky (`).]A;]A;Volitelný parametr <rw> pro určité řetězce určuje, jak se k nim bude přistupovat. Je možné ho zadat jako read, write nebo readwrite s výchozí hodnotou read.]A;]A;Platné zdroje:]]></Val>
+            <Val><![CDATA[**Experimentální funkce: může se změnit nebo odebrat bez upozornění.**]A;]A;Kmpkg může ukládat stažené prostředky do mezipaměti pomocí zrcadlení a zajistit tak plynulý provoz i v případě, že se původní zdroj změní nebo zmizí.]A;]A;Ukládání prostředků do mezipaměti je možné nakonfigurovat buď nastavením proměnné prostředí X_KMPKG_ASSET_SOURCES na seznam zdrojů oddělený středníky, nebo předáním posloupnosti možností příkazového řádku --x-asset-sources=<source>. Zdroje příkazového řádku se interpretují po zdrojích prostředí. Čárky, středníky a obrácené čárky je možné uvozovat pomocí obrácené čárky (`).]A;]A;Volitelný parametr <rw> pro určité řetězce určuje, jak se k nim bude přistupovat. Je možné ho zadat jako read, write nebo readwrite s výchozí hodnotou read.]A;]A;Platné zdroje:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6348,9 +6348,9 @@
       </Item>
       <Item ItemId=";HelpBinaryCaching" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg can cache compiled packages to accelerate restoration on a single machine or across the network. By default, vcpkg will save builds to a local machine cache. This can be disabled by passing "--binarysource=clear" as the last option on the command line.]A;]A;Binary caching can be further configured by either passing "--binarysource=<source>" options to every command line or setting the `VCPKG_BINARY_SOURCES` environment variable to a set of sources (Example: "<source>;<source>;..."). Command line sources are interpreted after environment sources.]A;]A;The "<rw>" optional parameter for certain strings controls whether they will be consulted for downloading binaries and whether on-demand builds will be uploaded to that remote. It can be specified as "read", "write", or "readwrite".]A;]A;General sources:]]></Val>
+          <Val><![CDATA[kmpkg can cache compiled packages to accelerate restoration on a single machine or across the network. By default, kmpkg will save builds to a local machine cache. This can be disabled by passing "--binarysource=clear" as the last option on the command line.]A;]A;Binary caching can be further configured by either passing "--binarysource=<source>" options to every command line or setting the `KMPKG_BINARY_SOURCES` environment variable to a set of sources (Example: "<source>;<source>;..."). Command line sources are interpreted after environment sources.]A;]A;The "<rw>" optional parameter for certain strings controls whether they will be consulted for downloading binaries and whether on-demand builds will be uploaded to that remote. It can be specified as "read", "write", or "readwrite".]A;]A;General sources:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vcpkg může ukládat zkompilované balíčky do mezipaměti, aby se urychlilo obnovení na jednom počítači nebo v síti. Ve výchozím nastavení bude vcpkg ukládat buildy do mezipaměti místního počítače. To je možné zakázat předáním --binarysource=clear jako poslední možnosti na příkazovém řádku.]A;]A;Binární ukládání do mezipaměti je možné dále nakonfigurovat buď předáním možností --binarysource=<source> do každého příkazového řádku, nebo nastavením proměnné prostředí VCPKG_BINARY_SOURCES na sadu zdrojů (příklad: <source>;<source>;...). Zdroje příkazového řádku se interpretují po zdrojích prostředí.]A;]A;Volitelný parametr <rw> pro určité řetězce určuje, jestli se do nich bude nahlížet při stahování binárních souborů a jestli se na dané vzdálené zařízení nahrají buildy na vyžádání. Dá se zadat jako read, write nebo readwrite.]A;]A;Obecné zdroje:]]></Val>
+            <Val><![CDATA[Kmpkg může ukládat zkompilované balíčky do mezipaměti, aby se urychlilo obnovení na jednom počítači nebo v síti. Ve výchozím nastavení bude kmpkg ukládat buildy do mezipaměti místního počítače. To je možné zakázat předáním --binarysource=clear jako poslední možnosti na příkazovém řádku.]A;]A;Binární ukládání do mezipaměti je možné dále nakonfigurovat buď předáním možností --binarysource=<source> do každého příkazového řádku, nebo nastavením proměnné prostředí KMPKG_BINARY_SOURCES na sadu zdrojů (příklad: <source>;<source>;...). Zdroje příkazového řádku se interpretují po zdrojích prostředí.]A;]A;Volitelný parametr <rw> pro určité řetězce určuje, jestli se do nich bude nahlížet při stahování binárních souborů a jestli se na dané vzdálené zařízení nahrají buildy na vyžádání. Dá se zadat jako read, write nebo readwrite.]A;]A;Obecné zdroje:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6474,9 +6474,9 @@
       </Item>
       <Item ItemId=";HelpBinaryCachingNuGetFooter" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[NuGet's cache is not used by default. To use it for every NuGet-based source, set the environment variable "VCPKG_USE_NUGET_CACHE" to "true" (case-insensitive) or "1".]A;The "nuget" and "nugetconfig" source providers respect certain environment variables while generating NuGet packages. If the appropriate environment variables are defined and non-empty, "metadata.repository" field will be generated like one of the following examples:]]></Val>
+          <Val><![CDATA[NuGet's cache is not used by default. To use it for every NuGet-based source, set the environment variable "KMPKG_USE_NUGET_CACHE" to "true" (case-insensitive) or "1".]A;The "nuget" and "nugetconfig" source providers respect certain environment variables while generating NuGet packages. If the appropriate environment variables are defined and non-empty, "metadata.repository" field will be generated like one of the following examples:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Mezipaměť služby NuGet se ve výchozím nastavení nepoužívá. Pokud ji chcete použít pro každý zdroj založený na NuGet, nastavte proměnnou prostředí VCPKG_USE_NUGET_CACHE na true (bez rozlišování velkých a malých písmen) nebo 1.]A;Zdrojoví zprostředkovatelé nuget a nugetconfig respektují při generování balíčků NuGet určité proměnné prostředí. Pokud jsou definované příslušné proměnné prostředí a nejsou prázdné, vygeneruje se pole metadata.repository jako jeden z následujících příkladů:]]></Val>
+            <Val><![CDATA[Mezipaměť služby NuGet se ve výchozím nastavení nepoužívá. Pokud ji chcete použít pro každý zdroj založený na NuGet, nastavte proměnnou prostředí KMPKG_USE_NUGET_CACHE na true (bez rozlišování velkých a malých písmen) nebo 1.]A;Zdrojoví zprostředkovatelé nuget a nugetconfig respektují při generování balíčků NuGet určité proměnné prostředí. Pokud jsou definované příslušné proměnné prostředí a nejsou prázdné, vygeneruje se pole metadata.repository jako jeden z následujících příkladů:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6510,9 +6510,9 @@
       </Item>
       <Item ItemId=";HelpBuiltinBase" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The baseline references a commit within the vcpkg repository that establishes a minimum version on every dependency in the graph. For example, if no other constraints are specified (directly or transitively), then the version will resolve to the baseline of the top level manifest. Baselines of transitive dependencies are ignored.]]></Val>
+          <Val><![CDATA[The baseline references a commit within the kmpkg repository that establishes a minimum version on every dependency in the graph. For example, if no other constraints are specified (directly or transitively), then the version will resolve to the baseline of the top level manifest. Baselines of transitive dependencies are ignored.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Směrný plán odkazuje na potvrzení v úložišti vcpkg, které určuje minimální verzi každé závislosti v grafu. Pokud například nejsou zadána žádná jiná omezení (přímo nebo přechodně), bude verze přeložena na směrný plán manifestu nejvyšší úrovně. Směrné plány přechodných závislostí se ignorují.]]></Val>
+            <Val><![CDATA[Směrný plán odkazuje na potvrzení v úložišti kmpkg, které určuje minimální verzi každé závislosti v grafu. Pokud například nejsou zadána žádná jiná omezení (přímo nebo přechodně), bude verze přeložena na směrný plán manifestu nejvyšší úrovně. Směrné plány přechodných závislostí se ignorují.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6588,9 +6588,9 @@
       </Item>
       <Item ItemId=";HelpExampleCommand" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[For more help (including examples) see https://learn.microsoft.com/vcpkg]]></Val>
+          <Val><![CDATA[For more help (including examples) see https://learn.microsoft.com/kmpkg]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Další nápovědu (včetně příkladů) najdete na https://learn.microsoft.com/vcpkg]]></Val>
+            <Val><![CDATA[Další nápovědu (včetně příkladů) najdete na https://learn.microsoft.com/kmpkg]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[For more help (including examples) see the accompanying README.md and docs folder.]]></Val>
@@ -6630,18 +6630,18 @@
       </Item>
       <Item ItemId=";HelpMinVersion" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Vcpkg will select the minimum version found that matches all applicable constraints, including the version from the baseline specified at top-level as well as any "version>=" constraints in the graph.]]></Val>
+          <Val><![CDATA[Kmpkg will select the minimum version found that matches all applicable constraints, including the version from the baseline specified at top-level as well as any "version>=" constraints in the graph.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vcpkg vybere minimální zjištěnou verzi, která odpovídá všem použitelným omezením, včetně verze ze směrného plánu zadaného na nejvyšší úrovni, a všech omezení version>= v grafu.]]></Val>
+            <Val><![CDATA[Kmpkg vybere minimální zjištěnou verzi, která odpovídá všem použitelným omezením, včetně verze ze směrného plánu zadaného na nejvyšší úrovni, a všech omezení version>= v grafu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";HelpOverrides" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[When used as the top-level manifest (such as when running `vcpkg install` in the directory), overrides allow a manifest to short-circuit dependency resolution and specify exactly the version to use. These can be used to handle version conflicts, such as with `version-string` dependencies. They will not be considered when transitively depended upon.]]></Val>
+          <Val><![CDATA[When used as the top-level manifest (such as when running `kmpkg install` in the directory), overrides allow a manifest to short-circuit dependency resolution and specify exactly the version to use. These can be used to handle version conflicts, such as with `version-string` dependencies. They will not be considered when transitively depended upon.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Při použití jako manifest nejvyšší úrovně (například při spuštění vcpkg install v adresáři) umožňují přepsání manifestu zkrátit řešení závislostí a přesně určit verzi, která se má použít. Je možné je použít k řešení konfliktů verzí, například u závislostí version-string. Při přechodné závislosti se neberou v úvahu.]]></Val>
+            <Val><![CDATA[Při použití jako manifest nejvyšší úrovně (například při spuštění kmpkg install v adresáři) umožňují přepsání manifestu zkrátit řešení závislostí a přesně určit verzi, která se má použít. Je možné je použít k řešení konfliktů verzí, například u závislostí version-string. Při přechodné závislosti se neberou v úvahu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -6957,12 +6957,12 @@
       </Item>
       <Item ItemId=";HelpTxtOptWritePkgConfig" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Writes a NuGet packages.config-formatted file for use with external binary caching. See `vcpkg help binarycaching` for more information]]></Val>
+          <Val><![CDATA[Writes a NuGet packages.config-formatted file for use with external binary caching. See `kmpkg help binarycaching` for more information]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Zapíše soubor ve formátu NuGet packages.config pro použití s externí binární mezipamětí. Další informace najdete v vcpkg help binarycaching]]></Val>
+            <Val><![CDATA[Zapíše soubor ve formátu NuGet packages.config pro použití s externí binární mezipamětí. Další informace najdete v kmpkg help binarycaching]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Writes out a NuGet packages.config-formatted file for use with external binary caching.]A;See `vcpkg help binarycaching` for more information.]]></Val>
+            <Val><![CDATA[Writes out a NuGet packages.config-formatted file for use with external binary caching.]A;See `kmpkg help binarycaching` for more information.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -7078,14 +7078,14 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";IgnoringVcpkgRootEnvironment" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";IgnoringKmpkgRootEnvironment" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The vcpkg {value} is using detected vcpkg root {actual} and ignoring mismatched VCPKG_ROOT environment value {path}. To suppress this message, unset the environment variable or use the --vcpkg-root command line switch.]]></Val>
+          <Val><![CDATA[The kmpkg {value} is using detected kmpkg root {actual} and ignoring mismatched KMPKG_ROOT environment value {path}. To suppress this message, unset the environment variable or use the --kmpkg-root command line switch.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vcpkg {value} používá zjištěný kořen vcpkg {actual} a ignoruje neodpovídající VCPKG_ROOT hodnotu {path} prostředí. Pokud chcete tuto zprávu potlačit, zrušte nastavení proměnné prostředí nebo použijte přepínač příkazového řádku --vcpkg-root.]]></Val>
+            <Val><![CDATA[Kmpkg {value} používá zjištěný kořen kmpkg {actual} a ignoruje neodpovídající KMPKG_ROOT hodnotu {path} prostředí. Pokud chcete tuto zprávu potlačit, zrušte nastavení proměnné prostředí nebo použijte přepínač příkazového řádku --kmpkg-root.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Ignoring VCPKG_ROOT environment variable; use --vcpkg-root "{path}" to use the environment value or unset the VCPKG_ROOT environment variable to suppress this message. Using detected vcpkg root: "{actual}".]]></Val>
+            <Val><![CDATA[Ignoring KMPKG_ROOT environment variable; use --kmpkg-root "{path}" to use the environment value or unset the KMPKG_ROOT environment variable to suppress this message. Using detected kmpkg root: "{actual}".]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -7464,18 +7464,18 @@
       </Item>
       <Item ItemId=";InternalCICommand" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg ci is an internal command which will change incompatibly or be removed at any time.]]></Val>
+          <Val><![CDATA[kmpkg ci is an internal command which will change incompatibly or be removed at any time.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg ci je interní příkaz, který se změní nekompatibilně nebo se kdykoli odebere.]]></Val>
+            <Val><![CDATA[kmpkg ci je interní příkaz, který se změní nekompatibilně nebo se kdykoli odebere.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InternalErrorMessageContact" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Please open an issue at https://github.com/microsoft/vcpkg/issues/new?template=other-type-of-bug-report.md&labels=category:vcpkg-bug with detailed steps to reproduce the problem.]]></Val>
+          <Val><![CDATA[Please open an issue at https://github.com/kumose/kmpkg/issues/new?template=other-type-of-bug-report.md&labels=category:kmpkg-bug with detailed steps to reproduce the problem.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Otevřete prosím problém na adrese https://github.com/microsoft/vcpkg/issues/new?template=other-type-of-bug-report.md&labels=category:vcpkg-bug, kde uveďte podrobný postup, jak problém vyvolat.]]></Val>
+            <Val><![CDATA[Otevřete prosím problém na adrese https://github.com/kumose/kmpkg/issues/new?template=other-type-of-bug-report.md&labels=category:kmpkg-bug, kde uveďte podrobný postup, jak problém vyvolat.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -7725,9 +7725,9 @@
       </Item>
       <Item ItemId=";InvalidCommentStyle" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg does not support c-style comments, however most objects allow $-prefixed fields to be used as comments.]]></Val>
+          <Val><![CDATA[kmpkg does not support c-style comments, however most objects allow $-prefixed fields to be used as comments.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg nepodporuje komentáře ve stylu c, ale většina objektů povoluje použití polí s předponou $jako komentářů.]]></Val>
+            <Val><![CDATA[kmpkg nepodporuje komentáře ve stylu c, ale většina objektů povoluje použití polí s předponou $jako komentářů.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -7965,18 +7965,18 @@
       </Item>
       <Item ItemId=";InvalidValueHashAdditionalFiles" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Variable VCPKG_HASH_ADDITIONAL_FILES contains invalid file path: '{path}'. The value must be an absolute path to an existent file.]]></Val>
+          <Val><![CDATA[Variable KMPKG_HASH_ADDITIONAL_FILES contains invalid file path: '{path}'. The value must be an absolute path to an existent file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná VCPKG_HASH_ADDITIONAL_FILES obsahuje neplatnou cestu k souboru: {path}. Hodnota musí být absolutní cesta k existujícímu souboru.]]></Val>
+            <Val><![CDATA[Proměnná KMPKG_HASH_ADDITIONAL_FILES obsahuje neplatnou cestu k souboru: {path}. Hodnota musí být absolutní cesta k existujícímu souboru.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";InvalidValuePostPortfileIncludes" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Variable VCPKG_POST_PORTFILE_INCLUDES contains invalid file path: '{path}'. The value must be an absolute path to an existent cmake file.]]></Val>
+          <Val><![CDATA[Variable KMPKG_POST_PORTFILE_INCLUDES contains invalid file path: '{path}'. The value must be an absolute path to an existent cmake file.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Proměnná VCPKG_POST_PORTFILE_INCLUDES obsahuje neplatnou cestu k souboru: {path}. Hodnota musí být absolutní cesta k existujícímu souboru cmake.]]></Val>
+            <Val><![CDATA[Proměnná KMPKG_POST_PORTFILE_INCLUDES obsahuje neplatnou cestu k souboru: {path}. Hodnota musí být absolutní cesta k existujícímu souboru cmake.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8373,9 +8373,9 @@
       </Item>
       <Item ItemId=";MismatchedBinParagraphs" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The serialized binary paragraph was different from the original binary paragraph. Please open an issue at https://github.com/microsoft/vcpkg with the following output:]]></Val>
+          <Val><![CDATA[The serialized binary paragraph was different from the original binary paragraph. Please open an issue at https://github.com/kumose/kmpkg with the following output:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Serializovaný binární odstavec se lišil od původního binárního odstavce. Otevřete prosím problém na https://github.com/microsoft/vcpkg s následujícím výstupem:]]></Val>
+            <Val><![CDATA[Serializovaný binární odstavec se lišil od původního binárního odstavce. Otevřete prosím problém na https://github.com/kumose/kmpkg s následujícím výstupem:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8391,9 +8391,9 @@
       </Item>
       <Item ItemId=";MismatchedManifestAfterReserialize" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The serialized manifest was different from the original manifest. Please open an issue at https://github.com/microsoft/vcpkg, with the following output:]]></Val>
+          <Val><![CDATA[The serialized manifest was different from the original manifest. Please open an issue at https://github.com/kumose/kmpkg, with the following output:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Serializovaný manifest se lišil od původního manifestu. Otevřete problém na https://github.com/microsoft/vcpkg s následujícím výstupem:]]></Val>
+            <Val><![CDATA[Serializovaný manifest se lišil od původního manifestu. Otevřete problém na https://github.com/kumose/kmpkg s následujícím výstupem:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -8616,9 +8616,9 @@
       </Item>
       <Item ItemId=";NewConfigurationAlreadyExists" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Creating a manifest would overwrite a vcpkg-configuration.json at {path}.]]></Val>
+          <Val><![CDATA[Creating a manifest would overwrite a kmpkg-configuration.json at {path}.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vytvoření manifestu by přepsalo soubor vcpkg-configuration.json v {path}.]]></Val>
+            <Val><![CDATA[Vytvoření manifestu by přepsalo soubor kmpkg-configuration.json v {path}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -9120,9 +9120,9 @@
       </Item>
       <Item ItemId=";PackageLicenseSpdxThisInstall" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Packages installed in this vcpkg installation declare the following licenses:]]></Val>
+          <Val><![CDATA[Packages installed in this kmpkg installation declare the following licenses:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Balíčky nainstalované v této instalaci vcpkg deklarují následující licence:]]></Val>
+            <Val><![CDATA[Balíčky nainstalované v této instalaci kmpkg deklarují následující licence:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -9393,9 +9393,9 @@
       </Item>
       <Item ItemId=";PathMustBeAbsolute" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Value of environment variable X_VCPKG_REGISTRIES_CACHE is not absolute: {path}]]></Val>
+          <Val><![CDATA[Value of environment variable X_KMPKG_REGISTRIES_CACHE is not absolute: {path}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hodnota proměnné prostředí X_VCPKG_REGISTRIES_CACHE není absolutní: {path}]]></Val>
+            <Val><![CDATA[Hodnota proměnné prostředí X_KMPKG_REGISTRIES_CACHE není absolutní: {path}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -9414,9 +9414,9 @@
       </Item>
       <Item ItemId=";PortBugBinDirExists" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/{path} exists but should not in a static build. To suppress this message, add set(VCPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
+          <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/{path} exists but should not in a static build. To suppress this message, add set(KMPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/{path} existuje, ale nesmí se nacházet ve statickém sestavení. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
+            <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/{path} existuje, ale nesmí se nacházet ve statickém sestavení. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[There should be no bin\ directory in a static build, but {path} is present.]]></Val>
@@ -9426,9 +9426,9 @@
       </Item>
       <Item ItemId=";PortBugDebugShareDir" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/share should not exist. Please reorganize any important files, then delete any remaining by adding `file(REMOVE_RECURSE "${{CURRENT_PACKAGES_DIR}}/debug/share")`. To suppress this message, add set(VCPKG_POLICY_ALLOW_DEBUG_SHARE enabled)]]></Val>
+          <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/share should not exist. Please reorganize any important files, then delete any remaining by adding `file(REMOVE_RECURSE "${{CURRENT_PACKAGES_DIR}}/debug/share")`. To suppress this message, add set(KMPKG_POLICY_ALLOW_DEBUG_SHARE enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/share nesmí existovat. Přeuspořádejte prosím všechny důležité soubory a pak odstraňte všechny zbývající soubory tak, že přidáte file(REMOVE_RECURSE "${{CURRENT_PACKAGES_DIR}}/debug/share"). Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_ALLOW_DEBUG_SHARE enabled)]]></Val>
+            <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/share nesmí existovat. Přeuspořádejte prosím všechny důležité soubory a pak odstraňte všechny zbývající soubory tak, že přidáte file(REMOVE_RECURSE "${{CURRENT_PACKAGES_DIR}}/debug/share"). Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_ALLOW_DEBUG_SHARE enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[/debug/share should not exist. Please reorganize any important files, then use]A;file(REMOVE_RECURSE "${{CURRENT_PACKAGES_DIR}}/debug/share")]]></Val>
@@ -9438,9 +9438,9 @@
       </Item>
       <Item ItemId=";PortBugDllAppContainerBitNotSet" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The App Container bit must be set for all DLLs in Windows Store apps, and the triplet requests targeting the Windows Store, but the following DLLs were not built with the bit set. This usually means that toolchain linker flags are not being properly propagated, or the linker in use does not support the /APPCONTAINER switch. To suppress this message, add set(VCPKG_POLICY_SKIP_APPCONTAINER_CHECK enabled)]]></Val>
+          <Val><![CDATA[The App Container bit must be set for all DLLs in Windows Store apps, and the triplet requests targeting the Windows Store, but the following DLLs were not built with the bit set. This usually means that toolchain linker flags are not being properly propagated, or the linker in use does not support the /APPCONTAINER switch. To suppress this message, add set(KMPKG_POLICY_SKIP_APPCONTAINER_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bit kontejneru aplikací musí být nastavený pro všechny knihovny DLL v aplikacích pro Windows Store a triplet vyžaduje cílení na Windows Store, ale následující knihovny DLL nebyly sestaveny se sadou bitů. To obvykle znamená, že příznaky linkeru sady nástrojů nejsou správně šířeny nebo použitý linker nepodporuje přepínač /APPCONTAINER. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_APPCONTAINER_CHECK enabled)]]></Val>
+            <Val><![CDATA[Bit kontejneru aplikací musí být nastavený pro všechny knihovny DLL v aplikacích pro Windows Store a triplet vyžaduje cílení na Windows Store, ale následující knihovny DLL nebyly sestaveny se sadou bitů. To obvykle znamená, že příznaky linkeru sady nástrojů nejsou správně šířeny nebo použitý linker nepodporuje přepínač /APPCONTAINER. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_APPCONTAINER_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The App Container bit must be set for Windows Store apps. The following DLLs do not have the App Container bit set:]]></Val>
@@ -9462,9 +9462,9 @@
       </Item>
       <Item ItemId=";PortBugDuplicateIncludeFiles" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/include should not exist. To suppress this message, add set(VCPKG_POLICY_ALLOW_DEBUG_INCLUDE enabled)]]></Val>
+          <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/include should not exist. To suppress this message, add set(KMPKG_POLICY_ALLOW_DEBUG_INCLUDE enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/include nesmí existovat. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_ALLOW_DEBUG_INCLUDE enabled)]]></Val>
+            <Val><![CDATA[${{CURRENT_PACKAGES_DIR}}/debug/include nesmí existovat. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_ALLOW_DEBUG_INCLUDE enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Include files should not be duplicated into the /debug/include directory. If this cannot be disabled in the project cmake, use]A;file(REMOVE_RECURSE "${{CURRENT_PACKAGES_DIR}}/debug/include")]]></Val>
@@ -9507,9 +9507,9 @@
       </Item>
       <Item ItemId=";PortBugFoundDllInStaticBuild" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[DLLs should not be present in a static build, but the following DLLs were found. To suppress this message, add set(VCPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
+          <Val><![CDATA[DLLs should not be present in a static build, but the following DLLs were found. To suppress this message, add set(KMPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Knihovny DLL by neměly být přítomny ve statickém sestavení, ale byly nalezeny následující knihovny DLL. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
+            <Val><![CDATA[Knihovny DLL by neměly být přítomny ve statickém sestavení, ale byly nalezeny následující knihovny DLL. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_DLLS_IN_STATIC_LIBRARY enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[DLLs should not be present in a static build, but the following DLLs were found:]]></Val>
@@ -9519,9 +9519,9 @@
       </Item>
       <Item ItemId=";PortBugFoundEmptyDirectories" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[There should be no installed empty directories. Empty directories are not representable to several binary cache providers, git repositories, and are not considered semantic build outputs. You should either create a regular file inside each empty directory, or delete them with the following CMake. To suppress this message, add set(VCPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)]]></Val>
+          <Val><![CDATA[There should be no installed empty directories. Empty directories are not representable to several binary cache providers, git repositories, and are not considered semantic build outputs. You should either create a regular file inside each empty directory, or delete them with the following CMake. To suppress this message, add set(KMPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Neměly by existovat žádné nainstalované prázdné adresáře. Prázdné adresáře nejsou reprezentovatelné pro několik zprostředkovatelů mezipaměti binárních souborů, úložišť git a nejsou považovány za sémantické výstupy sestavení. V jednotlivých prázdných adresářích byste měli buď vytvořit běžný soubor, nebo byste je měli je odstranit pomocí následujícího příkazu CMake. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)]]></Val>
+            <Val><![CDATA[Neměly by existovat žádné nainstalované prázdné adresáře. Prázdné adresáře nejsou reprezentovatelné pro několik zprostředkovatelů mezipaměti binárních souborů, úložišť git a nejsou považovány za sémantické výstupy sestavení. V jednotlivých prázdných adresářích byste měli buď vytvořit běžný soubor, nebo byste je měli je odstranit pomocí následujícího příkazu CMake. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[There should be no empty directories in {path}. The following empty directories were found:]]></Val>
@@ -9531,9 +9531,9 @@
       </Item>
       <Item ItemId=";PortBugFoundExeInBinDir" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The following executables were found in ${{CURRENT_PACKAGES_DIR}}/bin or ${{CURRENT_PACKAGES_DIR}}/debug/bin. Executables are not valid distribution targets. If these executables are build tools, consider using `vcpkg_copy_tools`. To suppress this message, add set(VCPKG_POLICY_ALLOW_EXES_IN_BIN enabled)]]></Val>
+          <Val><![CDATA[The following executables were found in ${{CURRENT_PACKAGES_DIR}}/bin or ${{CURRENT_PACKAGES_DIR}}/debug/bin. Executables are not valid distribution targets. If these executables are build tools, consider using `kmpkg_copy_tools`. To suppress this message, add set(KMPKG_POLICY_ALLOW_EXES_IN_BIN enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[V ${{CURRENT_PACKAGES_DIR}}/bin nebo ${{CURRENT_PACKAGES_DIR}}/debug/bin byly nalezeny následující spustitelné soubory. Spustitelné soubory nejsou platné cíle distribuce. Pokud jsou tyto spustitelné soubory nástroje sestavení, zvažte možnost použít vcpkg_copy_tools. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_ALLOW_EXES_IN_BIN enabled)]]></Val>
+            <Val><![CDATA[V ${{CURRENT_PACKAGES_DIR}}/bin nebo ${{CURRENT_PACKAGES_DIR}}/debug/bin byly nalezeny následující spustitelné soubory. Spustitelné soubory nejsou platné cíle distribuce. Pokud jsou tyto spustitelné soubory nástroje sestavení, zvažte možnost použít kmpkg_copy_tools. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_ALLOW_EXES_IN_BIN enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The following EXEs were found in /bin or /debug/bin. EXEs are not valid distribution targets.]]></Val>
@@ -9555,9 +9555,9 @@
       </Item>
       <Item ItemId=";PortBugIncludeDirInCMakeHelperPort" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The folder ${{CURRENT_PACKAGES_DIR}}/include exists in a CMake helper port; this is incorrect, since only CMake files should be installed. To suppress this message, remove set(VCPKG_POLICY_CMAKE_HELPER_PORT enabled).]]></Val>
+          <Val><![CDATA[The folder ${{CURRENT_PACKAGES_DIR}}/include exists in a CMake helper port; this is incorrect, since only CMake files should be installed. To suppress this message, remove set(KMPKG_POLICY_CMAKE_HELPER_PORT enabled).]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Složka ${{CURRENT_PACKAGES_DIR}}/include existuje v pomocném portu CMake; toto není správné, protože by se měly instalovat jenom soubory CMake. Pokud chcete tuto zprávu potlačit, odeberte set(VCPKG_POLICY_CMAKE_HELPER_PORT enabled).]]></Val>
+            <Val><![CDATA[Složka ${{CURRENT_PACKAGES_DIR}}/include existuje v pomocném portu CMake; toto není správné, protože by se měly instalovat jenom soubory CMake. Pokud chcete tuto zprávu potlačit, odeberte set(KMPKG_POLICY_CMAKE_HELPER_PORT enabled).]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The folder /include exists in a cmake helper port; this is incorrect, since only cmake files should be installed]]></Val>
@@ -9588,18 +9588,18 @@
       </Item>
       <Item ItemId=";PortBugInvalidCrtLinkageHeader" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[binaries built by this port link with C RunTimes ("CRTs") inconsistent with those requested by the triplet and deployment structure. If the triplet is intended to only use the release CRT, you should add set(VCPKG_POLICY_ONLY_RELEASE_CRT enabled) to the triplet .cmake file. To suppress this check entirely, add set(VCPKG_POLICY_SKIP_CRT_LINKAGE_CHECK enabled) to the triplet .cmake if this is triplet-wide, or to portfile.cmake if this is specific to the port. You can inspect the binaries with: dumpbin.exe /directives mylibfile.lib]]></Val>
+          <Val><![CDATA[binaries built by this port link with C RunTimes ("CRTs") inconsistent with those requested by the triplet and deployment structure. If the triplet is intended to only use the release CRT, you should add set(KMPKG_POLICY_ONLY_RELEASE_CRT enabled) to the triplet .cmake file. To suppress this check entirely, add set(KMPKG_POLICY_SKIP_CRT_LINKAGE_CHECK enabled) to the triplet .cmake if this is triplet-wide, or to portfile.cmake if this is specific to the port. You can inspect the binaries with: dumpbin.exe /directives mylibfile.lib]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[binární soubory vytvořené tímto portem se propojí s objekty CRT (C RunTimes), které nejsou konzistentní s těmi, které jsou požadovány tripletem a strukturou nasazení. Pokud má triplet používat pouze CRT pro verze, měli byste do souboru .cmake přidat set(VCPKG_POLICY_ONLY_RELEASE_CRT enabled). Pokud chcete tuto kontrolu zcela potlačit, přidejte set(VCPKG_POLICY_SKIP_CRT_LINKAGE_CHECK enabled), a to buď do souboru .cmake pro celý triplet, nebo do souboru portfile.cmake, pokud je tato kontrola specifická pro daný port. Binární soubory můžete zkontrolovat pomocí dumpbin.exe /directives mylibfile.lib.]]></Val>
+            <Val><![CDATA[binární soubory vytvořené tímto portem se propojí s objekty CRT (C RunTimes), které nejsou konzistentní s těmi, které jsou požadovány tripletem a strukturou nasazení. Pokud má triplet používat pouze CRT pro verze, měli byste do souboru .cmake přidat set(KMPKG_POLICY_ONLY_RELEASE_CRT enabled). Pokud chcete tuto kontrolu zcela potlačit, přidejte set(KMPKG_POLICY_SKIP_CRT_LINKAGE_CHECK enabled), a to buď do souboru .cmake pro celý triplet, nebo do souboru portfile.cmake, pokud je tato kontrola specifická pro daný port. Binární soubory můžete zkontrolovat pomocí dumpbin.exe /directives mylibfile.lib.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";PortBugKernel32FromXbox" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The selected triplet targets Xbox, but the following DLLs link with kernel32. These DLLs cannot be loaded on Xbox, where kernel32 is not present. This is typically caused by linking with kernel32.lib rather than a suitable umbrella library, such as onecore_apiset.lib or xgameplatform.lib. You can inspect a DLL's dependencies with `dumpbin.exe /dependents mylibfile.dll`. To suppress this message, add set(VCPKG_POLICY_ALLOW_KERNEL32_FROM_XBOX enabled)]]></Val>
+          <Val><![CDATA[The selected triplet targets Xbox, but the following DLLs link with kernel32. These DLLs cannot be loaded on Xbox, where kernel32 is not present. This is typically caused by linking with kernel32.lib rather than a suitable umbrella library, such as onecore_apiset.lib or xgameplatform.lib. You can inspect a DLL's dependencies with `dumpbin.exe /dependents mylibfile.dll`. To suppress this message, add set(KMPKG_POLICY_ALLOW_KERNEL32_FROM_XBOX enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vybraný triplet cílí na Xbox, ale následující knihovny DLL se propojují s kernel32. Tyto knihovny DLL nejde načíst na Xboxu, kde kernel32 není k dispozici. To je obvykle způsobeno propojením s kernel32.lib namísto vhodné knihovny umbrella, jako je onecore_apiset.lib nebo xgameplatform.lib. Závislosti knihovny DLL můžete zkontrolovat pomocí dumpbin.exe /dependents mylibfile.dll. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_ALLOW_KERNEL32_FROM_XBOX enabled)]]></Val>
+            <Val><![CDATA[Vybraný triplet cílí na Xbox, ale následující knihovny DLL se propojují s kernel32. Tyto knihovny DLL nejde načíst na Xboxu, kde kernel32 není k dispozici. To je obvykle způsobeno propojením s kernel32.lib namísto vhodné knihovny umbrella, jako je onecore_apiset.lib nebo xgameplatform.lib. Závislosti knihovny DLL můžete zkontrolovat pomocí dumpbin.exe /dependents mylibfile.dll. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_ALLOW_KERNEL32_FROM_XBOX enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The selected triplet targets Xbox, but the following DLLs link with kernel32. These DLLs cannot be loaded on Xbox, where kernel32 is not present. This is typically caused by linking with kernel32.lib rather than a suitable umbrella library, such as onecore_apiset.lib or xgameplatform.lib.]]></Val>
@@ -9609,30 +9609,30 @@
       </Item>
       <Item ItemId=";PortBugMergeLibCMakeDir" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[This port creates ${{CURRENT_PACKAGES_DIR}}/lib/cmake and/or ${{CURRENT_PACKAGES_DIR}}/debug/lib/cmake, which should be merged and moved to ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/cmake. Please use the helper function vcpkg_cmake_config_fixup() from the port vcpkg-cmake-config. To suppress this message, add set(VCPKG_POLICY_SKIP_LIB_CMAKE_MERGE_CHECK enabled)]]></Val>
+          <Val><![CDATA[This port creates ${{CURRENT_PACKAGES_DIR}}/lib/cmake and/or ${{CURRENT_PACKAGES_DIR}}/debug/lib/cmake, which should be merged and moved to ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/cmake. Please use the helper function kmpkg_cmake_config_fixup() from the port kmpkg-cmake-config. To suppress this message, add set(KMPKG_POLICY_SKIP_LIB_CMAKE_MERGE_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Tento port vytvoří ${{CURRENT_PACKAGES_DIR}}/lib/cmake a/nebo{{CURRENT_PACKAGES_DIR}}$ /debug/lib/cmake, které by se měly sloučit a přesunout do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/cmake. Použijte prosím pomocnou funkci vcpkg_cmake_config_fixup() z portu vcpkg-cmake-config. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_LIB_CMAKE_MERGE_CHECK enabled)]]></Val>
+            <Val><![CDATA[Tento port vytvoří ${{CURRENT_PACKAGES_DIR}}/lib/cmake a/nebo{{CURRENT_PACKAGES_DIR}}$ /debug/lib/cmake, které by se měly sloučit a přesunout do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/cmake. Použijte prosím pomocnou funkci kmpkg_cmake_config_fixup() z portu kmpkg-cmake-config. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_LIB_CMAKE_MERGE_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The /lib/cmake folder should be merged with /debug/lib/cmake and moved to /share/{package_name}/cmake. Please use the helper function `vcpkg_cmake_config_fixup()` from the port vcpkg-cmake-config.`]]></Val>
+            <Val><![CDATA[The /lib/cmake folder should be merged with /debug/lib/cmake and moved to /share/{package_name}/cmake. Please use the helper function `kmpkg_cmake_config_fixup()` from the port kmpkg-cmake-config.`]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";PortBugMismatchingNumberOfBinaries" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[mismatching number of debug and release binaries. This often indicates incorrect handling of debug or release in portfile.cmake or the build system. If the intent is to only ever produce release components for this triplet, the triplet should have set(VCPKG_BUILD_TYPE release) added to its .cmake file. To suppress this message, add set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)]]></Val>
+          <Val><![CDATA[mismatching number of debug and release binaries. This often indicates incorrect handling of debug or release in portfile.cmake or the build system. If the intent is to only ever produce release components for this triplet, the triplet should have set(KMPKG_BUILD_TYPE release) added to its .cmake file. To suppress this message, add set(KMPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[neshoduje se počet binárních souborů ladění a vydání. To často indikuje nesprávné zpracování ladění nebo vydání verze v souboru portfile.cmake nebo v sestavovacím systému. Pokud je záměrem vytvářet pro tento triplet pouze komponenty pro vydání, měli byste do souboru .cmake přidat set(VCPKG_BUILD_TYPE release). Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)]]></Val>
+            <Val><![CDATA[neshoduje se počet binárních souborů ladění a vydání. To často indikuje nesprávné zpracování ladění nebo vydání verze v souboru portfile.cmake nebo v sestavovacím systému. Pokud je záměrem vytvářet pro tento triplet pouze komponenty pro vydání, měli byste do souboru .cmake přidat set(KMPKG_BUILD_TYPE release). Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";PortBugMisplacedCMakeFiles" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[This port installs the following CMake files in places CMake files are not expected. CMake files should be installed in ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}. To suppress this message, add set(VCPKG_POLICY_SKIP_MISPLACED_CMAKE_FILES_CHECK enabled)]]></Val>
+          <Val><![CDATA[This port installs the following CMake files in places CMake files are not expected. CMake files should be installed in ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}. To suppress this message, add set(KMPKG_POLICY_SKIP_MISPLACED_CMAKE_FILES_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Tento port instaluje následující soubory CMake na místa, kde se soubory CMake neočekávají. Soubory CMake by se měly nainstalovat do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_MISPLACED_CMAKE_FILES_CHECK enabled)]]></Val>
+            <Val><![CDATA[Tento port instaluje následující soubory CMake na místa, kde se soubory CMake neočekávají. Soubory CMake by se měly nainstalovat do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_MISPLACED_CMAKE_FILES_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The following cmake files were found outside /share/{spec}. Please place cmake files in /share/{spec}.]]></Val>
@@ -9642,9 +9642,9 @@
       </Item>
       <Item ItemId=";PortBugMisplacedFiles" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The following regular files are installed to location(s) where regular files may not be installed. These should be installed in a subdirectory. To suppress this message, add set(VCPKG_POLICY_SKIP_MISPLACED_REGULAR_FILES_CHECK enabled)]]></Val>
+          <Val><![CDATA[The following regular files are installed to location(s) where regular files may not be installed. These should be installed in a subdirectory. To suppress this message, add set(KMPKG_POLICY_SKIP_MISPLACED_REGULAR_FILES_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Následující běžné soubory jsou nainstalovány do umístění, kde nemusí být nainstalovány běžné soubory. Ty by se měly nainstalovat v podadresáři. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_MISPLACED_REGULAR_FILES_CHECK enabled)]]></Val>
+            <Val><![CDATA[Následující běžné soubory jsou nainstalovány do umístění, kde nemusí být nainstalovány běžné soubory. Ty by se měly nainstalovat v podadresáři. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_MISPLACED_REGULAR_FILES_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The following files are placed in {path}:]]></Val>
@@ -9654,9 +9654,9 @@
       </Item>
       <Item ItemId=";PortBugMisplacedPkgConfigFiles" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The following misplaced pkgconfig directories were installed. Misplaced pkgconfig files will not be found correctly by pkgconf or pkg-config. pkgconfig directories should be ${{CURRENT_PACKAGES_DIR}}/share/pkgconfig (for architecture agnostic / header only libraries only), ${{CURRENT_PACKAGES_DIR}}/lib/pkgconfig (for release dependencies), or ${{CURRENT_PACKAGES_DIR}}/debug/lib/pkgconfig (for debug dependencies). To suppress this message, add set(VCPKG_POLICY_SKIP_PKGCONFIG_CHECK enabled)]]></Val>
+          <Val><![CDATA[The following misplaced pkgconfig directories were installed. Misplaced pkgconfig files will not be found correctly by pkgconf or pkg-config. pkgconfig directories should be ${{CURRENT_PACKAGES_DIR}}/share/pkgconfig (for architecture agnostic / header only libraries only), ${{CURRENT_PACKAGES_DIR}}/lib/pkgconfig (for release dependencies), or ${{CURRENT_PACKAGES_DIR}}/debug/lib/pkgconfig (for debug dependencies). To suppress this message, add set(KMPKG_POLICY_SKIP_PKGCONFIG_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Byly nainstalovány následující chybně umístěné adresáře pkgconfig. Chybně umístěné soubory pkgconfig nebudou správně nalezeny nástroji pkgconf nebo pkg-config. Adresáře pkgconfig by měly být ${{CURRENT_PACKAGES_DIR}}/share/pkgconfig (pouze pro knihovny nezávislé na architektuře / pouze header-only knihovny), ${{CURRENT_PACKAGES_DIR}}/lib/pkgconfig (pro závislosti na verzi) nebo ${{CURRENT_PACKAGES_DIR}}/debug/lib/pkgconfig (pro závislosti na ladění). Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_PKGCONFIG_CHECK enabled)]]></Val>
+            <Val><![CDATA[Byly nainstalovány následující chybně umístěné adresáře pkgconfig. Chybně umístěné soubory pkgconfig nebudou správně nalezeny nástroji pkgconf nebo pkg-config. Adresáře pkgconfig by měly být ${{CURRENT_PACKAGES_DIR}}/share/pkgconfig (pouze pro knihovny nezávislé na architektuře / pouze header-only knihovny), ${{CURRENT_PACKAGES_DIR}}/lib/pkgconfig (pro závislosti na verzi) nebo ${{CURRENT_PACKAGES_DIR}}/debug/lib/pkgconfig (pro závislosti na ladění). Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_PKGCONFIG_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[pkgconfig directories should be one of share/pkgconfig (for header only libraries only), lib/pkgconfig, or lib/debug/pkgconfig. The following misplaced pkgconfig files were found:]]></Val>
@@ -9666,9 +9666,9 @@
       </Item>
       <Item ItemId=";PortBugMissingCMakeHelperPortFile" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/vcpkg-port-config.cmake file does not exist. This file must exist for CMake helper ports. To suppress this message, remove set(VCPKG_POLICY_CMAKE_HELPER_PORT enabled)]]></Val>
+          <Val><![CDATA[The ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/kmpkg-port-config.cmake file does not exist. This file must exist for CMake helper ports. To suppress this message, remove set(KMPKG_POLICY_CMAKE_HELPER_PORT enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Soubor ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/vcpkg-port-config.cmake neexistuje. Tento soubor musí existovat pro pomocné porty CMake. Pokud chcete tuto zprávu potlačit, odeberte set(VCPKG_POLICY_CMAKE_HELPER_PORT enabled)]]></Val>
+            <Val><![CDATA[Soubor ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/kmpkg-port-config.cmake neexistuje. Tento soubor musí existovat pro pomocné porty CMake. Pokud chcete tuto zprávu potlačit, odeberte set(KMPKG_POLICY_CMAKE_HELPER_PORT enabled)]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -9684,21 +9684,21 @@
       </Item>
       <Item ItemId=";PortBugMissingImportedLibs" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Import libraries for installed DLLs appear to be missing. If this is intended, add set(VCPKG_POLICY_DLLS_WITHOUT_LIBS enabled)]]></Val>
+          <Val><![CDATA[Import libraries for installed DLLs appear to be missing. If this is intended, add set(KMPKG_POLICY_DLLS_WITHOUT_LIBS enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vypadá to, že chybí knihovny importu pro nainstalované knihovny DLL. Pokud je to záměr, přidejte set(VCPKG_POLICY_DLLS_WITHOUT_LIBS enabled)]]></Val>
+            <Val><![CDATA[Vypadá to, že chybí knihovny importu pro nainstalované knihovny DLL. Pokud je to záměr, přidejte set(KMPKG_POLICY_DLLS_WITHOUT_LIBS enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Import libraries were not present in {path}.]A;If this is intended, add the following line in the portfile:]A;set(VCPKG_POLICY_DLLS_WITHOUT_LIBS enabled)]]></Val>
+            <Val><![CDATA[Import libraries were not present in {path}.]A;If this is intended, add the following line in the portfile:]A;set(KMPKG_POLICY_DLLS_WITHOUT_LIBS enabled)]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";PortBugMissingIncludeDir" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The folder ${{CURRENT_PACKAGES_DIR}}/include is empty or not present. This usually means that headers are not correctly installed. If this is a CMake helper port, add set(VCPKG_POLICY_CMAKE_HELPER_PORT enabled). If this is not a CMake helper port but this is otherwise intentional, add set(VCPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled) to suppress this message.]]></Val>
+          <Val><![CDATA[The folder ${{CURRENT_PACKAGES_DIR}}/include is empty or not present. This usually means that headers are not correctly installed. If this is a CMake helper port, add set(KMPKG_POLICY_CMAKE_HELPER_PORT enabled). If this is not a CMake helper port but this is otherwise intentional, add set(KMPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled) to suppress this message.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Složka ${{CURRENT_PACKAGES_DIR}}/include je prázdná nebo neexistuje. To obvykle znamená, že nejsou správně nainstalované hlavičky. Pokud se jedná o pomocný port CMake, přidejte set(VCPKG_POLICY_CMAKE_HELPER_PORT enabled). Pokud se nejedná o pomocný port CMake, ale jedná se o záměr, potlačte tuto zprávu přidáním set(VCPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled).]]></Val>
+            <Val><![CDATA[Složka ${{CURRENT_PACKAGES_DIR}}/include je prázdná nebo neexistuje. To obvykle znamená, že nejsou správně nainstalované hlavičky. Pokud se jedná o pomocný port CMake, přidejte set(KMPKG_POLICY_CMAKE_HELPER_PORT enabled). Pokud se nejedná o pomocný port CMake, ale jedná se o záměr, potlačte tuto zprávu přidáním set(KMPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled).]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The folder /include is empty or not present. This indicates the library was not correctly installed.]]></Val>
@@ -9708,9 +9708,9 @@
       </Item>
       <Item ItemId=";PortBugMissingLicense" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[the license is not installed to ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright . This can be fixed by adding a call to vcpkg_install_copyright. To suppress this message, add set(VCPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
+          <Val><![CDATA[the license is not installed to ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright . This can be fixed by adding a call to kmpkg_install_copyright. To suppress this message, add set(KMPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[licence není nainstalovaná do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright. Tento problém lze vyřešit přidáním volání do funkce vcpkg_install_copyright. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
+            <Val><![CDATA[licence není nainstalovaná do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/copyright. Tento problém lze vyřešit přidáním volání do funkce kmpkg_install_copyright. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_COPYRIGHT_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The software license must be available at ${{CURRENT_PACKAGES_DIR}}/share/{package_name}/copyright]]></Val>
@@ -9729,9 +9729,9 @@
       </Item>
       <Item ItemId=";PortBugMissingProvidedUsage" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[this port contains a file named "usage" but didn't install it to ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/usage . If this file is not intended to be usage text, consider choosing another name; otherwise, install it. To suppress this message, add set(VCPKG_POLICY_SKIP_USAGE_INSTALL_CHECK enabled)]]></Val>
+          <Val><![CDATA[this port contains a file named "usage" but didn't install it to ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/usage . If this file is not intended to be usage text, consider choosing another name; otherwise, install it. To suppress this message, add set(KMPKG_POLICY_SKIP_USAGE_INSTALL_CHECK enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[tento port obsahuje soubor s názvem usage, ale nenainstaloval ho do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/usage. Pokud tento soubor nemá být textem „usage“, zvažte možnost zvolit jiný název. V opačném případě ho nainstalujte. Pokud chcete tuto zprávu potlačit, přidejte set(VCPKG_POLICY_SKIP_USAGE_INSTALL_CHECK enabled)]]></Val>
+            <Val><![CDATA[tento port obsahuje soubor s názvem usage, ale nenainstaloval ho do ${{CURRENT_PACKAGES_DIR}}/share/${{PORT}}/usage. Pokud tento soubor nemá být textem „usage“, zvažte možnost zvolit jiný název. V opačném případě ho nainstalujte. Pokud chcete tuto zprávu potlačit, přidejte set(KMPKG_POLICY_SKIP_USAGE_INSTALL_CHECK enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[The port provided "usage" but forgot to install to /share/{package_name}/usage, add the following linein the portfile:]]></Val>
@@ -9759,9 +9759,9 @@
       </Item>
       <Item ItemId=";PortBugOutdatedCRT" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[DLLs that link with obsolete C RunTime ("CRT") DLLs were installed. Installed DLLs should link with an in-support CRT. You can inspect the dependencies of a DLL with `dumpbin.exe /dependents mylibfile.dll`. If you're using a custom triplet targeting an old CRT, add set(VCPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled) to the triplet's .cmake file. To suppress this message for this port, add set(VCPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled)]]></Val>
+          <Val><![CDATA[DLLs that link with obsolete C RunTime ("CRT") DLLs were installed. Installed DLLs should link with an in-support CRT. You can inspect the dependencies of a DLL with `dumpbin.exe /dependents mylibfile.dll`. If you're using a custom triplet targeting an old CRT, add set(KMPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled) to the triplet's .cmake file. To suppress this message for this port, add set(KMPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Byly nainstalovány knihovny DLL, které jsou propojeny se zastaralými knihovnami DLL C RunTime („CRT“). Nainstalované knihovny DLL by měly být propojeny s podporovanými objekty CRT. Závislosti knihovny DLL můžete zkontrolovat pomocí dumpbin.exe /dependents mylibfile.dll. Pokud používáte vlastní triplet, který cílí na starý objekt CRT, přidejte set(VCPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled) do souboru .cmake pro triplet. Pokud chcete tuto zprávu pro tento port potlačit, přidejte set(VCPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled)]]></Val>
+            <Val><![CDATA[Byly nainstalovány knihovny DLL, které jsou propojeny se zastaralými knihovnami DLL C RunTime („CRT“). Nainstalované knihovny DLL by měly být propojeny s podporovanými objekty CRT. Závislosti knihovny DLL můžete zkontrolovat pomocí dumpbin.exe /dependents mylibfile.dll. Pokud používáte vlastní triplet, který cílí na starý objekt CRT, přidejte set(KMPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled) do souboru .cmake pro triplet. Pokud chcete tuto zprávu pro tento port potlačit, přidejte set(KMPKG_POLICY_ALLOW_OBSOLETE_MSVCRT enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
             <Val><![CDATA[Detected outdated dynamic CRT in the following files:]]></Val>
@@ -9788,19 +9788,19 @@
             <Val><![CDATA[file(REMOVE_RECURSE prázdné adresáře, které ponechala výše uvedená přejmenování)]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg_fixup_pkgconfig()]A;file(REMOVE_RECURSE empty directories left by the above renames)]]></Val>
+            <Val><![CDATA[kmpkg_fixup_pkgconfig()]A;file(REMOVE_RECURSE empty directories left by the above renames)]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";PortBugRestrictedHeaderPaths" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Taking the following restricted headers can prevent the core C++ runtime and other packages from compiling correctly. These should be renamed or stored in a subdirectory instead. In exceptional circumstances, this warning can be suppressed by adding set(VCPKG_POLICY_ALLOW_RESTRICTED_HEADERS enabled)]]></Val>
+          <Val><![CDATA[Taking the following restricted headers can prevent the core C++ runtime and other packages from compiling correctly. These should be renamed or stored in a subdirectory instead. In exceptional circumstances, this warning can be suppressed by adding set(KMPKG_POLICY_ALLOW_RESTRICTED_HEADERS enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Použitím následujících omezených hlaviček lze zabránit správné kompilaci základního modulu runtime C++ a dalších balíčků. Místo toho by měly být přejmenovány nebo uloženy v podadresáři. Za výjimečných okolností lze toto upozornění potlačit přidáním set(VCPKG_POLICY_ALLOW_RESTRICTED_HEADERS enabled)]]></Val>
+            <Val><![CDATA[Použitím následujících omezených hlaviček lze zabránit správné kompilaci základního modulu runtime C++ a dalších balíčků. Místo toho by měly být přejmenovány nebo uloženy v podadresáři. Za výjimečných okolností lze toto upozornění potlačit přidáním set(KMPKG_POLICY_ALLOW_RESTRICTED_HEADERS enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The following restricted headers can prevent the core C++ runtime and other packages from compiling correctly. In exceptional circumstances, this policy can be disabled by setting CMake variable VCPKG_POLICY_ALLOW_RESTRICTED_HEADERS in portfile.cmake.]]></Val>
+            <Val><![CDATA[The following restricted headers can prevent the core C++ runtime and other packages from compiling correctly. In exceptional circumstances, this policy can be disabled by setting CMake variable KMPKG_POLICY_ALLOW_RESTRICTED_HEADERS in portfile.cmake.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -9816,12 +9816,12 @@
       </Item>
       <Item ItemId=";PortBugSetDllsWithoutExports" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[the following DLLs were built without any exports. DLLs without exports are likely bugs in the build script. If this is intended, add set(VCPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)]]></Val>
+          <Val><![CDATA[the following DLLs were built without any exports. DLLs without exports are likely bugs in the build script. If this is intended, add set(KMPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[následující knihovny DLL byly sestaveny bez jakýchkoli exportů. Knihovny DLL bez exportů jsou pravděpodobně chybami ve skriptu sestavení. Pokud je to záměr, přidejte set(VCPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)]]></Val>
+            <Val><![CDATA[následující knihovny DLL byly sestaveny bez jakýchkoli exportů. Knihovny DLL bez exportů jsou pravděpodobně chybami ve skriptu sestavení. Pokud je to záměr, přidejte set(KMPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[DLLs without any exports are likely a bug in the build script. If this is intended, add the following line in the portfile:]A;set(VCPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)]A;The following DLLs have no exports:]]></Val>
+            <Val><![CDATA[DLLs without any exports are likely a bug in the build script. If this is intended, add the following line in the portfile:]A;set(KMPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)]A;The following DLLs have no exports:]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -9855,9 +9855,9 @@
       </Item>
       <Item ItemId=";PortMissingManifest2" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{package_name} port manifest missing (no vcpkg.json or CONTROL file)]]></Val>
+          <Val><![CDATA[{package_name} port manifest missing (no kmpkg.json or CONTROL file)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Chybí manifest portu {package_name} (žádný soubor vcpkg.json ani CONTROL)]]></Val>
+            <Val><![CDATA[Chybí manifest portu {package_name} (žádný soubor kmpkg.json ani CONTROL)]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10083,9 +10083,9 @@
       </Item>
       <Item ItemId=";RemoveDependencies" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[To remove dependencies in manifest mode, edit your manifest (vcpkg.json) and run 'install'.]]></Val>
+          <Val><![CDATA[To remove dependencies in manifest mode, edit your manifest (kmpkg.json) and run 'install'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pokud chcete odebrat závislosti v režimu manifestu, upravte manifest (vcpkg.json) a spusťte install.]]></Val>
+            <Val><![CDATA[Pokud chcete odebrat závislosti v režimu manifestu, upravte manifest (kmpkg.json) a spusťte install.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10125,9 +10125,9 @@
       </Item>
       <Item ItemId=";RequestedPortsNotInCIPlan" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[one or more ports requested to be installed were not present in the action plan. (Probably a vcpkg bug)]]></Val>
+          <Val><![CDATA[one or more ports requested to be installed were not present in the action plan. (Probably a kmpkg bug)]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Minimálně jeden port požadovaný k instalaci nebyl v akčním plánu. (Pravděpodobně chyba vcpkg)]]></Val>
+            <Val><![CDATA[Minimálně jeden port požadovaný k instalaci nebyl v akčním plánu. (Pravděpodobně chyba kmpkg)]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10222,20 +10222,20 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";RunningVcpkgInternallyReturnedANonzeroExitCode$" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";RunningKmpkgInternallyReturnedANonzeroExitCode$" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Running vcpkg internally returned a nonzero exit code: ${p0}]]></Val>
+          <Val><![CDATA[Running kmpkg internally returned a nonzero exit code: ${p0}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Spuštění vcpkg interně vrátilo nenulový ukončovací kód: ${p0}.]]></Val>
+            <Val><![CDATA[Spuštění kmpkg interně vrátilo nenulový ukončovací kód: ${p0}.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";RunvcpkgshellActivateToApplyToTheCurrentTerminal" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";RunkmpkgshellActivateToApplyToTheCurrentTerminal" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Run \`vcpkg-shell activate\` to apply to the current terminal]]></Val>
+          <Val><![CDATA[Run \`kmpkg-shell activate\` to apply to the current terminal]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Spuštěním příkazu vcpkg-shell activate použijte aktuální terminál.]]></Val>
+            <Val><![CDATA[Spuštěním příkazu kmpkg-shell activate použijte aktuální terminál.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10305,12 +10305,12 @@
       </Item>
       <Item ItemId=";ShallowRepositoryDetected" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg was cloned as a shallow repository. Try again with a full vcpkg clone.]]></Val>
+          <Val><![CDATA[kmpkg was cloned as a shallow repository. Try again with a full kmpkg clone.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg se naklonoval jako mělké úložiště. Zkuste to znovu s úplným klonem vcpkg.]]></Val>
+            <Val><![CDATA[kmpkg se naklonoval jako mělké úložiště. Zkuste to znovu s úplným klonem kmpkg.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg was cloned as a shallow repository in: {path}]A;Try again with a full vcpkg clone.]]></Val>
+            <Val><![CDATA[kmpkg was cloned as a shallow repository in: {path}]A;Try again with a full kmpkg clone.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -10353,12 +10353,12 @@
       </Item>
       <Item ItemId=";SourceFieldPortNameMismatch" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The 'Source' field inside the CONTROL file, or "name" field inside the vcpkg.json file has the name {package_name} and does not match the port directory "{path}".]]></Val>
+          <Val><![CDATA[The 'Source' field inside the CONTROL file, or "name" field inside the kmpkg.json file has the name {package_name} and does not match the port directory "{path}".]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Pole Source v souboru CONTROL nebo pole name v souboru vcpkg.json má název {package_name} a neodpovídá adresáři portu {path}.]]></Val>
+            <Val><![CDATA[Pole Source v souboru CONTROL nebo pole name v souboru kmpkg.json má název {package_name} a neodpovídá adresáři portu {path}.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The 'Source' field inside the CONTROL file, or "name" field inside the vcpkg.json file has the name {package_name} and does not match the port directory {path}.]]></Val>
+            <Val><![CDATA[The 'Source' field inside the CONTROL file, or "name" field inside the kmpkg.json file has the name {package_name} and does not match the port directory {path}.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -10374,24 +10374,24 @@
       </Item>
       <Item ItemId=";SpecifyHostArch" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Host triplet. See 'vcpkg help triplet' (default: {env_var})]]></Val>
+          <Val><![CDATA[Host triplet. See 'kmpkg help triplet' (default: {env_var})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hostující trojčata. Viz vcpkg help triplet (výchozí: {env_var})]]></Val>
+            <Val><![CDATA[Hostující trojčata. Viz kmpkg help triplet (výchozí: {env_var})]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Specify the host architecture triplet. See 'vcpkg help triplet'.]A;(default: '{env_var}')]]></Val>
+            <Val><![CDATA[Specify the host architecture triplet. See 'kmpkg help triplet'.]A;(default: '{env_var}')]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";SpecifyTargetArch" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Target triplet. See 'vcpkg help triplet' (default: {env_var})]]></Val>
+          <Val><![CDATA[Target triplet. See 'kmpkg help triplet' (default: {env_var})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Cílová trojčata. Viz vcpkg help triplet (výchozí: {env_var})]]></Val>
+            <Val><![CDATA[Cílová trojčata. Viz kmpkg help triplet (výchozí: {env_var})]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Specify the target architecture triplet. See 'vcpkg help triplet'.]A;(default: '{env_var}')]]></Val>
+            <Val><![CDATA[Specify the target architecture triplet. See 'kmpkg help triplet'.]A;(default: '{env_var}')]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -10522,11 +10522,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";TheInfoBlockIsDeprecatedForConsistencyWithVcpkgjsonMoveInfoMembersToTheOutside" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";TheInfoBlockIsDeprecatedForConsistencyWithKmpkgjsonMoveInfoMembersToTheOutside" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The info block is deprecated for consistency with vcpkg.json; move info members to the outside.]]></Val>
+          <Val><![CDATA[The info block is deprecated for consistency with kmpkg.json; move info members to the outside.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Informační blok je zastaralý kvůli konzistenci s vcpkg.json; přesunout informační členy ven.]]></Val>
+            <Val><![CDATA[Informační blok je zastaralý kvůli konzistenci s kmpkg.json; přesunout informační členy ven.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10551,9 +10551,9 @@
       </Item>
       <Item ItemId=";ToolDataFileSchemaVersionNotSupported" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[document schema version {version} is not supported by this version of vcpkg]]></Val>
+          <Val><![CDATA[document schema version {version} is not supported by this version of kmpkg]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[verze schématu dokumentu {version} není podporována touto verzí vcpkg.]]></Val>
+            <Val><![CDATA[verze schématu dokumentu {version} není podporována touto verzí kmpkg.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -10806,9 +10806,9 @@
       </Item>
       <Item ItemId=";UndeterminedToolChainForTriplet" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unable to determine toolchain use for {triplet} with with CMAKE_SYSTEM_NAME {system_name}. Did you mean to use VCPKG_CHAINLOAD_TOOLCHAIN_FILE?]]></Val>
+          <Val><![CDATA[Unable to determine toolchain use for {triplet} with with CMAKE_SYSTEM_NAME {system_name}. Did you mean to use KMPKG_CHAINLOAD_TOOLCHAIN_FILE?]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nepovedlo se určit použití sady nástrojů pro {triplet} s CMAKE_SYSTEM_NAME {system_name}. Chtěli jste použít VCPKG_CHAINLOAD_TOOLCHAIN_FILE?]]></Val>
+            <Val><![CDATA[Nepovedlo se určit použití sady nástrojů pro {triplet} s CMAKE_SYSTEM_NAME {system_name}. Chtěli jste použít KMPKG_CHAINLOAD_TOOLCHAIN_FILE?]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11340,18 +11340,18 @@
       </Item>
       <Item ItemId=";UnknownSettingForBuildType" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Unknown setting for VCPKG_BUILD_TYPE {option}. Valid settings are '', 'debug', and 'release'.]]></Val>
+          <Val><![CDATA[Unknown setting for KMPKG_BUILD_TYPE {option}. Valid settings are '', 'debug', and 'release'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Neznámé nastavení pro VCPKG_BUILD_TYPE {option}. Platné nastavení jsou '', 'debug' a 'release'.]]></Val>
+            <Val><![CDATA[Neznámé nastavení pro KMPKG_BUILD_TYPE {option}. Platné nastavení jsou '', 'debug' a 'release'.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";UnknownTool" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg does not have a definition of this tool for this platform.]]></Val>
+          <Val><![CDATA[kmpkg does not have a definition of this tool for this platform.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vcpkg nemá definici tohoto nástroje pro tuto platformu.]]></Val>
+            <Val><![CDATA[Kmpkg nemá definici tohoto nástroje pro tuto platformu.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11421,9 +11421,9 @@
       </Item>
       <Item ItemId=";UnsupportedFeatureSupportsExpression" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{feature_spec} is only supported on '{supports_expression}', which does not match {triplet}. This usually means that there are known build failures, or runtime problems, when building other platforms. To ignore this and attempt to build {package_name} anyway, rerun vcpkg with `--allow-unsupported`.]]></Val>
+          <Val><![CDATA[{feature_spec} is only supported on '{supports_expression}', which does not match {triplet}. This usually means that there are known build failures, or runtime problems, when building other platforms. To ignore this and attempt to build {package_name} anyway, rerun kmpkg with `--allow-unsupported`.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[{feature_spec} se podporuje jenom u {supports_expression}, která neodpovídá {triplet}. To obvykle znamená, že při sestavování jiných platforem dochází ke známým selháním sestavení nebo problémům s moduly runtime. Pokud to chcete ignorovat a přesto se pokusit {package_name} sestavit, spusťte znovu soubor vcpkg s parametrem --allow-unsupported.]]></Val>
+            <Val><![CDATA[{feature_spec} se podporuje jenom u {supports_expression}, která neodpovídá {triplet}. To obvykle znamená, že při sestavování jiných platforem dochází ke známým selháním sestavení nebo problémům s moduly runtime. Pokud to chcete ignorovat a přesto se pokusit {package_name} sestavit, spusťte znovu soubor kmpkg s parametrem --allow-unsupported.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11475,12 +11475,12 @@
       </Item>
       <Item ItemId=";UnsupportedSystemName" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Could not map VCPKG_CMAKE_SYSTEM_NAME '{system_name}' to a vcvarsall platform. Supported system names are '', 'Windows' and 'WindowsStore'.]]></Val>
+          <Val><![CDATA[Could not map KMPKG_CMAKE_SYSTEM_NAME '{system_name}' to a vcvarsall platform. Supported system names are '', 'Windows' and 'WindowsStore'.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nepovedlo se namapovat VCPKG_CMAKE_SYSTEM_NAME {system_name} na platformu vcvarsall. Podporované názvy systémů jsou „“, „Windows“ a „WindowsStore“.]]></Val>
+            <Val><![CDATA[Nepovedlo se namapovat KMPKG_CMAKE_SYSTEM_NAME {system_name} na platformu vcvarsall. Podporované názvy systémů jsou „“, „Windows“ a „WindowsStore“.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: Could not map VCPKG_CMAKE_SYSTEM_NAME '{system_name}' to a vcvarsall platform. Supported system names are '', 'Windows' and 'WindowsStore'.]]></Val>
+            <Val><![CDATA[Error: Could not map KMPKG_CMAKE_SYSTEM_NAME '{system_name}' to a vcvarsall platform. Supported system names are '', 'Windows' and 'WindowsStore'.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -11499,9 +11499,9 @@
       </Item>
       <Item ItemId=";UnsupportedUpdateCMD" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[the update command does not currently support manifest mode. Instead, modify your vcpkg.json and run install.]]></Val>
+          <Val><![CDATA[the update command does not currently support manifest mode. Instead, modify your kmpkg.json and run install.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[příkaz aktualizovat v současné době nepodporuje režim manifestu. Místo toho upravte soubor vcpkg.json a spusťte instalaci.]]></Val>
+            <Val><![CDATA[příkaz aktualizovat v současné době nepodporuje režim manifestu. Místo toho upravte soubor kmpkg.json a spusťte instalaci.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11517,21 +11517,21 @@
       </Item>
       <Item ItemId=";UpdateBaselineLocalGitError" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[git failed to parse HEAD for the local vcpkg registry at "{path}"]]></Val>
+          <Val><![CDATA[git failed to parse HEAD for the local kmpkg registry at "{path}"]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Gitu se nepodařilo parsovat HEAD pro místní registr vcpkg v {path}.]]></Val>
+            <Val><![CDATA[Gitu se nepodařilo parsovat HEAD pro místní registr kmpkg v {path}.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[git failed to parse HEAD for the local vcpkg registry at '{path}']]></Val>
+            <Val><![CDATA[git failed to parse HEAD for the local kmpkg registry at '{path}']]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";UpdateBaselineNoConfiguration" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[neither `vcpkg.json` nor `vcpkg-configuration.json` exist to update.]]></Val>
+          <Val><![CDATA[neither `kmpkg.json` nor `kmpkg-configuration.json` exist to update.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Neexistuje soubor vcpkg.json ani soubor vcpkg-configuration.json, který by se dal aktualizovat.]]></Val>
+            <Val><![CDATA[Neexistuje soubor kmpkg.json ani soubor kmpkg-configuration.json, který by se dal aktualizovat.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11601,12 +11601,12 @@
       </Item>
       <Item ItemId=";UpgradeInManifest" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Upgrade upgrades a classic mode installation and thus does not support manifest mode. Consider updating your dependencies by updating your baseline to a current value with vcpkg x-update-baseline and running vcpkg install.]]></Val>
+          <Val><![CDATA[Upgrade upgrades a classic mode installation and thus does not support manifest mode. Consider updating your dependencies by updating your baseline to a current value with kmpkg x-update-baseline and running kmpkg install.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Upgrade upgraduje instalaci klasického režimu, a proto nepodporuje režim manifestu. Zvažte aktualizaci závislostí aktualizací směrného plánu na aktuální hodnotu pomocí vcpkg x-update-baseline a spuštěním instalace vcpkg.]]></Val>
+            <Val><![CDATA[Upgrade upgraduje instalaci klasického režimu, a proto nepodporuje režim manifestu. Zvažte aktualizaci závislostí aktualizací směrného plánu na aktuální hodnotu pomocí kmpkg x-update-baseline a spuštěním instalace kmpkg.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The upgrade command does not currently support manifest mode. Instead, modify your vcpkg.json and run install.]]></Val>
+            <Val><![CDATA[The upgrade command does not currently support manifest mode. Instead, modify your kmpkg.json and run install.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -11704,11 +11704,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VCPKGCOMMANDWasNotSet" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";KMPKGCOMMANDWasNotSet" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[VCPKG_COMMAND was not set]]></Val>
+          <Val><![CDATA[KMPKG_COMMAND was not set]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[VCPKG_COMMAND nebyl nastaven.]]></Val>
+            <Val><![CDATA[KMPKG_COMMAND nebyl nastaven.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11749,61 +11749,61 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgCeIsExperimental" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgCeIsExperimental" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg-artifacts is experimental and may change at any time.]]></Val>
+          <Val><![CDATA[kmpkg-artifacts is experimental and may change at any time.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg-artifacts jsou experimentální a můžou se kdykoli změnit.]]></Val>
+            <Val><![CDATA[kmpkg-artifacts jsou experimentální a můžou se kdykoli změnit.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg-ce ('configure environment') is experimental and may change at any time.]]></Val>
+            <Val><![CDATA[kmpkg-ce ('configure environment') is experimental and may change at any time.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgCompletion" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgCompletion" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg {value} completion is already imported to your "{path}" file.]A;The following entries were found:]]></Val>
+          <Val><![CDATA[kmpkg {value} completion is already imported to your "{path}" file.]A;The following entries were found:]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Dokončení vcpkg {value} je už naimportováno do souboru {path}.]A;Byly nalezeny následující položky:]]></Val>
+            <Val><![CDATA[Dokončení kmpkg {value} je už naimportováno do souboru {path}.]A;Byly nalezeny následující položky:]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgDisallowedClassicMode" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";KmpkgDisallowedClassicMode" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Could not locate a manifest (vcpkg.json) above the current working directory.]A;This vcpkg distribution does not have a classic mode instance.]]></Val>
+          <Val><![CDATA[Could not locate a manifest (kmpkg.json) above the current working directory.]A;This kmpkg distribution does not have a classic mode instance.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nad aktuálním pracovním adresářem se nepovedlo najít manifest (vcpkg.json).]A;Tato distribuce vcpkg nemá instanci klasického režimu.]]></Val>
+            <Val><![CDATA[Nad aktuálním pracovním adresářem se nepovedlo najít manifest (kmpkg.json).]A;Tato distribuce kmpkg nemá instanci klasického režimu.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Error: Could not locate a manifest (vcpkg.json) above the current working directory.]A;This vcpkg distribution does not have a classic mode instance.]]></Val>
+            <Val><![CDATA[Error: Could not locate a manifest (kmpkg.json) above the current working directory.]A;This kmpkg distribution does not have a classic mode instance.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgHasCrashed" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgHasCrashed" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg has crashed. Please create an issue at https://github.com/microsoft/vcpkg containing a brief summary of what you were trying to do and the following information.]]></Val>
+          <Val><![CDATA[kmpkg has crashed. Please create an issue at https://github.com/kumose/kmpkg containing a brief summary of what you were trying to do and the following information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[vcpkg se ukončil s chybou. Vytvořte prosím problém na https://github.com/microsoft/vcpkg se stručným souhrnem toho, co jste chtěli udělat, a následující informace.]]></Val>
+            <Val><![CDATA[kmpkg se ukončil s chybou. Vytvořte prosím problém na https://github.com/kumose/kmpkg se stručným souhrnem toho, co jste chtěli udělat, a následující informace.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[vcpkg.exe has crashed.]A;Please send an email to:]A;    {email}]A;containing a brief summary of what you were trying to do and the following data blob:]]></Val>
+            <Val><![CDATA[kmpkg.exe has crashed.]A;Please send an email to:]A;    {email}]A;containing a brief summary of what you were trying to do and the following data blob:]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgInVsPrompt" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgInVsPrompt" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg appears to be in a Visual Studio prompt targeting {value} but installing for {triplet}. Consider using --triplet {value}-windows or --triplet {value}-uwp.]]></Val>
+          <Val><![CDATA[kmpkg appears to be in a Visual Studio prompt targeting {value} but installing for {triplet}. Consider using --triplet {value}-windows or --triplet {value}-uwp.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Vypadá to, že vcpkg je ve požadavku Visual Studia, který cílí na {value}, ale instalujete se pro {triplet}. Zvažte použití -triplet {value}-windows nebo --triplet {value}-uwp.]]></Val>
+            <Val><![CDATA[Vypadá to, že kmpkg je ve požadavku Visual Studia, který cílí na {value}, ale instalujete se pro {triplet}. Zvažte použití -triplet {value}-windows nebo --triplet {value}-uwp.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgInvalidCommand" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgInvalidCommand" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[invalid command: {command_name}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -11812,37 +11812,37 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgRegistriesCacheIsNotDirectory" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgRegistriesCacheIsNotDirectory" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Value of environment variable X_VCPKG_REGISTRIES_CACHE is not a directory: {path}]]></Val>
+          <Val><![CDATA[Value of environment variable X_KMPKG_REGISTRIES_CACHE is not a directory: {path}]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Hodnota proměnné prostředí X_VCPKG_REGISTRIES_CACHE není adresář: {path}]]></Val>
+            <Val><![CDATA[Hodnota proměnné prostředí X_KMPKG_REGISTRIES_CACHE není adresář: {path}]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgRootRequired" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";KmpkgRootRequired" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Setting VCPKG_ROOT is required for standalone bootstrap.]]></Val>
+          <Val><![CDATA[Setting KMPKG_ROOT is required for standalone bootstrap.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Nastavení VCPKG_ROOT se vyžaduje pro samostatné spuštění.]]></Val>
+            <Val><![CDATA[Nastavení KMPKG_ROOT se vyžaduje pro samostatné spuštění.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgRootsDir" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgRootsDir" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[The vcpkg root directory (default: {env_var})]]></Val>
+          <Val><![CDATA[The kmpkg root directory (default: {env_var})]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Kořenový adresář vcpkg (výchozí: {env_var})]]></Val>
+            <Val><![CDATA[Kořenový adresář kmpkg (výchozí: {env_var})]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[Specify the vcpkg root directory.]A;(default: '{env_var}')]]></Val>
+            <Val><![CDATA[Specify the kmpkg root directory.]A;(default: '{env_var}')]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgSendMetricsButDisabled" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";KmpkgSendMetricsButDisabled" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[passed --sendmetrics, but metrics are disabled.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
@@ -11854,11 +11854,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";VcpkgUsage" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
+      <Item ItemId=";KmpkgUsage" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[usage: vcpkg <command> [--switches]5D; [--options=values]5D; [arguments]5D; @response_file]]></Val>
+          <Val><![CDATA[usage: kmpkg <command> [--switches]5D; [--options=values]5D; [arguments]5D; @response_file]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[použití: vcpkg <příkaz> [--switches]5D; [--options=values]5D; [arguments]5D; @response_file]]></Val>
+            <Val><![CDATA[použití: kmpkg <příkaz> [--switches]5D; [--options=values]5D; [arguments]5D; @response_file]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11906,7 +11906,7 @@
             <Val><![CDATA[{package_name} má přiřazený port {actual}, ale místní port je {expected}]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[The latest version is {expected}, but the baseline file contains {actual}.]A;Run:]A;vcpkg x-add-version {package_name}]A;git add versions]A;git commit -m "Update version database"]A;to update the baseline version.]]></Val>
+            <Val><![CDATA[The latest version is {expected}, but the baseline file contains {actual}.]A;Run:]A;kmpkg x-add-version {package_name}]A;git add versions]A;git commit -m "Update version database"]A;to update the baseline version.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -11922,18 +11922,18 @@
       </Item>
       <Item ItemId=";VersionCommandHeader" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[vcpkg package management program version {version}]A;]A;See LICENSE.txt for license information.]]></Val>
+          <Val><![CDATA[kmpkg package management program version {version}]A;]A;See LICENSE.txt for license information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Verze {version} programu pro správu balíčků vcpkg]A;]A;Informace o licenci najdete v LICENSE.txt.]]></Val>
+            <Val><![CDATA[Verze {version} programu pro správu balíčků kmpkg]A;]A;Informace o licenci najdete v LICENSE.txt.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VersionConstraintNotInDatabase1" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[the "version>=" constraint to {package_name} names version {version} which does not exist in the version database. All versions must exist in the version database to be interpreted by vcpkg.]]></Val>
+          <Val><![CDATA[the "version>=" constraint to {package_name} names version {version} which does not exist in the version database. All versions must exist in the version database to be interpreted by kmpkg.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[omezení "version>=" pro {package_name} uvádí verzi {version}, která v databázi verzí neexistuje. Všechny verze musí existovat v databázi verzí, aby je vcpkg mohl interpretovat.]]></Val>
+            <Val><![CDATA[omezení "version>=" pro {package_name} uvádí verzi {version}, která v databázi verzí neexistuje. Všechny verze musí existovat v databázi verzí, aby je kmpkg mohl interpretovat.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11993,7 +11993,7 @@
             <Val><![CDATA[tento port není v databázi verzí]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[{package_name} is missing a version database file at {path}]A;Run:]A;vcpkg x-add-version {package_name}]A;to create the versions file.]]></Val>
+            <Val><![CDATA[{package_name} is missing a version database file at {path}]A;Run:]A;kmpkg x-add-version {package_name}]A;to create the versions file.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -12044,7 +12044,7 @@
             <Val><![CDATA[Konflikt verzí na {spec}: {constraint_origin} vyžaduje {expected}, což se nedá porovnat se standardní verzí {actual}.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[version conflict on {spec}: {package_name} required {expected} but vcpkg could not compare it to {actual}.]A;The two versions used incomparable schemes:]]></Val>
+            <Val><![CDATA[version conflict on {spec}: {package_name} required {expected} but kmpkg could not compare it to {actual}.]A;The two versions used incomparable schemes:]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -12075,12 +12075,12 @@
       </Item>
       <Item ItemId=";VersionIncomparable4" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[See `vcpkg help versioning` or {url} for more information.]]></Val>
+          <Val><![CDATA[See `kmpkg help versioning` or {url} for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Další informace najdete v tématu „vcpkg help versioning“ nebo {url}.]]></Val>
+            <Val><![CDATA[Další informace najdete v tématu „kmpkg help versioning“ nebo {url}.]]></Val>
           </Tgt>
           <Prev Cat="Text">
-            <Val><![CDATA[See `vcpkg help versioning` for more information.]]></Val>
+            <Val><![CDATA[See `kmpkg help versioning` for more information.]]></Val>
           </Prev>
         </Str>
         <Disp Icon="Str" />
@@ -12216,18 +12216,18 @@
       </Item>
       <Item ItemId=";VersionRejectedDueToBaselineMissing" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{path} was rejected because it uses "{json_field}" and does not have a "builtin-baseline". This can be fixed by removing the uses of "{json_field}" or adding a "builtin-baseline".]A;See `vcpkg help versioning` for more information.]]></Val>
+          <Val><![CDATA[{path} was rejected because it uses "{json_field}" and does not have a "builtin-baseline". This can be fixed by removing the uses of "{json_field}" or adding a "builtin-baseline".]A;See `kmpkg help versioning` for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Cesta {path} byla odmítnuta, protože používá {json_field} a nemá předdefinovaný směrný plán. Tento problém můžete vyřešit odebráním použití {json_field} nebo přidáním předdefinovaného směrného plánu.]A;Další informace najdete v vcpkg help versioning.]]></Val>
+            <Val><![CDATA[Cesta {path} byla odmítnuta, protože používá {json_field} a nemá předdefinovaný směrný plán. Tento problém můžete vyřešit odebráním použití {json_field} nebo přidáním předdefinovaného směrného plánu.]A;Další informace najdete v kmpkg help versioning.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
       </Item>
       <Item ItemId=";VersionRejectedDueToFeatureFlagOff" ItemType="0" PsrId="306" InstFlg="true" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[{path} was rejected because it uses "{json_field}" and the `versions` feature flag is disabled. This can be fixed by removing "{json_field}" or enabling the `versions` feature flag.]A;See `vcpkg help versioning` for more information.]]></Val>
+          <Val><![CDATA[{path} was rejected because it uses "{json_field}" and the `versions` feature flag is disabled. This can be fixed by removing "{json_field}" or enabling the `versions` feature flag.]A;See `kmpkg help versioning` for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Cesta {path} byla odmítnuta, protože používá {json_field} a příznak funkce verze je zakázán. Tento problém můžete vyřešit odebráním {json_field} nebo povolením příznaku funkce verze.]A;Další informace najdete v tématu vcpkg help versioning.]]></Val>
+            <Val><![CDATA[Cesta {path} byla odmítnuta, protože používá {json_field} a příznak funkce verze je zakázán. Tento problém můžete vyřešit odebráním {json_field} nebo povolením příznaku funkce verze.]A;Další informace najdete v tématu kmpkg help versioning.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -12658,11 +12658,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";noPostscriptFileRunVcpkgshellWithTheSameArguments" ItemType="0" PsrId="306" Leaf="true">
+      <Item ItemId=";noPostscriptFileRunKmpkgshellWithTheSameArguments" ItemType="0" PsrId="306" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[no postscript file: run vcpkg-shell with the same arguments]]></Val>
+          <Val><![CDATA[no postscript file: run kmpkg-shell with the same arguments]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[žádný postscriptový soubor: spusťte příkaz vcpkg-shell se stejnými argumenty]]></Val>
+            <Val><![CDATA[žádný postscriptový soubor: spusťte příkaz kmpkg-shell se stejnými argumenty]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

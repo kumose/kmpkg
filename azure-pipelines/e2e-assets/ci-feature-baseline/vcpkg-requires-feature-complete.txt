@@ -1,3 +1,0 @@
-vcpkg-requires-feature[b-required] = options
-vcpkg-requires-feature[cascades] = cascade
-vcpkg-requires-feature[fails] = feature-fails

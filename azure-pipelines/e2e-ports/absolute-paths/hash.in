@@ -1,3 +1,0 @@
-#!/bin/bash
-
-test="${CURRENT_INSTALLED_DIR}"

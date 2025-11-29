@@ -7,7 +7,7 @@ int main(int argc, const char* argv[])
     const char* path;
     FILE* f;
 
-    path = getenv("VCPKG_TEST_OUTPUT");
+    path = getenv("KMPKG_TEST_OUTPUT");
     if (!path)
     {
         puts("bad env var");

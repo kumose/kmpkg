@@ -1,0 +1,883 @@
+#include <kmpkg/base/checks.h>
+#include <kmpkg/base/lineinfo.h>
+#include <kmpkg/base/parse.h>
+#include <kmpkg/base/strings.h>
+#include <kmpkg/base/util.h>
+
+#include <kmpkg/platform-expression.h>
+
+#include <numeric>
+#include <string>
+#include <vector>
+
+namespace kmpkg::PlatformExpression
+{
+    enum class Identifier
+    {
+        invalid = -1, // not a recognized identifier
+        x86,
+        x64,
+        arm,
+        arm32,
+        arm64,
+        arm64ec,
+        wasm32,
+        mips64,
+
+        windows,
+        mingw,
+        linux,
+        freebsd,
+        openbsd,
+        netbsd,
+        bsd,
+        solaris,
+        osx,
+        uwp,
+        xbox,
+        android,
+        emscripten,
+        ios,
+        qnx,
+        vxworks,
+        tvos,
+        watchos,
+        visionos,
+
+        static_link,
+        static_crt,
+
+        native, // HOST_TRIPLET == TARGET_TRIPLET
+    };
+
+    static Identifier string2identifier(StringView name)
+    {
+        static const std::map<StringView, Identifier> id_map = {
+            {"x86", Identifier::x86},
+            {"x64", Identifier::x64},
+            {"arm", Identifier::arm},
+            {"arm32", Identifier::arm32},
+            {"arm64", Identifier::arm64},
+            {"arm64ec", Identifier::arm64ec},
+            {"wasm32", Identifier::wasm32},
+            {"mips64", Identifier::mips64},
+            {"windows", Identifier::windows},
+            {"mingw", Identifier::mingw},
+            {"linux", Identifier::linux},
+            {"freebsd", Identifier::freebsd},
+            {"openbsd", Identifier::openbsd},
+            {"netbsd", Identifier::netbsd},
+            {"bsd", Identifier::bsd},
+            {"solaris", Identifier::solaris},
+            {"osx", Identifier::osx},
+            {"uwp", Identifier::uwp},
+            {"xbox", Identifier::xbox},
+            {"android", Identifier::android},
+            {"emscripten", Identifier::emscripten},
+            {"ios", Identifier::ios},
+            {"qnx", Identifier::qnx},
+            {"vxworks", Identifier::vxworks},
+            {"tvos", Identifier::tvos},
+            {"watchos", Identifier::watchos},
+            {"visionos", Identifier::visionos},
+            {"static", Identifier::static_link},
+            {"staticcrt", Identifier::static_crt},
+            {"native", Identifier::native},
+        };
+
+        auto id_pair = id_map.find(name);
+
+        if (id_pair == id_map.end())
+        {
+            return Identifier::invalid;
+        }
+
+        return id_pair->second;
+    }
+
+    namespace detail
+    {
+        enum class ExprKind
+        {
+            identifier,
+            op_not,
+            op_and,
+            op_or,
+            op_list,
+            op_empty,
+            op_invalid
+        };
+
+        struct ExprImpl
+        {
+            ExprImpl(ExprKind k, std::string i, std::vector<std::unique_ptr<ExprImpl>> es)
+                : kind(k), identifier(std::move(i)), exprs(std::move(es))
+            {
+            }
+
+            ExprImpl(ExprKind k, std::string i) : kind(k), identifier(std::move(i)) { }
+            ExprImpl(ExprKind k, std::unique_ptr<ExprImpl> a) : kind(k) { exprs.push_back(std::move(a)); }
+            ExprImpl(ExprKind k, std::vector<std::unique_ptr<ExprImpl>> es) : kind(k), exprs(std::move(es)) { }
+
+            ExprKind kind;
+            std::string identifier;
+            std::vector<std::unique_ptr<ExprImpl>> exprs;
+
+            std::unique_ptr<ExprImpl> clone() const
+            {
+                return std::make_unique<ExprImpl>(
+                    ExprImpl{kind, identifier, Util::fmap(exprs, [](auto&& p) { return p->clone(); })});
+            }
+
+            bool operator==(const ExprImpl& other) const noexcept
+            {
+                if (kind != other.kind) return false;
+                if (kind == ExprKind::identifier)
+                {
+                    return identifier == other.identifier;
+                }
+                return std::equal(exprs.begin(),
+                                  exprs.end(),
+                                  other.exprs.begin(),
+                                  other.exprs.end(),
+                                  [](const std::unique_ptr<detail::ExprImpl>& lhs,
+                                     const std::unique_ptr<detail::ExprImpl>& rhs) noexcept { return *lhs == *rhs; });
+            }
+
+            bool operator!=(const ExprImpl& other) const { return !(*this == other); }
+
+            void negate()
+            {
+                switch (kind)
+                {
+                    case ExprKind::identifier:
+                    {
+                        exprs.push_back(std::make_unique<ExprImpl>(std::move(*this)));
+                        kind = ExprKind::op_not;
+                        return;
+                    }
+                    case ExprKind::op_not:
+                    {
+                        auto sub_expr = std::move(*exprs.at(0));
+                        *this = std::move(sub_expr);
+                        return;
+                    }
+                    case ExprKind::op_and:
+                    case ExprKind::op_or:
+                    case ExprKind::op_list:
+                    {
+                        kind = (kind == ExprKind::op_and ? ExprKind::op_or : ExprKind::op_and);
+                        for (auto& expr : exprs)
+                        {
+                            expr->negate();
+                        }
+                        return;
+                    }
+                    case ExprKind::op_empty:
+                    case ExprKind::op_invalid: return;
+                }
+                Checks::unreachable(KMPKG_LINE_INFO);
+            }
+
+            static void add_if_not_contains(std::vector<std::unique_ptr<ExprImpl>>& exprs,
+                                            std::unique_ptr<ExprImpl>&& new_expr)
+            {
+                if (Util::all_of(exprs, [&](const auto& expr) { return *expr != *new_expr; }))
+                {
+                    exprs.push_back(std::move(new_expr));
+                }
+            }
+
+            static bool is_orish(ExprKind kind) { return kind == ExprKind::op_or || kind == ExprKind::op_list; }
+
+            void simplify()
+            {
+                switch (kind)
+                {
+                    case ExprKind::op_not:
+                    {
+                        exprs.at(0)->simplify();
+                        if (exprs.at(0)->kind == ExprKind::op_not)
+                        {
+                            auto sub_sub_expr = std::move(*exprs.at(0)->exprs.at(0));
+                            *this = std::move(sub_sub_expr);
+                            simplify();
+                        }
+                        return;
+                    }
+                    case ExprKind::op_and:
+                    case ExprKind::op_or:
+                    case ExprKind::op_list:
+                    {
+                        auto old_exprs = std::move(exprs);
+                        for (auto&& expr : old_exprs)
+                        {
+                            expr->simplify();
+                            if ((kind == ExprKind::op_and && expr->kind == ExprKind::op_and) ||
+                                (is_orish(kind) && is_orish(expr->kind)))
+                            {
+                                for (auto&& sub_expr : expr->exprs)
+                                {
+                                    add_if_not_contains(exprs, std::move(sub_expr));
+                                }
+                            }
+                            else
+                            {
+                                add_if_not_contains(exprs, std::move(expr));
+                            }
+                        }
+                        if (exprs.size() == 1)
+                        {
+                            auto sub_expr = std::move(*exprs[0]);
+                            *this = std::move(sub_expr);
+                        }
+                        return;
+                    }
+                    case ExprKind::identifier:
+                    case ExprKind::op_empty:
+                    case ExprKind::op_invalid: return;
+                }
+                Checks::unreachable(KMPKG_LINE_INFO);
+            }
+        };
+
+        struct ExpressionParser : ParserBase
+        {
+            ExpressionParser(StringView str, MultipleBinaryOperators multiple_binary_operators)
+                : ParserBase(str, "CONTROL", {0, 0}), multiple_binary_operators(multiple_binary_operators)
+            {
+            }
+
+            MultipleBinaryOperators multiple_binary_operators;
+
+            bool allow_multiple_binary_operators() const
+            {
+                return multiple_binary_operators == MultipleBinaryOperators::Allow;
+            }
+
+            // top-level-platform-expression = optional-whitespace, platform-expression
+            PlatformExpression::Expr parse()
+            {
+                skip_whitespace();
+                auto res = expr();
+
+                if (!at_eof())
+                {
+                    add_error(msg::format(msgInvalidLogicExpressionUnexpectedCharacter));
+                }
+
+                return Expr(std::move(res));
+            }
+
+        private:
+            // identifier-character =
+            // | lowercase-alpha
+            // | digit ;
+            static bool is_identifier_char(char32_t ch) { return is_lower_alpha(ch) || is_ascii_digit(ch); }
+
+            // platform-expression =
+            // | platform-expression-not
+            // | platform-expression-and
+            // | platform-expression-or
+            std::unique_ptr<ExprImpl> expr()
+            {
+                // this is the common prefix of all the variants
+                // platform-expression-not,
+                auto result = expr_not();
+
+                // the first expression must be followed by a logical operator (or nothing)
+                auto oper = expr_operator();
+                switch (oper)
+                {
+                    case ExprKind::op_and:
+                        // { "&", optional-whitespace, platform-expression-not }
+                        // { "and", platform-expression-binary-keyword-second-operand }
+                        return expr_binary<ExprKind::op_and, ExprKind::op_or>(
+                            std::make_unique<ExprImpl>(oper, std::move(result)));
+
+                    case ExprKind::op_or:
+                        // { "|", optional-whitespace, platform-expression-not }
+                        return expr_binary<ExprKind::op_or, ExprKind::op_and>(
+                            std::make_unique<ExprImpl>(oper, std::move(result)));
+
+                    case ExprKind::op_list:
+                        // { ",", optional-whitespace, platform-expression }
+                        return expr_binary<ExprKind::op_list, ExprKind::op_invalid>(
+                            std::make_unique<ExprImpl>(oper, std::move(result)));
+
+                    case ExprKind::op_empty: return result;
+
+                    default:
+                        // op_identifier and op_invalid both indicate a syntax error, which should have
+                        // already been flagged by expr_operator.
+                        return result;
+                }
+            }
+
+            ExprKind expr_operator()
+            {
+                auto oper = cur();
+
+                // Support chains of the kmpkg operators (`&`, `|`)  to avoid breaking backwards compatibility
+                switch (oper)
+                {
+                    case '|':
+                    case '&':
+                        do
+                        {
+                            next();
+                        } while (allow_multiple_binary_operators() && cur() == oper);
+                        break;
+                }
+
+                switch (oper)
+                {
+                    case '|':
+                    {
+                        // { "|", optional-whitespace, platform-expression-not }
+                        return ExprKind::op_or;
+                    }
+                    case '&':
+                    {
+                        // { "&", optional-whitespace, platform-expression-not }
+                        return ExprKind::op_and;
+                    }
+                    case ',':
+                    {
+                        // { ",", optional-whitespace, platform-expression-not }
+                        // "," is a near-synonym of "|", with the differences that it can be combined with "&"/"and",
+                        // but has lower precedence
+                        next();
+                        return ExprKind::op_list;
+                    }
+                    case 'a':
+                    case 'o':
+                    {
+                        // { "and", optional-whitespace, platform-expression-not }
+                        // { "or", platform-expression-binary-keyword-second-operand } }
+                        // "and" is a synonym of "&", "or" is reserved (but not yet supported) as a synonym of "|"
+                        std::string name = match_while(is_identifier_char).to_string();
+                        Checks::check_exit(KMPKG_LINE_INFO, !name.empty());
+
+                        if (name == "and")
+                        {
+                            return ExprKind::op_and;
+                        }
+                        else if (name == "or")
+                        {
+                            add_error(msg::format(msgInvalidLogicExpressionUsePipe));
+                            return ExprKind::op_invalid;
+                        }
+
+                        // Invalid alphanumeric strings or strings other than "and" are errors.
+                        add_error(msg::format(msgInvalidLogicExpressionUnexpectedCharacter));
+                        return ExprKind::op_invalid;
+                    }
+                    default:
+                        // Perhaps this should be an error, but in the previous implementation, this
+                        // was a do-nothing case, so let's maintain that behavior.
+                        return ExprKind::op_empty;
+                }
+            }
+
+            // platform-expression-simple =
+            // | platform-expression-identifier
+            // | platform-expression-grouped ;
+            std::unique_ptr<ExprImpl> expr_simple()
+            {
+                // platform-expression-grouped =
+                // | "(", optional-whitespace, platform-expression, ")", optional-whitespace ;
+                if (cur() == '(')
+                {
+                    // "(",
+                    next();
+                    // optional-whitespace,
+                    skip_whitespace();
+                    // platform-expression,
+                    auto result = expr();
+                    if (cur() != ')')
+                    {
+                        add_error(msg::format(msgMissingClosingParen));
+                        return result;
+                    }
+                    // ")",
+                    next();
+                    // optional-whitespace
+                    skip_whitespace();
+                    return result;
+                }
+
+                // platform-expression-identifier
+                return expr_identifier();
+            }
+
+            // platform-expression-identifier =
+            // | identifier-character, { identifier-character }, optional-whitespace ;
+            std::unique_ptr<ExprImpl> expr_identifier()
+            {
+                // identifier-character, { identifier-character },
+                std::string name = match_while(is_identifier_char).to_string();
+
+                if (name.empty())
+                {
+                    add_error(msg::format(msgMissingOrInvalidIdentifer));
+                }
+
+                // optional-whitespace
+                skip_whitespace();
+
+                return std::make_unique<ExprImpl>(ExprKind::identifier, std::move(name));
+            }
+
+            // platform-expression-not =
+            // | platform-expression-simple
+            // | "!", optional-whitespace, platform-expression-simple
+            // | "not", platform-expression-unary-keyword-operand ;
+            std::unique_ptr<ExprImpl> expr_not()
+            {
+                if (cur() == '!')
+                {
+                    // "!",
+                    next();
+                    // optional-whitespace,
+                    skip_whitespace();
+                    // platform-expression-simple
+                    return std::make_unique<ExprImpl>(ExprKind::op_not, expr_simple());
+                }
+                else if (cur() == 'n')
+                {
+                    std::string name = match_while(is_identifier_char).to_string();
+
+                    // "not"
+                    if (name == "not")
+                    {
+                        // required-whitespace, platform-expression-simple
+                        // optional-whitespace, platform-expression-grouped
+                        skip_whitespace();
+                        return std::make_unique<ExprImpl>(ExprKind::op_not, expr_simple());
+                    }
+
+                    // optional-whitespace
+                    skip_whitespace();
+
+                    return std::make_unique<ExprImpl>(ExprKind::identifier, std::move(name));
+                }
+
+                // platform-expression-simple
+                return expr_simple();
+            }
+
+            // platform-expression-list =
+            // | platform-expression {",", optional-whitespace, platform-expression};
+            //
+            // platform-expression-binary-keyword-first-operand =
+            // | platform-expression-not, required-whitespace
+            // | platform-expression-grouped ;
+            //
+            // platform-expression-binary-keyword-second-operand =
+            // | required-whitespace, platform-expression-not
+            // | platform-expression-grouped ;
+            //
+            // platform-expression-and =
+            // | platform-expression-not, { "&", optional-whitespace, platform-expression-not }
+            // | platform-expression-binary-keyword-first-operand, { "and",
+            // platform-expression-binary-keyword-second-operand } ;
+            //
+            // platform-expression-or =
+            // | platform-expression-not, { "|", optional-whitespace, platform-expression-not }
+            // | platform-expression-binary-keyword-first-operand, { "or",
+            // platform-expression-binary-keyword-second-operand } (* to allow for future extension *) ;
+            //
+            // Processing of the operator was already taken care of by the caller: continue
+            // with the next platform-expression-not or platform-expression-binary-keyword-second-operand.
+            template<ExprKind oper, ExprKind unmixable_oper>
+            std::unique_ptr<ExprImpl> expr_binary(std::unique_ptr<ExprImpl>&& seed)
+            {
+                // gather consecutive instances of the same operation into a single expr node
+                // e.g., parsing 'A & B & C' yields {&, vector<A,B,C>}
+                ExprKind next_oper = ExprKind::op_invalid;
+                do
+                {
+                    // optional-whitespace,
+                    skip_whitespace();
+
+                    if constexpr (oper == ExprKind::op_list)
+                    {
+                        // platform-expression { ",", optional-whitespace, platform-expression } ;
+                        seed->exprs.push_back(expr());
+                    }
+                    else
+                    {
+                        // platform-expression-not, (go back to start of repetition)
+                        seed->exprs.push_back(expr_not());
+                    }
+                    next_oper = expr_operator();
+                } while (next_oper == oper);
+
+                if constexpr (unmixable_oper != ExprKind::op_invalid)
+                {
+                    if (next_oper == unmixable_oper)
+                    {
+                        add_error(msg::format(msgMixingBooleanOperationsNotAllowed));
+                    }
+                }
+
+                if (next_oper == ExprKind::op_list)
+                {
+                    // platform-expression { ",", optional-whitespace, platform-expression } ;
+                    //
+                    // To handle a lower-precedence, treat the remainder of the string as a platform expression.
+                    // E.g., "A & B , C | D" will be treated as "(A & B) , (C | D)", which preserves intended precedence
+                    // In this case, see is the LHS at the point in which we see the ",".
+
+                    return expr_binary<ExprKind::op_list, ExprKind::op_invalid>(
+                        std::make_unique<ExprImpl>(next_oper, std::move(seed)));
+                }
+                else
+                {
+                    return std::move(seed);
+                }
+            }
+        };
+    }
+
+    using namespace detail;
+
+    Expr::Expr() noexcept = default;
+    Expr::Expr(Expr&& other) noexcept = default;
+    Expr& Expr::operator=(Expr&& other) noexcept = default;
+
+    Expr::Expr(const Expr& other)
+    {
+        if (other.underlying_)
+        {
+            this->underlying_ = other.underlying_->clone();
+        }
+    }
+    Expr& Expr::operator=(const Expr& other)
+    {
+        if (other.underlying_)
+        {
+            this->underlying_ = other.underlying_->clone();
+        }
+        else
+        {
+            this->underlying_.reset();
+        }
+
+        return *this;
+    }
+
+    Expr::Expr(std::unique_ptr<ExprImpl>&& e) : underlying_(std::move(e)) { }
+    Expr::~Expr() = default;
+
+    Expr Expr::Identifier(StringView id)
+    {
+        return Expr(std::make_unique<ExprImpl>(ExprKind::identifier, id.to_string()));
+    }
+    Expr Expr::Not(Expr&& e) { return Expr(std::make_unique<ExprImpl>(ExprKind::op_not, std::move(e.underlying_))); }
+    Expr Expr::And(std::vector<Expr>&& exprs)
+    {
+        return Expr(std::make_unique<ExprImpl>(
+            ExprKind::op_and, Util::fmap(exprs, [](Expr& expr) { return std::move(expr.underlying_); })));
+    }
+    Expr Expr::Or(std::vector<Expr>&& exprs)
+    {
+        return Expr(std::make_unique<ExprImpl>(
+            ExprKind::op_or, Util::fmap(exprs, [](Expr& expr) { return std::move(expr.underlying_); })));
+    }
+
+    bool Expr::evaluate(const Context& context) const
+    {
+        if (!this->underlying_)
+        {
+            return true; // empty expression is always true
+        }
+
+        std::map<std::string, bool> override_ctxt;
+        {
+            auto override_vars = context.find("KMPKG_DEP_INFO_OVERRIDE_VARS");
+            if (override_vars != context.end())
+            {
+                auto cmake_list = Strings::split(override_vars->second, ';');
+                for (auto& override_id : cmake_list)
+                {
+                    if (!override_id.empty())
+                    {
+                        if (override_id[0] == '!')
+                        {
+                            override_ctxt.emplace(override_id.substr(1), false);
+                        }
+                        else
+                        {
+                            override_ctxt.emplace(override_id, true);
+                        }
+                    }
+                }
+            }
+        }
+
+        struct Visitor
+        {
+            const Context& context;
+            const std::map<std::string, bool>& override_ctxt;
+
+            bool true_if_exists_and_nonempty(const std::string& variable_name) const
+            {
+                auto iter = context.find(variable_name);
+                if (iter == context.end())
+                {
+                    return false;
+                }
+
+                return !iter->second.empty();
+            }
+
+            bool true_if_exists_and_equal(const std::string& variable_name, const std::string& value) const
+            {
+                auto iter = context.find(variable_name);
+                if (iter == context.end())
+                {
+                    return false;
+                }
+                return iter->second == value;
+            }
+
+            bool visit(const ExprImpl& expr) const
+            {
+                if (expr.kind == ExprKind::identifier)
+                {
+                    if (!override_ctxt.empty())
+                    {
+                        auto override_id = override_ctxt.find(expr.identifier);
+                        if (override_id != override_ctxt.end())
+                        {
+                            return override_id->second;
+                        }
+                        // Fall through to use the cmake logic if the id does not have an override
+                    }
+
+                    auto id = string2identifier(expr.identifier);
+                    switch (id)
+                    {
+                        case Identifier::invalid:
+                            // Point out in the diagnostic that they should add to the override list because that is
+                            // what most users should do, however it is also valid to update the built in identifiers to
+                            // recognize the name.
+                            msg::println_warning(msgUnrecognizedIdentifier, msg::value = expr.identifier);
+                            return false;
+                        case Identifier::x64: return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "x64");
+                        case Identifier::x86: return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "x86");
+                        case Identifier::arm:
+                            // For backwards compatability arm is also true for arm64.
+                            // This is because it previously was only checking for a substring.
+                            return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "arm") ||
+                                   true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "arm64");
+                        case Identifier::arm32: return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "arm");
+                        case Identifier::arm64: return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "arm64");
+                        case Identifier::arm64ec:
+                            return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "arm64ec");
+                        case Identifier::windows:
+                            return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "") ||
+                                   true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "WindowsStore") ||
+                                   true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "MinGW");
+                        case Identifier::mingw: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "MinGW");
+                        case Identifier::linux: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "Linux");
+                        case Identifier::freebsd: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "FreeBSD");
+                        case Identifier::openbsd: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "OpenBSD");
+                        case Identifier::netbsd: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "NetBSD");
+                        case Identifier::bsd:
+                            return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "FreeBSD") ||
+                                   true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "OpenBSD") ||
+                                   true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "NetBSD");
+                        case Identifier::solaris: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "SunOS");
+                        case Identifier::osx: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "Darwin");
+                        case Identifier::uwp:
+                            return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "WindowsStore");
+                        case Identifier::xbox: return true_if_exists_and_nonempty("KMPKG_XBOX_CONSOLE_TARGET");
+                        case Identifier::android: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "Android");
+                        case Identifier::emscripten:
+                            return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "Emscripten");
+                        case Identifier::ios: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "iOS");
+                        case Identifier::qnx: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "QNX");
+                        case Identifier::vxworks: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "VxWorks");
+                        case Identifier::wasm32: return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "wasm32");
+                        case Identifier::mips64: return true_if_exists_and_equal("KMPKG_TARGET_ARCHITECTURE", "mips64");
+                        case Identifier::tvos: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "tvOS");
+                        case Identifier::watchos: return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "watchOS");
+                        case Identifier::visionos:
+                            return true_if_exists_and_equal("KMPKG_CMAKE_SYSTEM_NAME", "visionOS");
+                        case Identifier::static_link:
+                            return true_if_exists_and_equal("KMPKG_LIBRARY_LINKAGE", "static");
+                        case Identifier::static_crt: return true_if_exists_and_equal("KMPKG_CRT_LINKAGE", "static");
+                        case Identifier::native:
+                        {
+                            auto is_native = context.find("Z_KMPKG_IS_NATIVE");
+                            if (is_native == context.end())
+                            {
+                                Checks::unreachable(KMPKG_LINE_INFO);
+                            }
+
+                            return is_native->second == "1";
+                        }
+                    }
+                    Checks::unreachable(KMPKG_LINE_INFO);
+                }
+                else if (expr.kind == ExprKind::op_not)
+                {
+                    return !visit(*expr.exprs.at(0));
+                }
+                else if (expr.kind == ExprKind::op_and)
+                {
+                    bool valid = true;
+
+                    // we want to print errors in all expressions, so we check all of the expressions all the time
+                    for (const auto& e : expr.exprs)
+                    {
+                        valid &= visit(*e);
+                    }
+
+                    return valid;
+                }
+                else if ((expr.kind == ExprKind::op_or) || (expr.kind == ExprKind::op_list))
+                {
+                    bool valid = false;
+
+                    // we want to print errors in all expressions, so we check all of the expressions all the time
+                    for (const auto& e : expr.exprs)
+                    {
+                        valid |= visit(*e);
+                    }
+
+                    return valid;
+                }
+                else
+                {
+                    Checks::unreachable(KMPKG_LINE_INFO);
+                }
+            }
+        };
+
+        return Visitor{context, override_ctxt}.visit(*this->underlying_);
+    }
+
+    int Expr::complexity() const
+    {
+        if (is_empty()) return 0;
+
+        struct Impl
+        {
+            int operator()(const std::unique_ptr<detail::ExprImpl>& expr) const { return (*this)(*expr); }
+            int operator()(const detail::ExprImpl& expr) const
+            {
+                if (expr.kind == ExprKind::identifier) return 1;
+
+                if (expr.kind == ExprKind::op_not) return 1 + (*this)(expr.exprs.at(0));
+
+                return 1 + std::accumulate(expr.exprs.begin(), expr.exprs.end(), 0, [](int acc, const auto& el) {
+                           return acc + Impl{}(el);
+                       });
+            }
+        };
+
+        return Impl{}(underlying_);
+    }
+
+    Expr& Expr::negate()
+    {
+        underlying_->negate();
+        return *this;
+    }
+
+    Expr& Expr::simplify()
+    {
+        underlying_->simplify();
+        return *this;
+    }
+
+    ExpectedL<Expr> parse_platform_expression(StringView expression, MultipleBinaryOperators multiple_binary_operators)
+    {
+        ExpressionParser parser(expression, multiple_binary_operators);
+        auto res = parser.parse();
+
+        if (parser.messages().any_errors())
+        {
+            return parser.messages().join();
+        }
+
+        return res;
+    }
+
+    bool structurally_equal(const Expr& lhs, const Expr& rhs)
+    {
+        if (lhs.underlying_ && rhs.underlying_)
+        {
+            return *lhs.underlying_ == *rhs.underlying_;
+        }
+        return !lhs.underlying_ && !rhs.underlying_;
+    }
+
+    int compare(const Expr& lhs, const Expr& rhs)
+    {
+        auto lhs_platform_complexity = lhs.complexity();
+        auto rhs_platform_complexity = rhs.complexity();
+
+        if (lhs_platform_complexity < rhs_platform_complexity) return -1;
+        if (rhs_platform_complexity < lhs_platform_complexity) return 1;
+
+        auto lhs_platform = to_string(lhs);
+        auto rhs_platform = to_string(rhs);
+
+        if (lhs_platform.size() < rhs_platform.size()) return -1;
+        if (rhs_platform.size() < lhs_platform.size()) return 1;
+
+        auto platform_cmp = lhs_platform.compare(rhs_platform);
+        if (platform_cmp < 0) return -1;
+        if (platform_cmp > 0) return 1;
+
+        return 0;
+    }
+
+    std::string to_string(const Expr& expr)
+    {
+        struct Impl
+        {
+            std::string operator()(const std::unique_ptr<detail::ExprImpl>& expr) const
+            {
+                return (*this)(*expr, false);
+            }
+            std::string operator()(const detail::ExprImpl& expr, bool outer) const
+            {
+                StringLiteral join = "bug";
+                switch (expr.kind)
+                {
+                    case ExprKind::identifier: return expr.identifier;
+                    case ExprKind::op_and: join = " & "; break;
+                    case ExprKind::op_or: join = " | "; break;
+                    case ExprKind::op_list: join = ", "; break;
+                    case ExprKind::op_not: return Strings::concat('!', (*this)(expr.exprs.at(0)));
+                    case ExprKind::op_empty: join = ""; break;
+                    case ExprKind::op_invalid: join = " invalid "; break;
+                    default: Checks::unreachable(KMPKG_LINE_INFO);
+                }
+
+                if (outer)
+                {
+                    return Strings::join(join, expr.exprs, *this);
+                }
+                else
+                {
+                    return Strings::concat('(', Strings::join(join, expr.exprs, *this), ')');
+                }
+            }
+        };
+
+        if (expr.is_empty())
+        {
+            return std::string{};
+        }
+        return Impl{}(*expr.underlying_, true);
+    }
+
+    const Expr Expr::always_true{};
+}

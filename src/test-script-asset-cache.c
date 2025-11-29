@@ -5,7 +5,7 @@
 #include <string.h>
 
 static const char expected_uri[] =
-    "https://raw.githubusercontent.com/microsoft/vcpkg-tool/1767aaee7b229c609f7ad5cf2f57b6a6cc309fb8/LICENSE.txt";
+    "https://raw.githubusercontent.com/microsoft/kmpkg-tool/1767aaee7b229c609f7ad5cf2f57b6a6cc309fb8/LICENSE.txt";
 // Note that this checks that the SHA is properly tolower'd
 static const char expected_sha[] = "65077997890f66f6041bb3284bb7b88e27631411ccbc253201ca4e00c4bcc58c0d77edffda497549879"
                                    "7cc10772c7fd68fbeb13cc4ac493a3471a9d49e5b6f24";

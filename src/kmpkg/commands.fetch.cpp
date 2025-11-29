@@ -1,0 +1,41 @@
+#include <kmpkg/base/fwd/message_sinks.h>
+
+#include <kmpkg/base/util.h>
+
+#include <kmpkg/commands.fetch.h>
+#include <kmpkg/kmpkgcmdarguments.h>
+#include <kmpkg/kmpkgpaths.h>
+
+using namespace kmpkg;
+
+namespace
+{
+    static constexpr CommandSwitch STDERR_STATUS[] = {
+        {"x-stderr-status", msgCmdFetchOptXStderrStatus},
+    };
+} // unnamed namespace
+
+namespace kmpkg
+{
+    constexpr CommandMetadata CommandFetchMetadata{
+        "fetch",
+        msgCmdFetchSynopsis,
+        {"kmpkg fetch python"},
+        Undocumented,
+        AutocompletePriority::Public,
+        1,
+        1,
+        {STDERR_STATUS},
+        nullptr,
+    };
+
+    void command_fetch_and_exit(const KmpkgCmdArguments& args, const KmpkgPaths& paths)
+    {
+        const auto parsed = args.parse_arguments(CommandFetchMetadata);
+        const bool stderr_status = Util::Sets::contains(parsed.switches, STDERR_STATUS[0].name);
+        const std::string tool = parsed.command_arguments[0];
+        const Path& tool_path = paths.get_tool_exe(tool, stderr_status ? stderr_sink : stdout_sink);
+        msg::write_unlocalized_text(Color::none, tool_path.native() + '\n');
+        Checks::exit_success(KMPKG_LINE_INFO);
+    }
+} // namespace kmpkg

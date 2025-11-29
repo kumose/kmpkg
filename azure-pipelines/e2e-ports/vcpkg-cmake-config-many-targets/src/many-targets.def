@@ -1,5 +1,0 @@
-LIBRARY many-targets
-
-EXPORTS
-
-hello_earth
