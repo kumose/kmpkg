@@ -36,7 +36,7 @@ changelog:
 release:
   github:
     owner: kumose
-    name: kmcmake
+    name: kmpkg
   draft: false
   prerelease: false
   make_latest: true
