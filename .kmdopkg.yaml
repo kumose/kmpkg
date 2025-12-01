@@ -17,7 +17,7 @@ archives:
     formats: [tar.gz]
     files:
       - src: "__kmdo_installed"
-        dst: installed
+        dst: kmpkg
 
 checksum:
   name_template: "checksums.txt"
