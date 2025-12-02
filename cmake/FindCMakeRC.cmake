@@ -17,6 +17,7 @@ endif()
 
 include(FetchContent)
 find_package(Git REQUIRED)
+set(CMAKE_SKIP_INSTALL_RULES TRUE CACHE BOOL "" FORCE)
 FetchContent_Declare(
     CMakeRC
     URL "${KMPKG_CMAKERC_URL}"
@@ -24,7 +25,7 @@ FetchContent_Declare(
     PATCH_COMMAND "${GIT_EXECUTABLE}" "--work-tree=." apply "${CMAKE_CURRENT_LIST_DIR}/CMakeRC_cmake_4.patch"
 )
 FetchContent_MakeAvailable(CMakeRC)
-
+set(CMAKE_SKIP_INSTALL_RULES FALSE CACHE BOOL "" FORCE)
 if(NOT CMakeRC_FIND_REQUIRED)
     message(FATAL_ERROR "CMakeRC must be REQUIRED")
 endif()

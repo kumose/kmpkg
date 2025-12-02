@@ -1,0 +1,11 @@
+
+root = "$PREFIX/kmpkg/kit"
+
+[current]
+repo = "$PREFIX/kmpkg-org"
+remote = "https://github.com/kumose/kmpkg-org.git"
+
+[offical]
+repo = "$PREFIX/kmpkg-org"
+remote = "https://github.com/kumose/kmpkg-org.git"
+

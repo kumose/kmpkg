@@ -34,6 +34,7 @@ if(MSVC AND KMPKG_DEVELOPMENT_WARNINGS AND NOT (CMAKE_CXX_COMPILER_ID MATCHES "A
 endif()
 
 include(FetchContent)
+set(CMAKE_SKIP_INSTALL_RULES TRUE CACHE BOOL "" FORCE)
 FetchContent_Declare(
     fmt
     URL "${KMPKG_FMT_URL}"
@@ -49,7 +50,7 @@ if(KMPKG_DEPENDENCY_EXTERNAL_FMT)
 else()
     FetchContent_MakeAvailable(fmt)
 endif()
-
+set(CMAKE_SKIP_INSTALL_RULES FALSE CACHE BOOL "" FORCE)
 if(SKIP_WARNINGS)
     set(CMAKE_CXX_FLAGS "${OLD_CXX_FLAGS}")
 endif()

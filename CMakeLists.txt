@@ -191,9 +191,10 @@ set(TEST_SCRIPT_ASSET_CACHE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/test-script
 # ====================
 # === Dependencies ===
 # ====================
-
-find_package(fmt REQUIRED)
-find_package(CMakeRC REQUIRED)
+set(CMAKE_SKIP_INSTALL_RULES TRUE CACHE BOOL "" FORCE)
+add_subdirectory(fmt)
+add_subdirectory(cmrc)
+set(CMAKE_SKIP_INSTALL_RULES FALSE CACHE BOOL "" FORCE)
 
 # === Target: locale-resources ===
 
@@ -457,3 +458,6 @@ install(TARGETS kmpkg
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
     BUNDLE DESTINATION "${CMAKE_INSTALL_BINDIR}"
 )
+
+install(DIRECTORY kit DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES kmpkg.toml DESTINATION "${CMAKE_INSTALL_BINDIR}")

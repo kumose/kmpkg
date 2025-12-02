@@ -1,0 +1,97 @@
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: MIT
+#
+parameters:
+  - name: kmpkgToolSha
+    displayName: 'Custom SHA of kmpkg-tool to use rather than bootstrap'
+    type: string
+    default:  'use default'
+  - name: tripletPattern
+    displayName: 'Enable triplets which contain this substring (^ matches begin, $ matches end)'
+    type: string
+    default: '^'
+
+jobs:
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: x86_windows
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: x64_windows
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: x64_windows_release
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: x64_windows_static
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: x64_windows_static_md
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: x64_uwp
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: arm64_windows
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: arm64_windows_static_md
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: windows/azure-pipelines.yml
+  parameters:
+    jobName: arm64_uwp
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: osx/azure-pipelines.yml
+  parameters:
+    jobName: arm64_osx
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: linux/azure-pipelines.yml
+  parameters:
+    jobName: x64_linux
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: android/azure-pipelines.yml
+  parameters:
+    jobName: arm_neon_android
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: android/azure-pipelines.yml
+  parameters:
+    jobName: x64_android
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
+
+- template: android/azure-pipelines.yml
+  parameters:
+    jobName: arm64_android
+    kmpkgToolSha: ${{ parameters.kmpkgToolSha }}
+    tripletPattern: ${{ parameters.tripletPattern }}
